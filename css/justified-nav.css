@@ -1,5 +1,29 @@
 body {
   padding-top: 20px;
+  font-family: 'Raleway', sans-serif;
+}
+
+h1, h2, h3, .btn {
+  font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+  font-size: 1.8em;
+}
+
+.row  .btn {
+  font-size: 0.9em;
+}
+.center {
+  text-align: center;
+}
+.v-air { /* vertical air for call to action buttons */
+  padding: 1em 0;
+}
+
+p {
+  line-height: 1.4em;
+  font-size: 1.2em;
 }
 
 .footer {
@@ -17,6 +41,9 @@ body {
 .jumbotron .btn {
   padding: 14px 24px;
   font-size: 21px;
+}
+.jumbotron .lead {
+  font-size: 1.8em;
 }
 
 /* Customize the nav-justified links to be fill the entire space of the .navbar */
