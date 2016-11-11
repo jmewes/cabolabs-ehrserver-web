@@ -3,8 +3,9 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
-h1, h2, h3, .btn {
+h1, h2, h3, h4, .btn {
   font-family: 'Roboto', sans-serif;
+  margin: 22px 0 12px 0;
 }
 
 h2 {
@@ -24,6 +25,7 @@ h2 {
 p {
   line-height: 1.4em;
   font-size: 1.2em;
+  margin: 0 0 12px;
 }
 
 .footer {
@@ -33,17 +35,24 @@ p {
   border-top: 1px solid #eee;
 }
 
-/* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  background-color: transparent;
+div.main {
+  padding: 30px 0;
 }
-.jumbotron .btn {
-  padding: 14px 24px;
-  font-size: 21px;
+div.main h1{
+  font-size: 3.8em;
 }
-.jumbotron .lead {
+div.main h2 {
   font-size: 1.8em;
+}
+div.space {
+  height: 10px;
+}
+
+button.contact {
+ position: fixed; 
+ bottom: 20px; 
+ right: 20px;
+ z-index: 1001;
 }
 
 /* Customize the nav-justified links to be fill the entire space of the .navbar */
@@ -85,6 +94,10 @@ p {
   border-radius: 0 0 5px 5px;
 }
 
+.nav-justified > li > a {
+  white-space: nowrap; /* prevent menu text from wrapping */
+}
+
 @media (min-width: 768px) {
   .nav-justified {
     max-height: 52px;
@@ -112,4 +125,10 @@ p {
     padding-right: 0;
     padding-left: 0;
   }
+}
+
+#langs {
+ float: right;
+ font-size: 14px;
+ padding: 10px 0 0 0;
 }

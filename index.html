@@ -22,30 +22,41 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
   </head>
   <body>
+  
+    <button type="button" class="btn btn-default contact">Contact us</button>
+  
     <div class="container">
 
       <!-- The justified navigation menu is meant for single line per list item.
            Multiple lines will require custom code not provided by Bootstrap. -->
       <div class="masthead">
-        <h3 class="text-muted">EHRServer</h3></h3>
+        <h3 class="text-muted">EHRServer <span id="langs">EN | ES | PT</span></h3>
+        
         <nav>
           <ul class="nav nav-justified">
             <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Get Started</a></li>
-            <li><a href="#">Learn</a></li>
+            <li><a href="get_started.html">Get Started</a></li>
+            <li><a href="learn.html">Learn</a></li>
             <li><a href="#">Downloads</a></li>
-            <li><a href="#">Cloud <sub>(beta)</sub></a></li>
+            <li><a href="cloud.html">Cloud <sub>(beta)</sub></a></li>
             <li><a href="#">Support</a></li>
-            <li><a href="#">Contact</a></li>
           </ul>
         </nav>
       </div>
       
-       <!-- Jumbotron -->
-      <div class="jumbotron">
-        <h1>EHRServer by <a href="http://www.cabolabs.com/" target="_blank">CaboLabs</a></h1>
-        <p class="lead">50% of your next EHR project is already built</p>
-        <p><a class="btn btn-lg btn-success" href="#" role="button">Get started today</a></p>
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 text-center main">
+          <h1>EHRServer by <a href="http://www.cabolabs.com/" target="_blank">CaboLabs</a></h1>
+          <h2 class="lead">50% of your next EHR project is already built</h2>
+          <p><a class="btn btn-lg btn-success" href="get_started.html" role="button">Get started today</a></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <h1 class="text-center">The open source, service-oriented, clinical 
+          data repository, compliant with the openEHR standard.</h1>
+          <div class="space"></div>
+        </div>
       </div>
 
       <div class="row">
@@ -86,11 +97,46 @@
           to solve the same problem again and again, with partial solutions.</p>
           <p>EHRServer can help you to start working on you app right away, focusing on the features you
           will offer to your clients, and reduce time to market. Install your own self-managed instance
-          of the EHRServer or use EHRServer Cloud.</p>
-          <p class="center v-air"><a class="btn btn-primary" href="#" role="button">Get Started &raquo;</a></p>
+          of the EHRServer or use EHRServer Cloud. Even if you want to develop your own CDR backend
+          later on, using EHRServer will help you create an MVP and test your idea without investing
+          on building a backend.</p>
+          
+          
+          <h4>Main features:</h4>
+          <ol>
+            <li>Web Console for simple management</li>
+            <li>Full audit access for traceability</li>
+            <li>Versioned clinical documents</li>
+            <li>Service Oriented / REST API</li>
+            <li>Supports XML and JSON formats</li>
+            <li>Query Builder from the Web Console</li>
+            <li>Supports any structure of clinical document</li>
+            <li>Multitenant</li>
+            <li>Open Source</li>
+            <li>Compliant with the openEHR standard</li>
+          </ol>
+          
+          <p class="center v-air"><a class="btn btn-primary" href="get_started.html" role="button">Get Started &raquo;</a></p>
        </div>
         <div class="col-lg-6">
-          <h3>Simple as:</h3></h3>
+          <h3>How does it work?</h3>
+          <p>The core of EHRServer is based on the openEHR specifications. Most of the capabilities
+          and features offered by the EHRServer are because of this.</p>
+          <p>The EHRServer should be fed with clinical
+          document definitions called Operational Templates, or OPT for short. The OPTs define the
+          semantics, data structures, constraints and terminology associated with each clinical document.
+          It is basically an XML with metadata.</p>
+          <p>When client apps commit clinical documents to the EHRServer,
+          the data is indexed for querying. Of course, those documents should comply with their definitions (OPT).
+          A manager will create data queries using the EHRServer Query Builder, and those queries are defined
+          using only information from the OPTs, that is all clinical concepts like Blood Pressure, Diagnosis,
+          Physical Examination, Glasgow Coma Scale, etc.</p>
+          <p>To create queries there is no need of writing any SQL or source code.
+          Once queries are saved, a client system can executed them using the REST API, pulling clincial data
+          out from the EHRServer. That's it, data in, data out, all standardized,
+          without writing a single line of code.</p>
+          
+          <h4>Simple as:</h4>
           <ol>
             <li>Create a clinical document definition</li>
             <li>Upload the definition to the EHRServer</li>
@@ -99,6 +145,9 @@
             <li>Commit some data</li>
             <li>Query and display your data</li>
           </ol>
+          
+          <p class="center v-air"><a class="btn btn-primary" href="learn.html" role="button">Continue learning &raquo;</a></p>
+          
         </div>
       </div>
       
