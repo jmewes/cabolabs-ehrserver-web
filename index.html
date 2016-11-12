@@ -24,26 +24,43 @@
   <body>
   
     <button type="button" class="btn btn-default contact">Contact us</button>
+    
+    <div class="overlay"></div>
+    <div id="contact_container">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScOKFq83T2E_0sihwn3-3k52LglWw3gvK7zNua2CX7SW-_l8w/viewform?embedded=true" width="750" height="700" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+    </div>
+
   
     <div class="container">
 
       <!-- The justified navigation menu is meant for single line per list item.
            Multiple lines will require custom code not provided by Bootstrap. -->
       <div class="masthead">
-        <h3 class="text-muted">EHRServer <span id="langs">EN | ES | PT</span></h3>
+        <h3 class="text-muted">Cloud EHRServer <sub>(beta)</sub><span id="langs"><b>EN</b> | ES | PT</span></h3>
         
         <nav>
           <ul class="nav nav-justified">
             <li class="active"><a href="#">Home</a></li>
-            <li><a href="get_started.html">Get Started</a></li>
+            <li><a href="get_started.html">Overview</a></li>
+            <li><a href="cloud.html">Pricing</a></li>
             <li><a href="learn.html">Learn</a></li>
-            <li><a href="#">Downloads</a></li>
-            <li><a href="cloud.html">Cloud <sub>(beta)</sub></a></li>
             <li><a href="#">Support</a></li>
+            <li><a href="#">Community</a></li>
           </ul>
         </nav>
       </div>
       
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 text-center main">
+          <h1>50% of your next EHR project<br/> is already built.</h1>
+          <h2 class="lead">Focus on features, not on back-end.
+          The open clinical data repository, compliant
+          with the openEHR standard. Now on the cloud.</h2>
+          <p><a class="btn btn-lg btn-success" href="get_started.html" role="button">Get started today</a></p>
+        </div>
+      </div>
+      
+      <!--
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 text-center main">
           <h1>EHRServer by <a href="http://www.cabolabs.com/" target="_blank">CaboLabs</a></h1>
@@ -58,6 +75,7 @@
           <div class="space"></div>
         </div>
       </div>
+      -->
 
       <div class="row">
         <div class="col-lg-4">
@@ -84,19 +102,27 @@
       <div class="row">
         <div class="col-lg-6">
           <h3>Why EHRServer?</h3>
-          <p>EHRServer solves a very specific challenge all clinical informations systems come across:
-          to build a clinical data repository. Clinical data is complex, heterogeneous and highly hierarchic.
-          These characteristics make it very difficult to develop repositories that:
-          1. are generic (can handle different types of data structures),
-          2. are maintainable,
-          3. are performant,
-          4. are scalable and
-          5. are integrable.</p>
-          <p>At CaboLabs, it took us years of research and development to create a solution that complies
-          with all of those requirements, to save EHR/EMR/PHR software companies time and money trying
-          to solve the same problem again and again, with partial solutions.</p>
-          <p>EHRServer can help you to start working on you app right away, focusing on the features you
-          will offer to your clients, and reduce time to market. Install your own self-managed instance
+          <p>EHRServer solves a very specific challenge all clinical information systems have to tackle:
+          to build a clinical data repository.</p>
+          <p>Clinical data is complex, heterogeneous and highly hierarchic.
+          These characteristics make it very difficult to develop repositories that are:
+          1. generic (can handle different types of data structures),
+          2. maintainable in the long term,
+          3. performant,
+          4. scalable and
+          5. integrable into different apps.</p>
+          
+          <p>At CaboLabs, it took us years of research and development, trial and error, to create a
+          solution that complies with all of those requirements.</p>
+          
+          <p>The goal of the EHRServer is to save time and money to companies that are building their          
+          EHR/EMR/PHR systems, and try to solve the same problem again and again, with custom solutions.</p>
+          
+          <p>With EHRServer your company can start working on apps right away, focusing on the
+          value and features you will offer to your customers, reducing time to market, and avoiding
+          time-wasting tasks related to solving complex problems that are already solved.</p>
+         
+          <p>Install your own self-managed instance
           of the EHRServer or use EHRServer Cloud. Even if you want to develop your own CDR backend
           later on, using EHRServer will help you create an MVP and test your idea without investing
           on building a backend.</p>
@@ -188,5 +214,14 @@
     <script src="js/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    
+    <script>
+      $(function() {
+        $( "button.contact" ).on( "click", function() {
+          $('.overlay').toggle();
+          $('#contact_container').toggle();
+        });
+      });
+    </script>
   </body>
 </html>

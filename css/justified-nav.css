@@ -54,6 +54,26 @@ button.contact {
  right: 20px;
  z-index: 1001;
 }
+#contact_container {
+  display: none;
+  z-index: 1002;
+  position: absolute;
+  top: 10%;
+  
+  /* center horizontally */
+  left: 50%;
+  margin-left: -375px; /* half of the form width */
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(0,0,0,0.5);
+  display: none;
+}
 
 /* Customize the nav-justified links to be fill the entire space of the .navbar */
 
