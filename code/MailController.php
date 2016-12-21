@@ -25,18 +25,11 @@ function send_mail()
    $email_text .= '<br/>';
    $email_text .= 'Contact Name: '. $_POST['name'] .'<br/>';
    $email_text .= 'Contact Email: '. $_POST['email'] .'<br/>';
-   $email_text .= 'Project Type<br/><ul>';
-   
-   foreach ($_POST['project_type'] as $type)
-   {
-      $email_text .= '<li>'. $type .'</li>';
-   }
-   
-   $email_text .= '</ul>';
+   $email_text .= 'Organization: '. $_POST['organization'] .'<br/>';
    $email_text .= 'Message: '. $_POST['message'];
    
    
-   $body = "<h2>Contacto desde CaboLabs.com</h2>";
+   $body = "<h2>Contacto desde CloudEHRServer.com</h2>";
    $body .= $email_text;
    
    $headers = "From: ". $_POST['email'] . " <" . $_POST['email'] . ">\r\n"; //optional headerfields
@@ -53,7 +46,7 @@ function send_mail()
    try
    {
       // bool mail ( string $to , string $subject , string $message [, string $additional_headers [, string $additional_parameters ]] )
-      if (!mail('info@cabolabs.com', 'Contacto desde CaboLabs.com', $body, $headers))
+      if (!mail('info@cloudehrserver.com', 'Contacto desde CloudEHRServer.com', $body, $headers))
       {
          log_to_file('logs/'.date("YmdHis").'.log', 'No se pudo enviar el correo: '. $email_text);
          return false;
@@ -71,6 +64,7 @@ function send_mail()
    }
 }
 
+/* TODO add check to  avoid spam
 
 // The form should come from the UI and using POST
 if ($_SERVER['REQUEST_METHOD'] != 'POST' ||
@@ -84,14 +78,6 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' ||
    exit;
 }
 
-/*
-echo "<pre>";
-
-print_r($_SERVER);
-
-print_r($_REQUEST);
-
-echo "</pre>";
 */
 
 
@@ -242,7 +228,7 @@ if (empty($_POST['g-recaptcha-response']))
 }
 
 
-$params = new RequestParameters('6LfPbvwSAAAAACRBwwj-F5UoZQh7z_6-8W3rxSm7', $_POST['g-recaptcha-response'], $_SERVER[REMOTE_ADDR], 'php_1.1.2');
+$params = new RequestParameters('6Le0-w4UAAAAACYnmQyx6ta0hUmR88JcWQhTGr0F', $_POST['g-recaptcha-response'], $_SERVER[REMOTE_ADDR], 'php_1.1.2');
 
 $SITE_VERIFY_URL = 'https://www.google.com/recaptcha/api/siteverify';
 $handle = curl_init($SITE_VERIFY_URL);
@@ -282,7 +268,7 @@ if (!$resp->isSuccess())
 
 
 // Clear nonce from SESSION after the submit to avoid second submits or page reload
-unset( $_SESSION['form_id'] );
+//unset( $_SESSION['form_id'] );
 
 if (!send_mail())
 {

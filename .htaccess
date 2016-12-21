@@ -1,0 +1,21 @@
+##  Can be commented out if causes errors, see notes above.
+Options +SymLinksIfOwnerMatch -Indexes -MultiViews 
+
+#  mod_rewrite in use
+RewriteEngine On
+
+#change to / to upload to the server
+RewriteBase /ehrserver-cloud/
+
+# Si es un directorio fisico ir a index tambien
+#RewriteCond %{REQUEST_FILENAME} -d
+
+# Si es un archivo fisico, dejarlo pasar solo si es una de las extensiones
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !^.*\.(css|jpe?g|gif|png|js|ico)$ [NC]
+
+
+
+# Todo va al punto de entrada
+#RewriteRule ^([^/.]+)$ index.php [L]
+RewriteRule (.*) index.php [L]
