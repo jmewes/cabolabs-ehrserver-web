@@ -23,15 +23,16 @@ $path = $_SERVER['REQUEST_URI'];
 $route = str_remove_prefix($path, $_base_dir);
 
 $router = array(
-  '/get_started' => 'get_started.php',
-  '/beta_partners_program' => 'beta_partners_program.php',
-  '/learn'                 => 'learn.php',
-  '/learn/glossary'        => 'learn/glossary.php',
-  '/contact'   => 'contact.php',
-  '/'          => 'home.php',
-  '/index'     => 'home.php',
-  '/home'     => 'home.php',
-  '/community' => 'community.php',
+  '/get_started'                => 'get_started.php',
+  '/beta_partners_program'      => 'beta_partners_program.php',
+  '/learn'                      => 'learn.php',
+  '/learn/glossary'             => 'learn/glossary.php',
+  '/learn/basic_rest_api_usage' => 'learn/basic_rest_api_usage.php',
+  '/contact'                    => 'contact.php',
+  '/'                           => 'home.php',
+  '/index'                      => 'home.php',
+  '/home'                       => 'home.php',
+  '/community'                  => 'community.php',
 );
 
 /*

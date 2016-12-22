@@ -11,7 +11,9 @@
      <li>Introduction to the EHRServer Web Console</li>
      <li>Working with anonymous clinical information</li>
      <li>openEHR fundamentals</li>
-     <li>Basic REST API usage</li>
+     <li>
+       <a href="<?=$_base_dir?>/learn/basic_rest_api_usage">Basic REST API usage</a>
+     </li>
      <li>
        <a href="<?=$_base_dir?>/learn/glossary">Glossary of common terms</a></li>
      <!--
