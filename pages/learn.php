@@ -10,7 +10,9 @@
     <ol>
      <li>Introduction to the EHRServer Web Console</li>
      <li>Working with anonymous clinical information</li>
-     <li>openEHR fundamentals</li>
+     <li>
+       <a href="<?=$_base_dir?>/learn/openehr_fundamentals">openEHR fundamentals</a>
+     </li>
      <li>
        <a href="<?=$_base_dir?>/learn/basic_rest_api_usage">Basic REST API usage</a>
      </li>

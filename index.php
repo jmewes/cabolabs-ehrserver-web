@@ -28,6 +28,7 @@ $router = array(
   '/learn'                      => 'learn.php',
   '/learn/glossary'             => 'learn/glossary.php',
   '/learn/basic_rest_api_usage' => 'learn/basic_rest_api_usage.php',
+  '/learn/openehr_fundamentals' => '/learn/openehr_fundamentals.php',
   '/contact'                    => 'contact.php',
   '/'                           => 'home.php',
   '/index'                      => 'home.php',
