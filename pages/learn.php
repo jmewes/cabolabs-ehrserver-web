@@ -1,6 +1,7 @@
 <div class="row">
   <div class="col-md-12">
     <h1>EHRServer Learning Center</h1>
+    <p>USeful guides and resources to help you get started on the EHRServer use and get the most out of it.</p>
   </div>
 </div>
 
@@ -8,8 +9,11 @@
   <div class="col-md-12">
     <h2>Get Started</h2>
     <ol>
-     <li>Introduction to the EHRServer Web Console</li>
-     <li>Working with anonymous clinical information</li>
+     <li>
+       <a href="<?=$_base_dir?>/learn/ehrserver_web_console">Introduction to the EHRServer Web Console</a></li>
+     <li>
+       <a href="<?=$_base_dir?>/learn/anonymous_clinical_information">Working with anonymous clinical information</a>
+     </li>
      <li>
        <a href="<?=$_base_dir?>/learn/openehr_fundamentals">openEHR fundamentals</a>
      </li>
@@ -27,6 +31,12 @@
      <li>Using the REST API</li>
      -->
     </ol>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <h2>More guides soon!</h2>
   </div>
 </div>
 

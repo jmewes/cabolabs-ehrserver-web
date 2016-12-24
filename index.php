@@ -29,6 +29,8 @@ $router = array(
   '/learn/glossary'             => 'learn/glossary.php',
   '/learn/basic_rest_api_usage' => 'learn/basic_rest_api_usage.php',
   '/learn/openehr_fundamentals' => '/learn/openehr_fundamentals.php',
+  '/learn/anonymous_clinical_information' => '/learn/anonymous_clinical_information.php',
+  '/learn/ehrserver_web_console' => '/learn/ehrserver_web_console.php',
   '/contact'                    => 'contact.php',
   '/'                           => 'home.php',
   '/index'                      => 'home.php',
@@ -90,11 +92,21 @@ echo $router[$route] .'<br/>'; // TODO: CHECK IF IT EXISTS
     <div class="container">
 
       <?php include('header.php'); ?>
-      <?php include('pages/'. $router[$route]); ?>
+      <?php
+        if (array_key_exists($route, $router) && file_exists('pages/'. $router[$route]))
+        {
+           include('pages/'. $router[$route]);
+        }
+        else
+        {
+           // 404
+           echo '<div class="row"><div class="col-md-12"><h1>Sorry, this page wasn\'t found</h1></div></div>';
+        }
+      ?>
       
       <!-- Site footer -->
       <footer class="footer">
-        <p>&copy; 2016 <a href="http://www.cabolabs.com/" target="_blank">www.CaboLabs.com</a></p>
+        <p>&copy; 2016 Powered by <a href="http://www.cabolabs.com/" target="_blank">CaboLabs</a></p>
       </footer>
     </div>
 
