@@ -2,7 +2,7 @@
   <div class="col-md-12">
     <h1>Get started</h1>
     <p>
-      Currently we are accepting sign-ups only for the 
+      Currently we are only accepting sign-ups for the 
       <a href="<?=$_base_dir?>/beta_partners_program">Beta Partners Program</a>.
       Soon we will launch our service plans for general usage.
     </p>

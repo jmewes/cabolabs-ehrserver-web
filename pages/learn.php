@@ -1,7 +1,8 @@
 <div class="row">
   <div class="col-md-12">
     <h1>EHRServer Learning Center</h1>
-    <p>USeful guides and resources to help you get started on the EHRServer use and get the most out of it.</p>
+    <p>Useful guides and resources to help you get started on the EHRServer use and
+    get the most out of it.</p>
   </div>
 </div>
 
