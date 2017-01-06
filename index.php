@@ -25,6 +25,7 @@ $route = str_remove_prefix($path, $_base_dir);
 $router = array(
   '/get_started'                => 'get_started.php',
   '/beta_partners_program'      => 'beta_partners_program.php',
+  '/beta_partners_program/complete' => 'beta_partners_program/complete_signup.php',
   '/learn'                      => 'learn.php',
   '/learn/glossary'             => 'learn/glossary.php',
   '/learn/basic_rest_api_usage' => 'learn/basic_rest_api_usage.php',
