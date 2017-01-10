@@ -15,28 +15,66 @@ function str_remove_prefix ($str, $prefix)
    return $str; // no prfix, nothing change
 }
 
+function startsWith($haystack, $needle)
+{
+   $length = strlen($needle);
+   return (substr($haystack, 0, $length) === $needle);
+}
+function endsWith($haystack, $needle)
+{
+   $length = strlen($needle);
+   if ($length == 0) {
+      return true;
+   }
+
+   return (substr($haystack, -$length) === $needle);
+}
+
 //print_r($_REQUEST);
 //print_r($_SERVER);
 
+$lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2); // es en pt
+
+echo '<script>console.log("'.$lang.'");</script>';
 
 $path = $_SERVER['REQUEST_URI'];
 $route = str_remove_prefix($path, $_base_dir);
 
 $router = array(
-  '/get_started'                => 'get_started.php',
-  '/beta_partners_program'      => 'beta_partners_program.php',
-  '/beta_partners_program/complete' => 'beta_partners_program/complete_signup.php',
-  '/learn'                      => 'learn.php',
-  '/learn/glossary'             => 'learn/glossary.php',
-  '/learn/basic_rest_api_usage' => 'learn/basic_rest_api_usage.php',
-  '/learn/openehr_fundamentals' => '/learn/openehr_fundamentals.php',
-  '/learn/anonymous_clinical_information' => '/learn/anonymous_clinical_information.php',
-  '/learn/ehrserver_web_console' => '/learn/ehrserver_web_console.php',
-  '/contact'                    => 'contact.php',
-  '/'                           => 'home.php',
-  '/index'                      => 'home.php',
-  '/home'                       => 'home.php',
-  '/community'                  => 'community.php',
+   'en' =>
+     array(
+       '/get_started'                => 'get_started.php',
+       '/beta_partners_program'      => 'beta_partners_program.php',
+       '/beta_partners_program/complete' => 'beta_partners_program/complete_signup.php',
+       '/learn'                      => 'learn.php',
+       '/learn/glossary'             => 'learn/glossary.php',
+       '/learn/basic_rest_api_usage' => 'learn/basic_rest_api_usage.php',
+       '/learn/openehr_fundamentals' => '/learn/openehr_fundamentals.php',
+       '/learn/anonymous_clinical_information' => '/learn/anonymous_clinical_information.php',
+       '/learn/ehrserver_web_console' => '/learn/ehrserver_web_console.php',
+       '/contact'                    => 'contact.php',
+       '/'                           => 'home.php',
+       '/index'                      => 'home.php',
+       '/home'                       => 'home.php',
+       '/community'                  => 'community.php'
+     ),
+  'es' =>
+     array(
+       '/get_started'                => 'get_started.php',
+       '/beta_partners_program'      => 'beta_partners_program.php',
+       '/beta_partners_program/complete' => 'beta_partners_program/complete_signup.php',
+       '/learn'                      => 'learn.php',
+       '/learn/glossary'             => 'learn/glossary.php',
+       '/learn/basic_rest_api_usage' => 'learn/basic_rest_api_usage.php',
+       '/learn/openehr_fundamentals' => '/learn/openehr_fundamentals.php',
+       '/learn/anonymous_clinical_information' => '/learn/anonymous_clinical_information.php',
+       '/learn/ehrserver_web_console' => '/learn/ehrserver_web_console.php',
+       '/contact'                    => 'contact.php',
+       '/'                           => 'home.php',
+       '/index'                      => 'home.php',
+       '/home'                       => 'home.php',
+       '/community'                  => 'community.php'
+     )
 );
 
 /*
@@ -46,7 +84,7 @@ echo $route .'<br/>'; // /beta_partners_program
 echo $router[$route] .'<br/>'; // TODO: CHECK IF IT EXISTS
 */
 ?><!DOCTYPE html>
-<html lang="en">
+<html lang="<?=$lang?>">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -113,14 +151,20 @@ echo $router[$route] .'<br/>'; // TODO: CHECK IF IT EXISTS
       <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScOKFq83T2E_0sihwn3-3k52LglWw3gvK7zNua2CX7SW-_l8w/viewform?embedded=true" width="750" height="700" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
     </div>
     -->
+    <?php // set default lang if not supported
+    if (!in_array($lang, array('en','es')))
+    {
+       $lang = 'en';
+    }
+    ?>
   
     <div class="container">
 
-      <?php include('header.php'); ?>
+      <?php include('pages_'. $lang .'/'.'header.php'); ?>
       <?php
-        if (array_key_exists($route, $router) && file_exists('pages/'. $router[$route]))
+        if (array_key_exists($route, $router[$lang]) && file_exists('pages_'. $lang .'/'. $router[$lang][$route]))
         {
-           include('pages/'. $router[$route]);
+           include('pages_'. $lang .'/'. $router[$lang][$route]);
         }
         else
         {

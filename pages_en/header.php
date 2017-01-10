@@ -1,19 +1,3 @@
-<?php
-function startsWith($haystack, $needle)
-{
-   $length = strlen($needle);
-   return (substr($haystack, 0, $length) === $needle);
-}
-function endsWith($haystack, $needle)
-{
-   $length = strlen($needle);
-   if ($length == 0) {
-      return true;
-   }
-
-   return (substr($haystack, -$length) === $needle);
-}
-?>
 <div class="masthead">
   <h3 class="text-muted">
     <a href="<?=$_base_dir?>/index">Cloud EHRServer <sub>(beta)</sub></a>
