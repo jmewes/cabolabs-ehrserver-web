@@ -52,6 +52,7 @@ $router = array(
        '/learn/openehr_fundamentals' => '/learn/openehr_fundamentals.php',
        '/learn/anonymous_clinical_information' => '/learn/anonymous_clinical_information.php',
        '/learn/ehrserver_web_console' => '/learn/ehrserver_web_console.php',
+       '/learn/using_staging'        => '/learn/using_staging.php',
        '/contact'                    => 'contact.php',
        '/'                           => 'home.php',
        '/index'                      => 'home.php',
@@ -69,6 +70,7 @@ $router = array(
        '/learn/openehr_fundamentals' => '/learn/openehr_fundamentals.php',
        '/learn/anonymous_clinical_information' => '/learn/anonymous_clinical_information.php',
        '/learn/ehrserver_web_console' => '/learn/ehrserver_web_console.php',
+       '/learn/using_staging'        => '/learn/using_staging.php',
        '/contact'                    => 'contact.php',
        '/'                           => 'home.php',
        '/index'                      => 'home.php',
@@ -154,7 +156,7 @@ echo $router[$route] .'<br/>'; // TODO: CHECK IF IT EXISTS
     <?php // set default lang if not supported
     if (!in_array($lang, array('en','es')))
     {
-       $lang = 'en';
+      $lang = 'en';
     }
     ?>
   
@@ -164,12 +166,12 @@ echo $router[$route] .'<br/>'; // TODO: CHECK IF IT EXISTS
       <?php
         if (array_key_exists($route, $router[$lang]) && file_exists('pages_'. $lang .'/'. $router[$lang][$route]))
         {
-           include('pages_'. $lang .'/'. $router[$lang][$route]);
+          include('pages_'. $lang .'/'. $router[$lang][$route]);
         }
         else
         {
-           // 404
-           echo '<div class="row"><div class="col-md-12"><h1>Sorry, this page wasn\'t found</h1></div></div>';
+          // 404
+          echo '<div class="row"><div class="col-md-12"><h1>Sorry, this page wasn\'t found</h1></div></div>';
         }
       ?>
       
