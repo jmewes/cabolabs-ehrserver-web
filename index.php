@@ -2,8 +2,9 @@
 session_start();
 
 $_base_dir = substr($_SERVER['SCRIPT_NAME'], 0, strrpos($_SERVER['SCRIPT_NAME'], '/'));
-$_req_url = parse_url($_SERVER['REQUEST_URI']);
-$lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2); //en, es, pt, ...
+$_req_url = parse_url($_SERVER['REQUEST_URI']); // path, query
+$_supported_langs = array('en','es');
+$_default_lang = $_supported_langs[0];
 
 function str_remove_prefix ($str, $prefix)
 {
@@ -30,14 +31,39 @@ function endsWith($haystack, $needle)
    return (substr($haystack, -$length) === $needle);
 }
 
-//print_r($_REQUEST);
-//print_r($_SERVER);
+/*
+print_r($_REQUEST);
+print_r($_SERVER);
+print_r($_req_url);
+*/
 
-$lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2); // es en pt
+// lang
+// if not lang, get from the request, 1st access, set that as lang
+// else if there is lang on session but comes the lang param on the request, change lang
+if (!array_key_exists('lang', $_SESSION))
+{
+   $lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2); // es en pt
+   if (!in_array($lang, $_supported_langs))
+   {
+      $lang = $_default_lang;
+   }
+   $_SESSION['lang'] = $lang;
+}
+if (array_key_exists('lang', $_REQUEST))
+{
+   $lang = $_REQUEST['lang'];
+   if (!in_array($lang, $_supported_langs))
+   {
+      $lang = $_default_lang;
+   }
+   $_SESSION['lang'] = $lang;
+}
 
-echo '<script>console.log("'.$lang.'");</script>';
+echo '<script>console.log("'.$_SESSION['lang'].'");</script>';
 
-$path = $_SERVER['REQUEST_URI'];
+
+// routing
+$path = $_req_url['path']; // url path without query string
 $route = str_remove_prefix($path, $_base_dir);
 
 $router = array(
@@ -47,24 +73,30 @@ $router = array(
        '/beta_partners_program'      => 'beta_partners_program.php',
        '/beta_partners_program/complete' => 'beta_partners_program/complete_signup.php',
        '/learn'                      => 'learn.php',
+       '/learn/try_it'               => 'learn/test_ehrserver.php',
        '/learn/glossary'             => 'learn/glossary.php',
        '/learn/basic_rest_api_usage' => 'learn/basic_rest_api_usage.php',
        '/learn/openehr_fundamentals' => '/learn/openehr_fundamentals.php',
        '/learn/anonymous_clinical_information' => '/learn/anonymous_clinical_information.php',
        '/learn/ehrserver_web_console' => '/learn/ehrserver_web_console.php',
        '/learn/using_staging'        => '/learn/using_staging.php',
+       '/learn/data_commit'          => '/learn/data_commit.php',
+       '/learn/use_case_shared_health_recods' => '/learn/use_case_shared_health_recods.php',
+       '/learn/use_case_clinical_decision_support' => '/learn/use_case_clinical_decision_support.php',
+       '/learn/use_case_monitoring_and_wearables' => '/learn/use_case_monitoring_and_wearables.php',
        '/contact'                    => 'contact.php',
        '/'                           => 'home.php',
        '/index'                      => 'home.php',
        '/home'                       => 'home.php',
        '/community'                  => 'community.php'
      ),
-  'es' =>
+  'es' => // TODO: rename to spanish routes
      array(
        '/get_started'                => 'get_started.php',
        '/beta_partners_program'      => 'beta_partners_program.php',
        '/beta_partners_program/complete' => 'beta_partners_program/complete_signup.php',
        '/learn'                      => 'learn.php',
+       '/learn/try_it'               => 'learn/test_ehrserver.php', // TODO
        '/learn/glossary'             => 'learn/glossary.php',
        '/learn/basic_rest_api_usage' => 'learn/basic_rest_api_usage.php',
        '/learn/openehr_fundamentals' => '/learn/openehr_fundamentals.php',
@@ -79,19 +111,26 @@ $router = array(
      )
 );
 
+// TODO: create mappings between routes in different languages to allow changing the lang
+//       and stay on the same page instead of redirecting to home. To do the redirect,
+//       a parse url should be done on the referer.
+
 /*
 echo $path .'<br/>'; // /ehrserver-cloud/beta_partners_program
-echo $_base_dir .'<br/>';              // /ehrserver-cloud
+echo $_base_dir .'<br/>'; // /ehrserver-cloud
 echo $route .'<br/>'; // /beta_partners_program
 echo $router[$route] .'<br/>'; // TODO: CHECK IF IT EXISTS
 */
 ?><!DOCTYPE html>
-<html lang="<?=$lang?>">
+<html lang="<?=$_SESSION['lang']?>">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Cloud EHRServer, the open source, generic clinical data repository, with a powerful REST API, compliant with the openEHR standard">
+    <meta name="keywords" content="cloud,ehrserver,cabolabs,clinical data repository,clinical database,openehr,rest api,archetypes,templates,foss,open source">
+    <meta name="author" content="Pablo Pazos Gutierrez">
     <title>EHRServer by CaboLabs</title>
     
     <script>
@@ -153,26 +192,22 @@ echo $router[$route] .'<br/>'; // TODO: CHECK IF IT EXISTS
       <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScOKFq83T2E_0sihwn3-3k52LglWw3gvK7zNua2CX7SW-_l8w/viewform?embedded=true" width="750" height="700" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
     </div>
     -->
-    <?php // set default lang if not supported
-    if (!in_array($lang, array('en','es')))
-    {
-      $lang = 'en';
-    }
-    ?>
-  
+
     <div class="container">
 
-      <?php include('pages_'. $lang .'/'.'header.php'); ?>
+      <?php include('pages_'. $_SESSION['lang'] .'/'.'header.php'); ?>
       <?php
-        if (array_key_exists($route, $router[$lang]) && file_exists('pages_'. $lang .'/'. $router[$lang][$route]))
+        if (array_key_exists($route, $router[$_SESSION['lang']]) && file_exists('pages_'. $_SESSION['lang'] .'/'. $router[$_SESSION['lang']][$route]))
         {
-          include('pages_'. $lang .'/'. $router[$lang][$route]);
+          include('pages_'. $_SESSION['lang'] .'/'. $router[$_SESSION['lang']][$route]);
         }
         else
         {
           // 404
           echo '<div class="row"><div class="col-md-12"><h1>Sorry, this page wasn\'t found</h1></div></div>';
         }
+        
+        echo '<script>console.log("'.$route.'");</script>';
       ?>
       
       <!-- Site footer -->

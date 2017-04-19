@@ -80,7 +80,7 @@
     </ul>
     <p>
       To start using the EHRServer, you need to create some EHRs. No demographic data is stored in the EHRServer,
-      so all the data is anonymized. To create an EHR an external patient id is needed, so you can link your
+      so all the data is anonymized (<a href="<?=$_base_dir?>/learn/anonymous_clinical_information">Why?</a>). To create an EHR an external patient id is needed, so you can link your
       patients (managed on an external system) with the EHRs stored in the EHRServer.
       Then you need to add some clinical document definitions or Templates. There will be some templates loaded
       for you to use, and you can add more. This 

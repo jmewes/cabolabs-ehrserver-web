@@ -27,6 +27,10 @@
      <li>
        <a href="<?=$_base_dir?>/learn/using_staging">Using the EHRServer staging server</a>
      </li>
+     <li>
+       <a href="<?=$_base_dir?>/learn/data_commit">Data Commit Guide</a>
+     </li>
+     <!--
      <!--
      <li>Download or Clone</li>
      <li>Install and Configuration</li>
