@@ -1,7 +1,85 @@
+<style type="text/css">
+/*Vertical Sliding*/
+h1 div {
+   display: inline;
+}
+h1 div#main_text_2 {
+   margin-left: 2.215em;
+}
+.slidingVertical{
+	display: inline;
+	/*text-indent: 8px;*/
+}
+.slidingVertical span{
+	animation: topToBottom 10.0s linear infinite 0s;
+	-ms-animation: topToBottom 10.0s linear infinite 0s;
+	-webkit-animation: topToBottom 10.0s linear infinite 0s;
+	color: #00abe9;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+}
+.slidingVertical span:nth-child(2){
+	animation-delay: 2.5s;
+	-ms-animation-delay: 2.5s;
+	-webkit-animation-delay: 2.5s;
+}
+.slidingVertical span:nth-child(3){
+	animation-delay: 5s;
+	-ms-animation-delay: 5s;
+	-webkit-animation-delay: 5s;
+}
+.slidingVertical span:nth-child(4){
+	animation-delay: 7.5s;
+	-ms-animation-delay: 7.5s;
+	-webkit-animation-delay: 7.5s;
+}
+
+
+/*topToBottom Animation*/
+@-moz-keyframes topToBottom{
+	0% { opacity: 0; }
+	5% { opacity: 0; -moz-transform: translateY(-50px); }
+	10% { opacity: 1; -moz-transform: translateY(0px); }
+	25% { opacity: 1; -moz-transform: translateY(0px); }
+	30% { opacity: 0; -moz-transform: translateY(50px); }
+	80% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@-webkit-keyframes topToBottom{
+	0% { opacity: 0; }
+	5% { opacity: 0; -webkit-transform: translateY(-50px); }
+	10% { opacity: 1; -webkit-transform: translateY(0px); }
+	25% { opacity: 1; -webkit-transform: translateY(0px); }
+	30% { opacity: 0; -webkit-transform: translateY(50px); }
+	80% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@-ms-keyframes topToBottom{
+	0% { opacity: 0; }
+	5% { opacity: 0; -ms-transform: translateY(-50px); }
+	10% { opacity: 1; -ms-transform: translateY(0px); }
+	25% { opacity: 1; -ms-transform: translateY(0px); }
+	30% { opacity: 0; -ms-transform: translateY(50px); }
+	80% { opacity: 0; }
+	100% { opacity: 0; }
+}
+</style>
+
 <div class="row">
   <div class="col-lg-8 col-lg-offset-2 text-center main">
     <img src="<?=$_base_dir?>/images/CloudEHRServer_white_72_square.png" />
-    <h1>50% of your next EHR project<br/> is already built.</h1>
+    <h1>
+    <div id="main_text_1">50% of your next</div>
+    <div class="slidingVertical">
+      <span>EHR</span>
+      <span>EMR</span>
+      <span>PHR</span>
+      <span>App</span>
+    </div>
+    <div id="main_text_2">project</div>
+    <br/>
+    <div id="main_text_3">is already built.</div></h1>
     <h2 class="lead">Focus on features, deliver faster.
     EHRServer the open source clinical data repository,
     compliant with the openEHR standard. Now on the cloud.</h2>

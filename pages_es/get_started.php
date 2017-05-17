@@ -1,47 +1,48 @@
 <div class="row">
   <div class="col-md-12">
-    <h1>Get started</h1>
+    <h1>Comienza</h1>
     <p>
-      Currently we are only accepting sign-ups for the 
-      <a href="<?=$_base_dir?>/beta_partners_program">Beta Partners Program</a>.
-      Soon we will launch our service plans for general usage.
+      Actualmente sólo estamos aceptando usuarios que sean parte del
+      <a href="<?=$_base_dir?>/programa_beta_partners">Programa de Beta Partners</a>.
+      Pronto lanzaremos los planes para uso general.
     </p>
   </div>
 </div>
 <div class="row">
   <div class="col-md-12">
-    <h2>Enrollment process</h2>
+    <h2>Proceso de registro</h2>
     <p>
-      To sign-up just send us a
-      <a href="<?=$_base_dir?>/contact">message</a> and we will contact you.
-      After you sign up, we will send you information to confirm your
-      account and start using the Cloud EHRServer. 
+      Para usar CloudEHRServer, envíanos un <a href="<?=$_base_dir?>/contacto">mensaje</a>
+      y te contactaremos con istrucciones. Luego de la confirmación de tu registro, te enviaremos
+      toda la información necesaria para comenzar a usar el CloudEHRServer!
+      Quienes se registren en nuestro
+      <a href="<?=$_base_dir?>/programa_beta_partners">Programa de  Beta Partners</a>
+      tendrán acceso al servidor de producción.
     </p>
   </div>
 </div>
 <div class="row">
   <div class="col-md-12">
-    <h2>Trying out Cloud EHRServer</h2>
+    <h2>Probando el CloudEHRServer</h2>
     <p>
-      We have two staging servers that we use for testing and demos, that are
-      publicly accessible. You can create a test account directly on those servers.
-      Consider that those are small servers, with that we mean that are really sloooow,
-      and might not have the latest version of the EHRServer installed, but we try
-      to keep them up to date. Also the service might not be available 100% of the time.
+      Contamos con dos servidores de pruebas, utilizados para testing y demos. Estos son
+      accesibles por el público en general. Puedes crear una cuenta de usuario directamente
+      en estos servidores. Solo considera que son servidores pequeños y un poco lentos.
+      Puede ser que no estén disponibles temporalmente. En ese caso, intenta acceder,
+      espera unos momentos y vuelve a intentar.
       <ul>
-        <li>Staging 1: <a href="https://cabolabs-ehrserver.rhcloud.com/" target="_blank">cabolabs-ehrserver.rhcloud.com</a></li>
-        <li>Staging 2: <a href="https://ehrserver-cabolabs2.rhcloud.com/login/auth" target="_blank">ehrserver-cabolabs2.rhcloud.com</a></li>
+        <li>Servidor 1: <a href="https://cabolabs-ehrserver.rhcloud.com/" target="_blank">cabolabs-ehrserver.rhcloud.com</a> (versión antigua)</li>
+        <li>Servidor 2: <a href="https://ehrserver-cabolabs2.rhcloud.com/login/auth" target="_blank">ehrserver-cabolabs2.rhcloud.com (última versión)</a></li>
       </ul>
     </p>
   </div>
 </div>
 <div class="row">
   <div class="col-md-12">
-    <h2>Usage and Management</h2>
+    <h2>Uso y Administración</h2>
     <p>
-      In our <a href="<?=$_base_dir?>/learn">Learn</a> section you will find documentation and guides that will help you
-      in the process of understanding how the EHRServer woks and how to get the most
-      out of it.
+      En la sección de <a href="<?=$_base_dir?>/aprende">aprendizaje</a> podrás encontrar documentos y guías que
+      te ayudarán en el proceso de entender cómo funciona el EHRServer y cómo sacarle provecho.
     </p>
   </div>
 </div>

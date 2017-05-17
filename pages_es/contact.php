@@ -119,7 +119,7 @@
 
       <div class="row">
         <div class="col-md-12">
-          <h1>Contact us</h1>
+          <h1>Contáctanos</h1>
         </div>
       </div>
       
@@ -127,22 +127,22 @@
         <div class="col-md-12">
          <form id="contact" action="<?=$_base_dir?>/code/MailController.php" method="post">
           <fieldset>
-            <input placeholder="Your name" type="text" name="name" tabindex="1" required autofocus>
+            <input placeholder="Tu nombre" type="text" name="name" tabindex="1" required autofocus>
           </fieldset>
           <fieldset>
-            <input placeholder="Your Email Address" type="email" name="email" tabindex="2" required>
+            <input placeholder="Correo electronico" type="email" name="email" tabindex="2" required>
           </fieldset>
           <fieldset>
-            <input placeholder="Your company / organization" type="text" name="organization"" tabindex="3" required>
+            <input placeholder="Empresa u Organizacion" type="text" name="organization"" tabindex="3" required>
           </fieldset>
           <fieldset>
-            <textarea placeholder="Type your message here...." tabindex="4" name="message" required></textarea>
+            <textarea placeholder="Mensaje ..." tabindex="4" name="message" required></textarea>
           </fieldset>
           <fieldset>
             <div class="g-recaptcha" data-sitekey="6Le0-w4UAAAAAL1mG-q-4sAq0GYKZPUCBODB5NdV"></div>
           </fieldset>
           <fieldset>
-            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending" tabindex="5">Send!</button>
+            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending" tabindex="5">Envía!</button>
           </fieldset>
          </form>
        </div>

@@ -1,11 +1,14 @@
 <?php
 session_start();
 
+date_default_timezone_set('America/Montevideo');
+
 $_base_dir = substr($_SERVER['SCRIPT_NAME'], 0, strrpos($_SERVER['SCRIPT_NAME'], '/'));
 $_req_url = parse_url($_SERVER['REQUEST_URI']); // path, query
 $_supported_langs = array('en','es');
 $_default_lang = $_supported_langs[0];
 
+// lib
 function str_remove_prefix ($str, $prefix)
 {
    if (substr($str, 0, strlen($prefix)) == $prefix)
@@ -21,6 +24,7 @@ function startsWith($haystack, $needle)
    $length = strlen($needle);
    return (substr($haystack, 0, $length) === $needle);
 }
+
 function endsWith($haystack, $needle)
 {
    $length = strlen($needle);
@@ -30,6 +34,14 @@ function endsWith($haystack, $needle)
 
    return (substr($haystack, -$length) === $needle);
 }
+
+function a($body, $path)
+{
+   global $_base_dir;
+   if ($path[0] != '/') $path = '/'. $path;
+   return '<a href="'. $_base_dir . $path .'">'. $body .'</a>';
+}
+
 
 /*
 print_r($_REQUEST);
@@ -69,51 +81,210 @@ $route = str_remove_prefix($path, $_base_dir);
 $router = array(
    'en' =>
      array(
-       '/get_started'                => 'get_started.php',
-       '/beta_partners_program'      => 'beta_partners_program.php',
+       '/get_started'                 => 'get_started.php',
+       '/beta_partners_program'       => 'beta_partners_program.php',
        '/beta_partners_program/complete' => 'beta_partners_program/complete_signup.php',
-       '/learn'                      => 'learn.php',
-       '/learn/try_it'               => 'learn/test_ehrserver.php',
-       '/learn/glossary'             => 'learn/glossary.php',
-       '/learn/basic_rest_api_usage' => 'learn/basic_rest_api_usage.php',
-       '/learn/openehr_fundamentals' => '/learn/openehr_fundamentals.php',
+       '/learn'                       => 'learn.php',
+       '/learn/try_it'                => 'learn/test_ehrserver.php',
+       '/learn/glossary'              => 'learn/glossary.php',
+       '/learn/basic_rest_api_usage'  => 'learn/basic_rest_api_usage.php',
+       '/learn/openehr_fundamentals'  => '/learn/openehr_fundamentals.php',
        '/learn/anonymous_clinical_information' => '/learn/anonymous_clinical_information.php',
        '/learn/ehrserver_web_console' => '/learn/ehrserver_web_console.php',
-       '/learn/using_staging'        => '/learn/using_staging.php',
-       '/learn/data_commit'          => '/learn/data_commit.php',
-       '/learn/use_case_shared_health_recods' => '/learn/use_case_shared_health_recods.php',
+       '/learn/using_staging'         => '/learn/using_staging.php',
+       '/learn/data_commit'           => '/learn/data_commit.php',
+       '/learn/use_case_shared_health_recods'      => '/learn/use_case_shared_health_recods.php',
        '/learn/use_case_clinical_decision_support' => '/learn/use_case_clinical_decision_support.php',
-       '/learn/use_case_monitoring_and_wearables' => '/learn/use_case_monitoring_and_wearables.php',
-       '/contact'                    => 'contact.php',
-       '/'                           => 'home.php',
-       '/index'                      => 'home.php',
-       '/home'                       => 'home.php',
-       '/community'                  => 'community.php'
+       '/learn/use_case_monitoring_and_wearables'  => '/learn/use_case_monitoring_and_wearables.php',
+       '/learn/use_case_health_and_wellness_apps'  => '/learn/use_case_health_and_wellness_apps.php',
+       '/learn/use_case_backup_and_query_database' => '/learn/use_case_backup_and_query_database.php',
+       '/learn/use_case_fast_prototyping_poc'      => '/learn/use_case_fast_prototyping_poc.php',
+       '/contact'                     => 'contact.php',
+       '/'                            => 'home.php',
+       '/index'                       => 'home.php',
+       '/home'                        => 'home.php',
+       '/community'                   => 'community.php'
      ),
   'es' => // TODO: rename to spanish routes
      array(
-       '/get_started'                => 'get_started.php',
-       '/beta_partners_program'      => 'beta_partners_program.php',
-       '/beta_partners_program/complete' => 'beta_partners_program/complete_signup.php',
-       '/learn'                      => 'learn.php',
-       '/learn/try_it'               => 'learn/test_ehrserver.php', // TODO
-       '/learn/glossary'             => 'learn/glossary.php',
-       '/learn/basic_rest_api_usage' => 'learn/basic_rest_api_usage.php',
-       '/learn/openehr_fundamentals' => '/learn/openehr_fundamentals.php',
-       '/learn/anonymous_clinical_information' => '/learn/anonymous_clinical_information.php',
-       '/learn/ehrserver_web_console' => '/learn/ehrserver_web_console.php',
-       '/learn/using_staging'        => '/learn/using_staging.php',
-       '/contact'                    => 'contact.php',
+       '/comienza'                     => 'get_started.php',
+       '/programa_beta_partners'       => 'beta_partners_program.php',
+       '/programa_beta_partners/completa' => 'beta_partners_program/complete_signup.php',
+       '/aprende'                      => 'learn.php',
+       '/aprende/try_it'               => 'learn/test_ehrserver.php', // TODO
+       '/aprende/glossary'             => 'learn/glossary.php',
+       '/aprende/basic_rest_api_usage'               => 'learn/basic_rest_api_usage.php',
+       '/aprende/openehr_fundamentals'               => '/learn/openehr_fundamentals.php',
+       '/aprende/anonymous_clinical_information'     => '/learn/anonymous_clinical_information.php',
+       '/aprende/ehrserver_web_console'              => '/learn/ehrserver_web_console.php',
+       '/aprende/using_staging'                      => '/learn/using_staging.php',
+       '/aprende/data_commit'                        => '/learn/data_commit.php',
+       '/aprende/use_case_shared_health_recods'      => '/learn/use_case_shared_health_recods.php',
+       '/aprende/use_case_clinical_decision_support' => '/learn/use_case_clinical_decision_support.php',
+       '/aprende/use_case_monitoring_and_wearables'  => '/learn/use_case_monitoring_and_wearables.php',
+       '/aprende/use_case_health_and_wellness_apps'  => '/learn/use_case_health_and_wellness_apps.php',
+       '/aprende/use_case_backup_and_query_database' => '/learn/use_case_backup_and_query_database.php',
+       '/aprende/use_case_fast_prototyping_poc'      => '/learn/use_case_fast_prototyping_poc.php',
+       '/contacto'                   => 'contact.php',
        '/'                           => 'home.php',
        '/index'                      => 'home.php',
-       '/home'                       => 'home.php',
-       '/community'                  => 'community.php'
+       '/inicio'                     => 'home.php',
+       '/comunidad'                  => 'community.php'
      )
 );
 
 // TODO: create mappings between routes in different languages to allow changing the lang
 //       and stay on the same page instead of redirecting to home. To do the redirect,
 //       a parse url should be done on the referer.
+
+/* current lang => current route => other lang => other route */
+
+$router_maps = array(
+
+  'en' => array(
+    '/get_started' => array(
+      'es' => '/comienza' 
+    ),
+    '/beta_partners_program' => array(
+      'es' => '/programa_beta_partners' 
+    ),
+    '/beta_partners_program/complete' => array(
+      'es' => '/programa_beta_partners/completa' 
+    ),
+    '/learn' => array(
+      'es' => '/aprende' 
+    ),
+    '/learn/try_it' => array(
+      'es' => '/aprende/try_it' 
+    ),
+    '/learn/glossary' => array(
+      'es' => '/aprende/glossary' 
+    ),
+    '/learn/basic_rest_api_usage' => array(
+      'es' => '/aprende/basic_rest_api_usage' 
+    ),
+    '/learn/openehr_fundamentals' => array(
+      'es' => '/aprende/openehr_fundamentals' 
+    ),
+    '/learn/anonymous_clinical_information' => array(
+      'es' => '/aprende/anonymous_clinical_information' 
+    ),
+    '/learn/ehrserver_web_console' => array(
+      'es' => '/aprende/ehrserver_web_console' 
+    ),
+    '/learn/using_staging' => array(
+      'es' => '/aprende/using_staging' 
+    ),
+    '/learn/data_commit' => array(
+      'es' => '/aprende/data_commit' 
+    ),
+    '/learn/use_case_shared_health_recods' => array(
+      'es' => '/aprende/use_case_shared_health_recods' 
+    ),
+    '/learn/use_case_clinical_decision_support' => array(
+      'es' => '/aprende/use_case_clinical_decision_support' 
+    ),
+    '/learn/use_case_monitoring_and_wearables' => array(
+      'es' => '/aprende/use_case_monitoring_and_wearables' 
+    ),
+    '/learn/use_case_health_and_wellness_apps' => array(
+      'es' => '/aprende/use_case_health_and_wellness_apps' 
+    ),
+    '/learn/use_case_backup_and_query_database' => array(
+      'es' => '/aprende/use_case_backup_and_query_database' 
+    ),
+    '/learn/use_case_fast_prototyping_poc' => array(
+      'es' => '/aprende/use_case_fast_prototyping_poc' 
+    ),
+    '/contact' => array(
+      'es' => '/contacto' 
+    ),
+    '/' => array(
+      'es' => '/' 
+    ),
+    '/index' => array(
+      'es' => '/' 
+    ),
+    '/home' => array(
+      'es' => '/inicio' 
+    ),
+    '/community' => array(
+      'es' => '/comunidad' 
+    ),
+  ),
+  'es' => array(
+    '/comienza' => array(
+      'en' => '/get_started' 
+    ),
+    '/programa_beta_partners' => array(
+      'en' => '/beta_partners_program' 
+    ),
+    '/programa_beta_partners/completa' => array(
+      'en' => '/beta_partners_program/complete' 
+    ),
+    '/aprende' => array(
+      'en' => '/learn' 
+    ),
+    '/aprende/try_it' => array(
+      'en' => 'learn/try_it'
+    ),
+    '/aprende/glossary' => array(
+      'en' => 'learn/glossary'
+    ),
+    '/aprende/basic_rest_api_usage' => array(
+      'en' => 'learn/basic_rest_api_usage'
+    ),
+    '/aprende/openehr_fundamentals' => array(
+      'en' => '/learn/openehr_fundamentals'
+    ),
+    '/aprende/anonymous_clinical_information' => array(
+      'en' => '/learn/anonymous_clinical_information'
+    ),
+    '/aprende/ehrserver_web_console' => array(
+      'en' => '/learn/ehrserver_web_console'
+    ),
+    '/aprende/using_staging' => array(
+      'en' => '/learn/using_staging'
+    ),
+    '/aprende/data_commit' => array(
+      'en' => '/learn/data_commit'
+    ),
+    '/aprende/use_case_shared_health_recods' => array(
+      'en' => '/learn/use_case_shared_health_recods'
+    ),
+    '/aprende/use_case_clinical_decision_support' => array(
+      'en' => '/learn/use_case_clinical_decision_support'
+    ),
+    '/aprende/use_case_monitoring_and_wearables' => array(
+      'en' => '/learn/use_case_monitoring_and_wearables'
+    ),
+    '/aprende/use_case_health_and_wellness_apps' => array(
+      'en' => '/learn/use_case_health_and_wellness_apps'
+    ),
+    '/aprende/use_case_backup_and_query_database' => array(
+      'en' => '/learn/use_case_backup_and_query_database'
+    ),
+    '/aprende/use_case_fast_prototyping_poc' => array(
+      'en' => '/learn/use_case_fast_prototyping_poc'
+    ),
+    '/contacto' => array(
+      'en' => '/contact' 
+    ),
+    '/' => array(
+      'en' => '/' 
+    ),
+    '/index' => array(
+      'en' => '/' 
+    ),
+    '/inicio' => array(
+      'en' => '/' 
+    ),
+    '/comunidad' => array(
+      'en' => '/community' 
+    ),
+  )
+);
+
 
 /*
 echo $path .'<br/>'; // /ehrserver-cloud/beta_partners_program
@@ -212,7 +383,7 @@ echo $router[$route] .'<br/>'; // TODO: CHECK IF IT EXISTS
       
       <!-- Site footer -->
       <footer class="footer">
-        <p>&copy; 2016 Powered by <a href="http://www.cabolabs.com/" target="_blank">CaboLabs</a></p>
+        <p>&copy; <?=date("Y")?> Powered by <a href="http://www.cabolabs.com/" target="_blank">CaboLabs</a></p>
       </footer>
     </div>
 

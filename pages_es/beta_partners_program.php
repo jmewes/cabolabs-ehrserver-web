@@ -1,64 +1,75 @@
 <div class="row">
   <div class="col-md-12">
-    <h1>Beta Partners Program</h1>
-    <p>Join as a Beta Partner, become an expert, gain a competitive advantage, 
-    create awesome clinical apps, help us grow.</p>
+    <h1>Programa de Beta Partners</h1>
+    <p>
+      Únete al programa, hazte un experto, obtiene ventaja competitiva,
+      crea aplicaciones clínicas geniales, y crece con nosotros.
+    </p>
   </div>
 </div>
 
 <div class="row">
   <div class="col-md-12">
     <h2>Why join as a Beta Partner?</h2>
-    <p>We want to empower a small group of companies to become experts on the use and management of the EHRServer.
-    Collaborating with them during the initial phases of evaluating, testing and prototyping using our services.</p>
-    <p>To get the best out of the EHRServer, some openEHR knowledge is needed and it can take some time to understand
-    the basics. Also to fully understand the EHRServer management, some insights about the internal design are helpful.
-    During the Beta Partners Program we will transfer all that knowledge to you, in a fraction of the time that it
-    can take to learn from the specs.</p>
+    <p>
+      Queremos empoderar a un pequeño grupo de desarrolladores y fábricas de software para volverse
+      expertos en el EHRServer, colaborando con ellos mientras lo evalúan, y lo usan para construir
+      prototipos y pruebas de concepto.
+    </p>
+    <p>
+      Para obtener lo mejor del EHRServer, conocimiento básico del estándar openEHR es necesario, y
+      conocer las funcionalidades y la interfaz de administración del EHRServer también es necesario.
+      Durante el programa de Beta Partners, te proveeremos de todo el conocimiento y apoyo que necesitas,
+      en una fracción del tiempo.
+    </p>
   </div>
 </div>
 
 <div class="row">
   <div class="col-md-12">
-    <h2>What do you get?</h2>
+    <h2>¿Qué obtienes?</h2>
     <ul>
-      <li>Access to the Beta Partners Events (demos, tutorials, Q&amp;A sessions, etc)</li>
-      <li>Early access to new releases, documentation and other resources</li>
-      <li>Direct access to the core team (email, skype/hangouts)</li>
-      <li>Your company logo and profile on our Beta Partners page</li>
-      <li>Participation on feedback and feature request meetings (yes, you can shape the future of the EHRServer)</li>
-      <li>Receive the Beta Partners Newsletter with exclusive information about the EHRServer and related services</li>
-      <li>Product highlights on our "Who is using EHRServer" page</li>
-      <li>Discounts on the CaboLabs courses and workshops</li>
+      <li>Acceso a eventos para Beta Partners (demos, tutoriales, sesiones de consulta)</li>
+      <li>Acceso temprano a nuevas versions, documentación y otros recursos</li>
+      <li>Acceso directo al equipo de desarrollo (email, skype, hangouts, ryver)</li>
+      <li>El logo y perfil de tu empresa en nuestra página de Beta Partners</li>
+      <li>Participación en sesiones de solicitud de mejoras</li>
+      <li>Destaque de tus productos en nuestro sitio y redes sociales</li>
+      <li>Descuentos en <a href="http://www.cabolabs.com/es/capacitacion" target="_blank">cursos y talleres de CaboLabs</a></li>
     </ul>
   </div>
 </div>
 
 <div class="row">
   <div class="col-md-12">
-    <h2>Investment</h2>
+    <h2>Inversión</h2>
+    <p>
+      La cuota de Beta Partners nos permite mantener y mejorar la infraestructura
+      que creamos para producción. También nos permitirá dar mantenimiento al
+      producto y realizarle mejoras durante el período Beta.
+    </p>
+    <p>
+      La cuota es muy pequeña, en relación correspondería a la compra de un plan pequeño,
+      pero sin ninguna de sus restricciones (cantidad de organizaciones, usuarios, historias
+      clínicas, etc.), esto permitirá que puedas probar el producto sin preocuparte por los
+      límites, y a la vez nos ayudas a asegurar el futuro del producto.
+    </p>
 
-    <p>A small fee will be charged to help us maintain and scale the infrastructure, and add new features to the product.
-    This fee will be on the same price level of a medium plan, but it will have no constraints at all in terms of the
-    number of organizations, users and EHRs like plans will have. This allows you to use the service without worrying
-    about limits and quotas, while we secure the next phases of the product. Consider this as a micro-investment in
-    our product that is paid back in knowledge-transfer.</p>
-
-    <p>On the roadmap we have some big topics:</p>
+    <p>Hoja de ruta del producto:</p>
     
     <ul>
-     <li>Create tools for testing and monitoring</li>
-     <li>Reporting</li>
-     <li>Automatic Backups</li>
-     <li>Export / Import data between EHRServers</li>
-     <li>Improve querying capabilities</li>
-     <li>Improve GUI and usability</li>
-     <li>Create new documentation, guides and other learning resources</li>
-     <li>Let us know what is important to you!</li>
+     <li>Crear herramientas para pruebas y monitoreo</li>
+     <li>Agregar funcionalidades para reportes</li>
+     <li>Agregar soporte para respaldos automáticos</li>
+     <li>Exportar/importar datos entre distintos EHRServers</li>
+     <li>Ampliar la capacidad de las consultas de datos</li>
+     <li>Mejorar la interfaz de usuario y la usabilidad</li>
+     <li>Crear nueva documentación y otros recursos de aprendizaje</li>
+     <li><a href="<?=$_base_dir?>/contacto">Háznos saber qué es importante para ti</a></li>
     </ul>
 
     <p class="center">
-      <a href="<?=$_base_dir?>/contact"><button type="button" class="btn btn-success btn-lg">Request to participate in the Beta Partners Program</button></a>
+      <a href="https://goo.gl/forms/44CBKedQVhpFFwsU2" target="_blank"><button type="button" class="btn btn-success btn-lg">Solicita participar en el Programa de Beta Partners</button></a>
     </p>
     
   </div>
