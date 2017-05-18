@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-lg-8 col-lg-offset-2 text-center main">
     <img src="<?=$_base_dir?>/images/CloudEHRServer_white_72_square.png" />
-    <h1>El 50% de tu próximo proyecto de e-Salud,<br/> ya está listo.</h1>
+    <h1>El 50% de tu próximo proyecto<br/> de e-Salud, ya está listo.</h1>
     <h2 class="lead">Enfócate en tu software, entrega más rápido.
     EHRServer es el repositorio de datos clínicos de código abierto,
     que cumple con el estándar openEHR. Ahora en la nube.</h2>
@@ -76,25 +76,29 @@
     </ol>
     
     <p class="center v-air"><a class="btn btn-primary" href="<?=$_base_dir?>/get_started" role="button">Comienza ahora</a></p>
- </div>
+  </div>
   <div class="col-lg-6">
     <h3>¿Cómo funciona?</h3>
-    <p>..
-    The core of EHRServer is based on the openEHR specifications. Most of the capabilities
-    and features offered by the EHRServer are because of this.</p>
-    <p>The EHRServer should be fed with clinical
-    document definitions called Operational Templates, or OPT for short. The OPTs define the
-    semantics, data structures, constraints and terminology associated with each clinical document.
-    It is basically an XML with metadata.</p>
-    <p>When client apps commit clinical documents to the EHRServer,
-    the data is indexed for querying. Of course, those documents should comply with their definitions (OPT).
-    A manager will create data queries using the EHRServer Query Builder, and those queries are defined
-    using only information from the OPTs, that is all clinical concepts like Blood Pressure, Diagnosis,
-    Physical Examination, Glasgow Coma Scale, etc.</p>
-    <p>To create queries there is no need of writing any SQL or source code.
-    Once queries are saved, a client system can executed them using the REST API, pulling clincial data
-    out from the EHRServer. That's it, data in, data out, all standardized,
-    without writing a single line of code.</p>
+    <p>EHRServer está basado en el estándar openEHR, y gran parte de sus especificaciones
+    y características son soportadas.</p>
+    <p>EHRServer consume modelos de inforamción clínica llamados Plantillas Operativas
+    (OPT por su sigla en inglés), donde se define la semántica, estructuras de datos,
+    restricciones y terminología asociada a cada documento clínico que será almacenado.</p>
+    <p>
+    Cuando una aplicación envía documentos para almacenar en EHRServer, datos clave son
+    extraídos para permitir búsquedas inteligentes de información. Esos documentos deberán
+    cumplir con los OPTs cargados previamente.</p>
+    <p>
+    Un administrador podrá crear consultas de información utilizando una interfaz web, y
+    estarán basadas en las definiciones de los OPTs. Las consultas estarán
+    disponibles de forma instantánea para ser ejecutadas desde Servicios Web REST, y así
+    poder obtener conjuntos de datos almacenados en EHRServer.</p>
+    <p>
+    Se pueden crear tantas consultas como sea necesario, sin modificar una sola línea de
+    código ni escribir SQL.</p>
+    <p>
+    Eso es todo, guardas datos, consultas datos, todo estandarizado, y sin escribir una sola
+    línea de código.</p>
     
     <h4>Tan simple como:</h4>
     <ol>
