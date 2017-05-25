@@ -79,7 +79,8 @@ h1 div#main_text_2 {
     </div>
     <div id="main_text_2">project</div>
     <br/>
-    <div id="main_text_3">is already built.</div></h1>
+    <div id="main_text_3">is already built.</div>
+    </h1>
     <h2 class="lead">Focus on features, deliver faster.
     EHRServer the open source clinical data repository,
     compliant with the openEHR standard. Now on the cloud.</h2>
@@ -132,20 +133,28 @@ h1 div#main_text_2 {
 </div>
 
 <div class="row">
-  <div class="col-lg-6">
-    <h3>Why EHRServer?</h3>
-    <p>EHRServer solves a very specific challenge all clinical information systems have to tackle:
-    to build a clinical data repository.</p>
-    <p>Clinical data is complex, heterogeneous and highly hierarchic.
-    These characteristics make it very difficult to develop repositories that are:
-    1. generic (can handle different types of data structures),
-    2. maintainable in the long term,
-    3. performant,
-    4. scalable and
-    5. integrable into different apps.</p>
+  <div class="col-md-12">
+    <h1>Why EHRServer?</h1>
+    <p>
+    EHRServer solves a very specific challenge all clinical information systems have to tackle:
+    to build a clinical data repository. And companies are creating custom repositories for every
+    new project, lacking resources on a problem that is already solved in a generic and standard way.
+    </p>
     
-    <p>At CaboLabs, it took us years of research and development, trial and error, to create a
-    solution that complies with all of those requirements.</p>
+    <p>
+    Clinical data is complex, heterogeneous and highly hierarchic, making it very difficult to develop
+    repositories that are:
+      <ol>
+        <li>generic (can handle different types of data structures)</li>
+        <li>maintainable in the long term at low cost</li>
+        <li>performant, secure and scalable</li>
+        <li>integrable into different kinds of apps and platforms</li>
+        <li>based on open technologies and standards (like the Internet)</li>
+      </ol>
+    </p>
+    
+    <p>It took us years of research and development, trial and error, to create a good solution
+    for those requirements.</p>
     
     <p>The goal of the EHRServer is to save time and money to companies that are building their          
     EHR/EMR/PHR systems, and try to solve the same problem again and again, with custom solutions.</p>
@@ -154,61 +163,30 @@ h1 div#main_text_2 {
     value and features you will offer to your customers, reducing time to market, and avoiding
     time-wasting tasks related to solving complex problems that are already solved.</p>
    
-    <p>Install your own self-managed instance
-    of the EHRServer or use EHRServer Cloud. Even if you want to develop your own CDR backend
-    later on, using EHRServer will help you create an MVP and test your idea without investing
-    on building a backend.</p>
+    <p>Install your own self-managed instance or use EHRServer Cloud. Even if you want to develop
+    your own CDR backend later on, using EHRServer will help you create an MVP and test your idea
+    without investing on building a backend.</p>
     
-    
-    <h4>Main features:</h4>
-    <ol>
-      <li>Web Console for simple management</li>
-      <li>Full audit access for traceability</li>
-      <li>Versioned clinical documents</li>
-      <li>Service Oriented / REST API</li>
-      <li>Supports XML and JSON formats</li>
-      <li>Query Builder from the Web Console</li>
-      <li>Supports any structure of clinical document</li>
-      <li>Multitenant</li>
-      <li>Open Source</li>
-      <li>Compliant with the openEHR standard</li>
-    </ol>
-    
-    <p class="center v-air"><a class="btn btn-primary" href="<?=$_base_dir?>/get_started" role="button">Get Started</a></p>
- </div>
-  <div class="col-lg-6">
-    <h3>How does it work?</h3>
-    <p>The core of EHRServer is based on the openEHR specifications. Most of the capabilities
-    and features offered by the EHRServer are because of this.</p>
-    <p>The EHRServer should be fed with clinical
-    document definitions called Operational Templates, or OPT for short. The OPTs define the
-    semantics, data structures, constraints and terminology associated with each clinical document.
-    It is basically an XML with metadata.</p>
-    <p>When client apps commit clinical documents to the EHRServer,
-    the data is indexed for querying. Of course, those documents should comply with their definitions (OPT).
-    A manager will create data queries using the EHRServer Query Builder, and those queries are defined
-    using only information from the OPTs, that is all clinical concepts like Blood Pressure, Diagnosis,
-    Physical Examination, Glasgow Coma Scale, etc.</p>
-    <p>To create queries there is no need of writing any SQL or source code.
-    Once queries are saved, a client system can executed them using the REST API, pulling clincial data
-    out from the EHRServer. That's it, data in, data out, all standardized,
-    without writing a single line of code.</p>
-    
-    <h4>Simple as:</h4>
-    <ol>
-      <li>Create a clinical document definition</li>
-      <li>Upload the definition to the EHRServer</li>
-      <li>Create data queries based on document definitions</li>
-      <li>Integrate the EHRServer API in your apps</li>
-      <li>Commit some data</li>
-      <li>Query and display your data</li>
-    </ol>
-    
-    <p class="center v-air"><a class="btn btn-primary" href="<?=$_base_dir?>/learn" role="button">Continue learning</a></p>
-    
+    <p class="center v-air"><a class="btn btn-lg btn-primary" href="<?=$_base_dir?>/contact" role="button">Sounds interesting? Contact us</a></p>
   </div>
 </div>
 
+<div class="row">
+  <div class="col-md-12">
+    <h1>Solution Partners</h1>
+    <p>We are not alone! We partner with top notch companies to offer a thorough solution.</p>  
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <h2><a href="https://www.nirdhost.com/" target="_blank">NIRD HOST</a></h2>
+    <p>HIPAA compliant PaaS solution.</p>  
+  </div>
+  <div class="col-md-6">
+    <h2><a href="https://www.nirdhost.com/" target="_blank">InfoClinic</a></h2>
+    <p>Health Terminology Server as a service</p>  
+  </div>
+</div>
 <!--
 <div class="row">
   <div class="col-lg-4">

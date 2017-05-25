@@ -46,3 +46,55 @@
     </p>
   </div>
 </div>
+<div class="row">
+  <div class="col-md-12">
+    <h3>¿Cómo funciona?</h3>
+    <p>EHRServer está basado en el estándar openEHR, y gran parte de sus especificaciones
+    y características son soportadas.</p>
+    <p>EHRServer consume modelos de inforamción clínica llamados Plantillas Operativas
+    (OPT por su sigla en inglés), donde se define la semántica, estructuras de datos,
+    restricciones y terminología asociada a cada documento clínico que será almacenado.</p>
+    <p>
+    Cuando una aplicación envía documentos para almacenar en EHRServer, datos clave son
+    extraídos para permitir búsquedas inteligentes de información. Esos documentos deberán
+    cumplir con los OPTs cargados previamente.</p>
+    <p>
+    Un administrador podrá crear consultas de información utilizando una interfaz web, y
+    estarán basadas en las definiciones de los OPTs. Las consultas estarán
+    disponibles de forma instantánea para ser ejecutadas desde Servicios Web REST, y así
+    poder obtener conjuntos de datos almacenados en EHRServer.</p>
+    <p>
+    Se pueden crear tantas consultas como sea necesario, sin modificar una sola línea de
+    código ni escribir SQL.</p>
+    <p>
+    Eso es todo, guardas datos, consultas datos, todo estandarizado, y sin escribir una sola
+    línea de código.</p>
+    
+    <h4>Tan simple como:</h4>
+    <ol>
+      <li>Crea una definición de documento clínico</li>
+      <li>Carga la definición en el EHRServer</li>
+      <li>Crea consultas de datos basadas en las definiciones de documentos</li>
+      <li>Integra tus aplicaciones con la API REST del EHRServer</li>
+      <li>Envía datos al EHRServer</li>
+      <li>Ejecuta las consultas para obtener los datos en un formato estándar</li>
+    </ol>
+    
+    <h4>Principales características:</h4>
+    <ol>
+      <li>Consola Web para gestión simplificada</li>
+      <li>Auditoría y registros de trazabilidad completos</li>
+      <li>Documentos clínicos versionados</li>
+      <li>Orientado a servicios / API REST</li>
+      <li>Soporta formatos XML y JSON</li>
+      <li>Query Builder desde la Consola Web</li>
+      <li>Soporta cualquier estructura de documento clínico</li>
+      <li>Multi-organización</li>
+      <li>Código Abierto</li>
+      <li>Cumple el estándar openEHR</li>
+    </ol>
+    
+    <p class="center v-air"><a class="btn btn-primary" href="<?=$_base_dir?>/aprende" role="button">Aprende más</a></p>
+    
+  </div>
+</div>

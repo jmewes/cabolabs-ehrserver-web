@@ -5,7 +5,7 @@
     <h2 class="lead">Enfócate en tu software, entrega más rápido.
     EHRServer es el repositorio de datos clínicos de código abierto,
     que cumple con el estándar openEHR. Ahora en la nube.</h2>
-    <p><a class="btn btn-lg btn-success" href="<?=$_base_dir?>/get_started" role="button">Comienza ahora!</a></p>
+    <p><a class="btn btn-lg btn-success" href="<?=$_base_dir?>/comienza" role="button">Comienza ahora!</a></p>
   </div>
 </div>
 
@@ -31,17 +31,24 @@
 </div>
 
 <div class="row">
-  <div class="col-lg-6">
-    <h3>¿Por qué EHRServer?</h3>
-    <p>El EHRServer resuelve un problema muy específico, que todos los sistemas de información
-    en salud deben resolver: la creación de un repositorio de datos clínicos.</p>
+  <div class="col-lg-12">
+    <h1>¿Por qué EHRServer?</h1>
+    <p>
+    El EHRServer resuelve un problema muy específico, que todos los sistemas de información
+    en salud deben resolver: la creación de un repositorio de datos clínicos. Las empresas
+    siguen creando soluciones a medida con cada nuevo proyecto, desperdiciando recursos en
+    resolver el mismo problema, habiendo soluciones genéricas y basadas en estándares.
+    </p>
     <p>La información clínica es compleja, heterogénea y altamente jerárquica. Estas características
     hacen difícil lograr un repositorio que sea:
-    1. genérico (que soporte diferentes estructuras de datos),
-    2. mantenible a largo plazo,
-    3. performante,
-    4. escalable,
-    5. integrable con diversas aplicaciones.</p>
+     <ol>
+       <li>genérico (que soporte diferentes estructuras de datos)</li>
+       <li>mantenible a largo plazo y a bajo costo</li>
+       <li>performante, seguro y escalable</li>
+       <li>integrable con diversas aplicaciones</li>
+       <li>basado en tecnologías y estándares abiertos</li>
+     </ol>
+    </p>
     
     <p>En CaboLabs no ha tomado años de investigación y desarrollo, prueba y error, el crear
     una solución que cumpliera con todos esos requerimientos.</p>
@@ -60,57 +67,23 @@
     el EHRServer te ayudará a lograr prototipos funcionales para tus proyectos a una fracción
     del tiempo. Prueba y valida tu idea antes de invertir en la construcción de tu repositorio.</p>
     
-    
-    <h4>Principales características:</h4>
-    <ol>
-      <li>Consola Web para gestión simplificada</li>
-      <li>Auditoría y registros de trazabilidad completos</li>
-      <li>Documentos clínicos versionados</li>
-      <li>Orientado a servicios / API REST</li>
-      <li>Soporta formatos XML y JSON</li>
-      <li>Query Builder desde la Consola Web</li>
-      <li>Soporta cualquier estructura de documento clínico</li>
-      <li>Multi-organización</li>
-      <li>Código Abierto</li>
-      <li>Cumple el estándar openEHR</li>
-    </ol>
-    
-    <p class="center v-air"><a class="btn btn-primary" href="<?=$_base_dir?>/get_started" role="button">Comienza ahora</a></p>
+    <p class="center v-air"><a class="btn btn-lg btn-primary" href="<?=$_base_dir?>/contacto" role="button">¿Te interesa? Contáctanos</a></p>
   </div>
-  <div class="col-lg-6">
-    <h3>¿Cómo funciona?</h3>
-    <p>EHRServer está basado en el estándar openEHR, y gran parte de sus especificaciones
-    y características son soportadas.</p>
-    <p>EHRServer consume modelos de inforamción clínica llamados Plantillas Operativas
-    (OPT por su sigla en inglés), donde se define la semántica, estructuras de datos,
-    restricciones y terminología asociada a cada documento clínico que será almacenado.</p>
-    <p>
-    Cuando una aplicación envía documentos para almacenar en EHRServer, datos clave son
-    extraídos para permitir búsquedas inteligentes de información. Esos documentos deberán
-    cumplir con los OPTs cargados previamente.</p>
-    <p>
-    Un administrador podrá crear consultas de información utilizando una interfaz web, y
-    estarán basadas en las definiciones de los OPTs. Las consultas estarán
-    disponibles de forma instantánea para ser ejecutadas desde Servicios Web REST, y así
-    poder obtener conjuntos de datos almacenados en EHRServer.</p>
-    <p>
-    Se pueden crear tantas consultas como sea necesario, sin modificar una sola línea de
-    código ni escribir SQL.</p>
-    <p>
-    Eso es todo, guardas datos, consultas datos, todo estandarizado, y sin escribir una sola
-    línea de código.</p>
-    
-    <h4>Tan simple como:</h4>
-    <ol>
-      <li>Crea una definición de documento clínico</li>
-      <li>Carga la definición en el EHRServer</li>
-      <li>Crea consultas de datos basadas en las definiciones de documentos</li>
-      <li>Integra tus aplicaciones con la API REST del EHRServer</li>
-      <li>Envía datos al EHRServer</li>
-      <li>Ejecuta las consultas para obtener los datos en un formato estándar</li>
-    </ol>
-    
-    <p class="center v-air"><a class="btn btn-primary" href="<?=$_base_dir?>/learn" role="button">Aprende más</a></p>
-    
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <h1>Socios de Solución</h1>
+    <p¡No estamos solos! Estamos asociados a empresas de primera categoría para ofrecer una solución completa.</p>  
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <h2><a href="https://www.nirdhost.com/" target="_blank">NIRD HOST</a></h2>
+    <p>Solución PaaS que cumple HIPAA.</p>  
+  </div>
+  <div class="col-md-6">
+    <h2><a href="https://www.nirdhost.com/" target="_blank">InfoClinic</a></h2>
+    <p>Servicios Terminológicos de Salud.</p>  
   </div>
 </div>
