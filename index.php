@@ -99,6 +99,7 @@ $router = array(
        '/learn/use_case_health_and_wellness_apps'  => '/learn/use_case_health_and_wellness_apps.php',
        '/learn/use_case_backup_and_query_database' => '/learn/use_case_backup_and_query_database.php',
        '/learn/use_case_fast_prototyping_poc'      => '/learn/use_case_fast_prototyping_poc.php',
+       '/learn/use_case_analytics_and_datawarehousing' => '/learn/use_case_analytics_and_datawarehousing.php',
        '/contact'                     => 'contact.php',
        '/'                            => 'home.php',
        '/index'                       => 'home.php',
@@ -125,6 +126,7 @@ $router = array(
        '/aprende/use_case_health_and_wellness_apps'  => '/learn/use_case_health_and_wellness_apps.php',
        '/aprende/use_case_backup_and_query_database' => '/learn/use_case_backup_and_query_database.php',
        '/aprende/use_case_fast_prototyping_poc'      => '/learn/use_case_fast_prototyping_poc.php',
+       '/aprende/use_case_analytics_and_datawarehousing' => '/learn/use_case_analytics_and_datawarehousing.php',
        '/contacto'                   => 'contact.php',
        '/'                           => 'home.php',
        '/index'                      => 'home.php',
@@ -196,6 +198,9 @@ $router_maps = array(
     '/learn/use_case_fast_prototyping_poc' => array(
       'es' => '/aprende/use_case_fast_prototyping_poc' 
     ),
+    '/learn/use_case_analytics_and_datawarehousing' => array(
+      'es' => '/aprende/use_case_analytics_and_datawarehousing' 
+    ),
     '/contact' => array(
       'es' => '/contacto' 
     ),
@@ -266,6 +271,9 @@ $router_maps = array(
     ),
     '/aprende/use_case_fast_prototyping_poc' => array(
       'en' => '/learn/use_case_fast_prototyping_poc'
+    ),
+    '/aprende/use_case_analytics_and_datawarehousing' => array(
+      'en' => '/learn/use_case_analytics_and_datawarehousing' 
     ),
     '/contacto' => array(
       'en' => '/contact' 
@@ -413,6 +421,16 @@ echo $router[$route] .'<br/>'; // TODO: CHECK IF IT EXISTS
           $('#contact_container').toggle();
         });
       });
+    </script>
+    
+    <script>
+     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+     ga('create', 'UA-100013609-1', 'auto');
+     ga('send', 'pageview');
     </script>
   </body>
 </html>
