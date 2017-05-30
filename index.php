@@ -100,6 +100,7 @@ $router = array(
        '/learn/use_case_backup_and_query_database' => '/learn/use_case_backup_and_query_database.php',
        '/learn/use_case_fast_prototyping_poc'      => '/learn/use_case_fast_prototyping_poc.php',
        '/learn/use_case_analytics_and_datawarehousing' => '/learn/use_case_analytics_and_datawarehousing.php',
+       '/learn/use_case_research_and_training'     => '/learn/use_case_research_and_training.php',
        '/contact'                     => 'contact.php',
        '/'                            => 'home.php',
        '/index'                       => 'home.php',
@@ -127,6 +128,7 @@ $router = array(
        '/aprende/use_case_backup_and_query_database' => '/learn/use_case_backup_and_query_database.php',
        '/aprende/use_case_fast_prototyping_poc'      => '/learn/use_case_fast_prototyping_poc.php',
        '/aprende/use_case_analytics_and_datawarehousing' => '/learn/use_case_analytics_and_datawarehousing.php',
+       '/aprende/use_case_research_and_training' => '/learn/use_case_research_and_training.php',
        '/contacto'                   => 'contact.php',
        '/'                           => 'home.php',
        '/index'                      => 'home.php',
@@ -201,6 +203,9 @@ $router_maps = array(
     '/learn/use_case_analytics_and_datawarehousing' => array(
       'es' => '/aprende/use_case_analytics_and_datawarehousing' 
     ),
+    '/learn/use_case_research_and_training' => array(
+      'es' => '/aprende/use_case_research_and_training' 
+    ),
     '/contact' => array(
       'es' => '/contacto' 
     ),
@@ -274,6 +279,9 @@ $router_maps = array(
     ),
     '/aprende/use_case_analytics_and_datawarehousing' => array(
       'en' => '/learn/use_case_analytics_and_datawarehousing' 
+    ),
+    '/aprende/use_case_research_and_training' => array(
+      'en' => '/learn/use_case_research_and_training' 
     ),
     '/contacto' => array(
       'en' => '/contact' 
