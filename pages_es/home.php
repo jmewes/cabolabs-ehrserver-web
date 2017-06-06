@@ -83,7 +83,13 @@
     <p>Solución PaaS que cumple HIPAA.</p>  
   </div>
   <div class="col-md-6">
-    <h2><a href="https://www.nirdhost.com/" target="_blank">InfoClinic</a></h2>
+    <h2><a href="http://infoclinic.co/" target="_blank">InfoClinic</a></h2>
     <p>Servicios Terminológicos de Salud.</p>  
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <h2><a href="http://www.vitalbox.com/" target="_blank">VitalBox</a></h2>
+    <p>Solución de Portal de Pacientse interoperable.</p>  
   </div>
 </div>

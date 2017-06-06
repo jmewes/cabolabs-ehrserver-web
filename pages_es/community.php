@@ -1,13 +1,13 @@
 <div class="row">
   <div class="col-md-12">
-    <h1>EHRServer Community</h1>
-    <p>Tools, sample code, resources, and community support.</p>
+    <h1>Comunidad EHRServer</h1>
+    <p>Herramientas, código de ejemplo, recursos y soporte de la comunidad.</p>
   </div>
 </div>
 
 <div class="row">
   <div class="col-md-12">
-    <h2>Clients &amp; Helpers for different languages</h2>
+    <h2>Clientes y librerías en diferentes lenguajes</h2>
     <ol>
      <li>
        <a href="https://github.com/ppazos/EHRClientPHP" target="_blank">PHP</a>
@@ -19,10 +19,10 @@
        <a href="https://github.com/ppazos/cabolabs-ehrserver-groovy" target="_blank">Groovy</a>
      </li>
      <li>
-       More soon!
+       ¡Pronto tendremos más!
      </li>
      <li>
-       <a href="<?=$_base_dir?>/contact">Let us know</a> if you created a client for other languages!
+       <a href="<?=$_base_dir?>/contact">Coméntanos</a> si has creado alguna librería para otros lenguajes.
      </li>
     </ol>
   </div>
@@ -30,15 +30,15 @@
 
 <div class="row">
   <div class="col-md-12">
-    <h2>Sample applications that use the EHRServer as backend</h2>
+    <h2>Aplicaciones de ejemplo que usan EHRServer como backend</h2>
     <ol>
      <li>
        <a href="https://github.com/ppazos/cabolabs-emrapp" target="_blank">EMRApp</a>
-       : Sample EMR application that uses the EHRServer as backend
+       : Aplicación de registro clínico que usa al EHRServer como backend
      </li>
      <li>
        <a href="https://github.com/ppazos/EHRCommitter" target="_blank">EHRCommitter</a>
-       : testing application that generates forms based on OPTs to commit data to the EHRServer
+       : aplicación de pruebas que genera formularios en función de OPTs openEHR, y genera datos de prueba aleatorios para guarlarlos en el EHRServer.
      </li>
     </ol>
   </div>
@@ -46,11 +46,11 @@
 
 <div class="row">
   <div class="col-md-12">
-    <h2>Tools</h2>
+    <h2>Herramientas</h2>
     <ol>
      <li>
        <a href="https://github.com/ppazos/openEHR-OPT" target="_blank">openEHR-OPT</a>
-       : command line tools to work with openEHR Operational Templates
+       : heramienta de línea de comandos para trabajar con Plantillas (OPT) openEHR
      </li>
     </ol>
   </div>

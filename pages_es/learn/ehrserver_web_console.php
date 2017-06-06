@@ -1,97 +1,103 @@
 <div class="row">
   <div class="col-md-12">
-    <h1>EHRServer Web Console</h1>
+    <h1>EHRServer: introducción a la Consola Web</h1>
     <p>
-      The Web Console is the User Interface of the EHRServer. Users with management
-      permissions will be able to access the Web Console. On this guide we exmplain
-      the main features of the Web Console to empower you on the management tasks.
+      La Consola Web es la interfaz de usuario del EHRServer. Los usuarios que tengan permisos
+      de administración podrán acceder a la consola para gestionar la información clínica de
+      pacientes asociados a distintas organización como hospitales, clínicas, etc.
+    </p>
+    <p>
+      En esta guía se describen las principales características de la Consola Web.
     </p>
     <ol>
-      <li>Introduction</li>
-      <li>Users and Roles</li>
-      <li>Organizations</li>
-      <li>EHRs</li>
-      <li>Versions</li>
-      <li>Contributions</li>
-      <li>Queries</li>
-      <li>Templates</li>
+      <li>Introducción</li>
+      <li>Usuarios y Roles</li>
+      <li>Organizaciones</li>
+      <li>Historias Clínicas</li>
+      <li>Versiones</li>
+      <li>Contributiones</li>
+      <li>Consultas</li>
+      <li>Plantillas</li>
     </ol>
   </div>
 </div>
 
 <div class="row">
   <div class="col-md-12">
-    <h2>1. Introduction</h2>
+    <h2>1. Introducción</h2>
     <p>
-      From the EHRServer Web Console you can manage all the back-end clinical
-      information of your health information systems. On the following sections
-      we will describe what you can do on the Web Console to manage:
+      Desde la Consola Web del EHRServer puedes gestionar toda la información generada
+      desde tus aplicaciones de registro clínico. En las siguientes secciones describiremos
+      qué es lo que puedes gestionar. Dentro de esto se incluye:
     </p>
     <ul>
-      <li>Administrative, security-related and audit information: Organizations, Users, Roles, Contributions</li>
-      <li>Clinical information: EHRs, Versions/Compositions</li>
-      <li>Data access: Queries</li>
+      <li>Área administrativa, seguridad y auditoría: Organizationes, Usuarios, Roles, Contributiones</li>
+      <li>Información clínica: Historias Clínicas, Versiones y Documentos Clínicos</li>
+      <li>Acceso a datos: Consultas</li>
     </ul>
   </div>
 </div>
 
 <div class="row">
   <div class="col-md-12">
-    <h2>2. Users and Roles</h2>
+    <h2>2. Usuarios y Roles</h2>
     <p>
-      From the Users section you can manage existing users and create new ones. For existing users you
-      can request a password update (you can't set passwords directly because passwords are private).
-      Each user should be associated with one Organization and have a Role.
+      Desde la sección de usuarios puedes gestionar los usuarios existentes y crear nuevos usuarios.
+      Para los usuarios existentes, puedes solicitar que actualicen sus contraseñas, pero no puedes
+      actualizarlas tú directamente ya que las contraseñas deben ser privadas. Cada usuario debe
+      tener asociado por lo menos un rol y una organización.
     </p>
     <p>
-      When you create or edit a User, you can assign Roles. If you want a User to be able to manage
-      the same information as you, assign the ROLE_ORG_MANAGER Role. If the User should only access
-      the EHRServer by the REST API, assign the ROLE_USER Role.
-    </p>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-12">
-    <h2>3. Organizations</h2>
-    <p>
-      From the Organizations section you can manage existing Organizations and create new ones.
-      Organizations are used to separate EHRs from different customers, so you'll need to create
-      one Organization per customer.
-    </p>
-    <p>
-      When you create a new User, you need to assign an Organization to that User. So you might
-      have 3 Organizations, and create a User to access only one of them. That way you have a lot
-      of flexibilty in terms of controlling who access which information.
-    </p>
-    <p>
-      Also when a User access the EHRServer though the REST API, all the requests are done in the
-      context of one Organization. If the User or App needs to access information from different
-      Organizations, different requests should be sent to the REST API, one per organization.
-      That way we keep information from different Organizations separated also for the REST API.
+      Cuando se edita un usuario se pueden asignar roles. Los roles que pueden gestionar datos desde
+      la Consola Web son los gestores de cuenta (ROLE_ACCOUNT_MANAGER) y gestores de organización
+      (ROLE_ORG_MANAGER). Los usuarios normales (ROLE_USER) sólo pueden acceder al EHRServer mediante
+      la API REST, estos no tendrán acceso a la Consola Web.
     </p>
   </div>
 </div>
 
 <div class="row">
   <div class="col-md-12">
-    <h2>4. EHRs</h2>
+    <h2>3. Organizationes</h2>
     <p>
-      From the EHRs section you can manage existing EHRs and create new ones. It is recommended
-      that the EHRs are created using the REST API, but to have full management abilities, we
-      decided to provide a user interfaces in the Web Console to create EHRs manually.
+      Desde la sección de organizaaciones se pueden gestonar las organizaciones existentes y 
+      crear nuevas. Cada organización puede ser un cliente para el cual se mantendrán un conjunto
+      de historias clínicas que no serán accesibles desde otras organizaciones.
     </p>
     <p>
-      On the EHR Details screen you can see all the Contributions to the EHR and access it's clinical
-      documents. Don't worry, this information is 100% anonymous. Check our
-      <a href="<?=$_base_dir?>/learn/anonymous_clinical_information">guide</a> about this.
+      Cuando se crea un nuevo usuario, se le debe asignar una organización. Entonces puedes tener
+      3 organizaciones, pero gestionar usuarios que pueden acceder solo a una de ellas. Esto brinda
+      una gran flexibilidad en términos de control de acceso a la información de las historias clínicas
+      asociadas a cada organización.
+    </p>
+    <p>
+      Cuando un usuario accede al EHRServer desde la API REST, todos los pedidos se encuentran en el
+      contexto de una organización. Si el usuario necesita acceder a información de otra organización
+      se deben enviar pedidos contextualizados en esa nueva organización.
     </p>
   </div>
 </div>
 
 <div class="row">
   <div class="col-md-12">
-    <h2>5. Versions</h2>
+    <h2>4. Historias Clínicas</h2>
+    <p>
+      Desde la sección de historias clínicas se pueden gestionar las existentes y crear nuevas.
+      Se recomienda que las historias sean creadas desde la API REST, pero igualmente se permiten
+      creare desde la Consola Web.
+    </p>
+    <p>
+      En la vista de los detalles de una historia, se pueden ver todos los cambios que ocurriedon
+      sobre la historia. Estos cambios se llaman "contribuciones". También se puede acceder a todos
+      los datos clínicos de la historia, pero no te preocupes, esta información es anónima.
+      <a href="<?=$_base_dir?>/aprende/anonymous_clinical_information">Más información</a>.
+    </p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <h2>5. Versiones</h2>
     <p>
       The Versions represent clinical documents that are versioned, so for the same clinical document
       (or Composition in the openEHR terminology), you can have more than one Version. On this section
@@ -104,49 +110,56 @@
 
 <div class="row">
   <div class="col-md-12">
-    <h2>6. Contributions</h2>
+    <h2>6. Contribuciones</h2>
     <p>
-      On this section you will find the logs of each change to each EHR of your Organization. This in
-      combination with the Versions gives you full Audit abilities. So you have full control over what
-      was added or changed, when, from where, by whom, etc.
+      En esta sección se pueden ver todos los cambios que ocurrieron sobre las historias clínicas de 
+      todas las organizaciones a las que tienes acceso. Esta sección en combinación con la sección de
+      versiones, donde se muestran todos los documentos clínicos, dan una visión clara para auditar el
+      registro clínico, y saber qué cambios se hicieron, sobre qué historia, cuándo, quién hizo los cambios,
+      desde dónde se hicieron, y la información clínica relativa a cada cambio.
     </p>
   </div>
 </div>
 
 <div class="row">
   <div class="col-md-12">
-    <h2>7. Queries</h2>
+    <h2>7. Consultas</h2>
     <p>
-      The EHRServer gives you full access to all the information stored in the EHRs of each one of your
-      organizations. This allow to develope apps that can use this information, without dealing with a
-      lot of services and data formats.
+      EHRServer brinda acceso completo a todos los datos clínicos que se almacenan y gestionan con él.
+      La accesbilidad a la información permite el desarrollo de nuevas aplicaciones y servicios, sin
+      la necesidad de implementar complejas integraciones ni tener que lidiar con cambios en el código
+      de la aplicación o con formatos proprietarios.
     </p>
     <p>
-      From the Web Console, you can create queries to return clinical documents or just data points.
-      Before saving the queries, you can test the queries with live data, and save the query when it
-      returns what you need. When a query is saved, it can be executed form the REST API, so client
-      apps will access the same data you saw when tesing que Query from the Web Console.
+      Las consultas de datos pueden ser creadas desde la propia Consola Web, sin escribir SQL ni otro
+      tipo de código. Las consultas pueden devolver documentos completos o datos singulares. En el momento
+      de crear una consulta, la Consola Web permite probar la consulta con datos reales, esto permite
+      verificar la correctitud de la consulta antes de guardarla. Una vez guardada la consulta, esta puede
+      ser ejecutada desde la API REST y obtener datos openEHR tanto en XML como en JSON. No hay límites en
+      cuanto a la cantidad de consultas que se pueden crear o a la complejidad de las mismas.
     </p>
     <p>
-      Queries are created for an Organization. If you want to allow Users from many Organizations to
-      use the same Query, you can share the Query between your Organizations. 
+      Las consultas se crean en el contexto de una organización. Si se desea que una consulta pueda ser
+      ejecutada por usuarios de distintas organizaciones, las consultas pueden compartirse.
     </p>
   </div>
 </div>
 
 <div class="row">
   <div class="col-md-12">
-    <h2>8. Templates</h2>
+    <h2>8. Plantillas</h2>
     <p>
-      On this section you can manage the Operational Templates (OPT) of your Organization. An OPT is
-      a clinical document definition, and is part or the openEHR specifications. OPTs are what makes
-      the EHRServer so generic, and the base of the querying feature: data queries are created based
-      on metadata contained in the OPTs.
+      En esta sección se pueden gestionar las plantillas para cada organización. Las plantillas son Operational
+      Templates (OPT), una forma definida de arquetipos openEHR. Los OPTs permiten que el EHRServer sea genérico,
+      en el sentido de que definen las estructuras de datos que se van a almacenar, y en que todas las consultas
+      de datos se basan en las estructuras de datos definidas dentro de los OPTs. Entonces, agregando nuevos OPTs
+      al EHRServer, se extienden las posibilidades de almacenamiento sin límites y sin necesidad de modificar el
+      código fuente o la estructura de la base de datos a la hora de soportar nuevas estructuras.
     </p>
     <p>
-      On the <a href="<?=$_base_dir?>/learn/openehr_fundamentals">openEHR fundamentals</a> you can find
-      more information about the tools needed to create OPTs. But don't worry, we provide a common set of
-      OPTs to get you started, and we cna help you creating new ones, so you can extend your EHR capabilities.
+      En la guía de <a href="<?=$_base_dir?>/aprende/openehr_fundamentals">fundamentos de openEHR</a> puedes encontrar
+      más información acerca de las herramientas utilizadas para crear OPTs. Pero no te preocupes, nosotros proveemos
+      un conjunto básico de OPTs para que puedas empezar a utilizar el EHRServer sin preocuparte por crear tus modelos.
     </p>
   </div>
 </div>

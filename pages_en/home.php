@@ -183,8 +183,14 @@ h1 div#main_text_2 {
     <p>HIPAA compliant PaaS solution.</p>  
   </div>
   <div class="col-md-6">
-    <h2><a href="https://www.nirdhost.com/" target="_blank">InfoClinic</a></h2>
+    <h2><a href="http://infoclinic.co/" target="_blank">InfoClinic</a></h2>
     <p>Health Terminology Server as a service</p>  
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <h2><a href="http://www.vitalbox.com/" target="_blank">VitalBox</a></h2>
+    <p>Interoperable Patient Portal solution.</p>  
   </div>
 </div>
 <!--
