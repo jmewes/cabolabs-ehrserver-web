@@ -5,7 +5,7 @@
     <h2 class="lead">Enfócate en tu software, entrega más rápido.
     EHRServer es el repositorio de datos clínicos de código abierto,
     que cumple con el estándar openEHR. Ahora en la nube.</h2>
-    <p><a class="btn btn-lg btn-success" href="<?=$_base_dir?>/comienza" role="button">Comienza ahora!</a></p>
+    <p><a class="btn btn-lg btn-success" href="<?=$_base_dir?>/comienza" role="button">¡Comienza ahora!</a></p>
   </div>
 </div>
 
@@ -90,6 +90,6 @@
 <div class="row">
   <div class="col-md-6">
     <h2><a href="http://www.vitalbox.com/" target="_blank">VitalBox</a></h2>
-    <p>Solución de Portal de Pacientse interoperable.</p>  
+    <p>Solución de Portal de Pacientes interoperable.</p>  
   </div>
 </div>
