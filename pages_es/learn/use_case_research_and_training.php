@@ -14,29 +14,27 @@
       normalizado, genérico, completo, consistente y abierto (independiente de cualquier proveedor, sin usar formatos propietarios).
     </p>
     <p>
-      
-      
-      Second to have a formal content management process baed on definition and sharing of
-      semantic clinical concepts that define and constraints data based on the information model. EHRServer simplifies the clinical
-      data management on every step of the process, and allows to get specific data needed by your research or educational needs.
+      El otro elemento que agrega la implementación del estándar openEHR es el contar con una metodología formal de gestión del
+      contenido clínico, incluyendo definición semántica mediante <?=a('arquetipos y plantillas','/openehr_fundamentals')?>,
+      vínculos con terminologías estándar (SNOMED CT, LOINC, CIE-10, etc.), y restricciones para validación de datos. El EHRServer
+      simplifica el proceso de gestión de la información clínica en cada paso del proceso, ahorrando tiempo en tareas relacionadas
+      dicha gestión, permitiendo focalizar los recursos en el análisis de los datos para las necesidades de investigación y educación.
     </p>
   </div>
 </div>
 <div class="row">
   <div class="col-md-12">
-    <h2>Use the EHRServer to gather clinical data</h2>
+    <h2>Recolecta información clínica y prepárala para el análisis con EHRServer</h2>
     <p>
-      The EHRServer can be used to store any kind of clinical structure without changing source code or the database schema. You don't
-      need to change your systems to do so, just build a small client program to copy your data into the EHRServer using the standard
-      openEHR format. This can be done from many data sources, integrating all the data you need into one place. Then by creating data
-      queries, using the visual EHRServer Query Builder, will allow you to retrieve your data sets based on certain conditions. Then
-      that data can be used to create reports, calculate variables, indicators and do any kind of data analysis.
-    </p>
-    <p>
-      The openEHR clinical content management methodology is key to have consistent data to analyze in an efficient way, that means
-      without weeks of data analysis to make sense of the data, start cleaning and organizing (preprocessing) before doing anything
-      valuable with the data. With this methodlogy and the EHRServer, the preparation stage is minimal, allowing to put your effort
-      on your research or educational goal.
+      El EHRServer puede ser utilizado para almacenar cualquier estructura de información clínica sin necesidad de modificar su
+      código o estrutura de base de datos. Para almacenar datos en el EHRServer no necesitas modificar tus sistemas, solamente con
+      crear un pequeño programa que pueda copiar datos desde tus fuentes de datos hacia el EHRServer es suficiente. Esta copia de
+      datos utilizará el formato estándar de openEHR para representar datos. Contamos con 
+      <a href="https://github.com/ppazos/openEHR-OPT" target="_blank">herramientas</a> que te serán útiles en ese proceso.
+      Esto se necesita hacer una sola vez, luego de que los datos son cargados en el EHRServer, puedes comenzar a crear
+      consultas desde la <?=a('Consola Web','/aprende/ehrserver_web_console')?>. De esta forma podrás obtener datos en un formato
+      consistente, usando condiciones y distintas formas de agrupamiento de los datos. Esto facilita el procesamiento posterior
+      para el cálculo de indicadores o la creación de reportes.
     </p>
     <p>
       For more about using the EHRServer, check the <?=a('latest demo of the EHRServer','/get_started')?>.
