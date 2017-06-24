@@ -8,7 +8,7 @@
     </p>
     <p>
       The EHRServer approach is the openEHR approach. First have a normalized, generic, complete, vendor-neutral, consistent, and
-      semantically correct information model. Second to have a formal content management process baed on definition and sharing of
+      semantically correct information model. Second to have a formal content management process based on definition and sharing of
       semantic clinical concepts that define and constraints data based on the information model. EHRServer simplifies the clinical
       data management on every step of the process, and allows to get specific data needed by your research or educational needs.
     </p>
