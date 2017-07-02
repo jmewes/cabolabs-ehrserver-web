@@ -1,6 +1,8 @@
 body {
   /*padding-top: 20px;*/
   font-family: 'Raleway', sans-serif;
+  line-height: 1.5em;
+  font-size: 1.6em;
 }
 
 h1, h2, h3, h4, .btn {
@@ -20,13 +22,14 @@ h2 {
   text-align: center;
 }
 .v-air { /* vertical air for call to action buttons */
-  padding: 1em 0;
+  padding: 1.5em 0;
 }
 
 p {
-  line-height: 1.4em;
-  font-size: 1.2em;
-  margin: 0 0 12px;
+  /*line-height: 1.4em;
+  font-size: 1.2em;*/
+  /*margin: 0 0 12px;*/
+  margin: 0 0 1.5em;
 }
 
 .footer {
@@ -40,10 +43,10 @@ div.main {
   padding: 30px 0;
 }
 div.main h1{
-  font-size: 3.8em;
+  font-size: 3.2em;
 }
 div.main h2 {
-  font-size: 1.8em;
+  font-size: 1.6em;
 }
 div.space {
   height: 10px;
@@ -117,6 +120,8 @@ button.contact {
 
 .nav-justified > li > a {
   white-space: nowrap; /* prevent menu text from wrapping */
+  font-size: 14px;
+  padding: 8px 0;
 }
 
 @media (min-width: 768px) {
