@@ -92,4 +92,8 @@
     <h2><a href="http://www.vitalbox.com/" target="_blank">VitalBox</a></h2>
     <p>Solución de Portal de Pacientes interoperable.</p>  
   </div>
+    <div class="col-md-6">
+    <h2><a href="http://www.miclinicaweb.com/" target="_blank">Cliniweb</a></h2>
+    <p>Finanzas para consultorios, historias clínicas y citas en línea.</p>  
+  </div>
 </div>

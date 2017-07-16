@@ -192,6 +192,10 @@ h1 div#main_text_2 {
     <h2><a href="http://www.vitalbox.com/" target="_blank">VitalBox</a></h2>
     <p>Interoperable Patient Portal solution.</p>  
   </div>
+  <div class="col-md-6">
+    <h2><a href="http://www.miclinicaweb.com/" target="_blank">Cliniweb</a></h2>
+    <p>EMR, finance and online appointments.</p>  
+  </div>
 </div>
 <!--
 <div class="row">
