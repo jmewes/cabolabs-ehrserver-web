@@ -31,8 +31,8 @@
       Puede ser que no estén disponibles temporalmente. En ese caso, intenta acceder,
       espera unos momentos y vuelve a intentar.
       <ul>
-        <li>Servidor 1: <a href="https://cabolabs-ehrserver.rhcloud.com/" target="_blank">cabolabs-ehrserver.rhcloud.com</a> (versión antigua)</li>
-        <li>Servidor 2: <a href="https://ehrserver-cabolabs2.rhcloud.com/login/auth" target="_blank">ehrserver-cabolabs2.rhcloud.com (última versión)</a></li>
+        <li>Servidor 1: <a href="https://cabolabs-ehrserver.rhcloud.com/" target="_blank">cabolabs-ehrserver.rhcloud.com</a></li>
+        <li>Servidor 2: <a href="https://ehrserver-cabolabs2.rhcloud.com/" target="_blank">ehrserver-cabolabs2.rhcloud.com</a></li>
       </ul>
     </p>
   </div>

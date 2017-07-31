@@ -42,12 +42,9 @@ function a($body, $path)
    return '<a href="'. $_base_dir . $path .'">'. $body .'</a>';
 }
 
-
-/*
-print_r($_REQUEST);
-print_r($_SERVER);
-print_r($_req_url);
-*/
+//print_r($_REQUEST);
+//print_r($_SERVER);
+//print_r($_req_url);
 
 // lang
 // if not lang, get from the request, 1st access, set that as lang
@@ -71,7 +68,7 @@ if (array_key_exists('lang', $_REQUEST))
    $_SESSION['lang'] = $lang;
 }
 
-echo '<script>console.log("'.$_SESSION['lang'].'");</script>';
+//echo '<script>console.log("'.$_SESSION['lang'].'");</script>';
 
 
 // routing
@@ -302,6 +299,33 @@ $router_maps = array(
 );
 
 
+// ----
+// check if the route exists for other language (happens when accesing an URL for one language but the client locale is in another language)
+
+if (!array_key_exists($route, $router[$_SESSION['lang']]) || !file_exists('pages_'. $_SESSION['lang'] .'/'. $router[$_SESSION['lang']][$route]))
+{
+  $_other_languages = $_supported_langs;
+  if (($key = array_search($_SESSION['lang'], $_other_languages)) !== false)
+  {
+     unset($_other_languages[$key]);
+  }
+  //print_r($_other_languages);
+  //print_r($_supported_langs);
+
+  foreach ($_other_languages as $_olang)
+  {
+     if (array_key_exists($route, $router[$_olang]))
+     {
+        $current_url = (isset($_SERVER['HTTPS']) ? "https" : "http") ."://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]?lang=". $_olang;
+        //echo "found $route in $_olang, go to $current_url";
+        header('Location: ' . $current_url, true, 302);
+        exit();
+     }
+  }
+}
+// ----
+
+
 /*
 echo $path .'<br/>'; // /ehrserver-cloud/beta_partners_program
 echo $_base_dir .'<br/>'; // /ehrserver-cloud
@@ -315,8 +339,8 @@ echo $router[$route] .'<br/>'; // TODO: CHECK IF IT EXISTS
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="Cloud EHRServer, the open source, generic clinical data repository, with a powerful REST API, compliant with the openEHR standard">
-    <meta name="keywords" content="cloud,ehrserver,cabolabs,clinical data repository,clinical database,openehr,rest api,archetypes,templates,foss,open source">
+    <meta name="description" content="Cloud EHRServer, the open source, clinical data repository, REST API, compliant with the openEHR standard">
+    <meta name="keywords" content="cloud,ehrserver,cabolabs,clinical data repository,clinical database,openehr,rest api,archetypes,templates,foss,open source,open,health,platform,ehr,sharing,emr,phr,smart,interoperability">
     <meta name="author" content="Pablo Pazos Gutierrez">
     <title>EHRServer by CaboLabs</title>
     
@@ -390,6 +414,24 @@ echo $router[$route] .'<br/>'; // TODO: CHECK IF IT EXISTS
         }
         else
         {
+           /*
+          // check if the route exists for other language (happens when accesing an URL for one language but the client locale is in another language)
+          $_other_languages = $_supported_langs;
+          if (($key = array_search($_SESSION['lang'], $_other_languages)) !== false)
+          {
+             unset($_other_languages[$key]);
+          }
+          print_r($_other_languages);
+          //if ()
+          foreach ($_other_languages as $_olang)
+          {
+             if (array_key_exists($route, $router[$_olang]))
+             {
+                echo "found $route in $_olang";
+             }
+          }
+          */
+             
           // 404
           echo '<div class="row"><div class="col-md-12"><h1>Sorry, this page wasn\'t found</h1></div></div>';
         }

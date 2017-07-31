@@ -72,6 +72,15 @@
   </div>
 </div>
 
+<div class="row">
+ <div class="col-md-12">
+   <h3>Guía de EHRServer</h3>
+   <div align="center">
+     <iframe src="https://docs.google.com/gview?url=https://cabolabs.com/software_resources/EHRServer_v1.0.pdf&embedded=true" style="width:640px; height:800px;" frameborder="0"></iframe>
+   </div>
+ </div>
+</div>
+  
 <!--
 <div class="row">
   <div class="col-lg-6">

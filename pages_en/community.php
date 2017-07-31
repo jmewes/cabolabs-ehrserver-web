@@ -19,6 +19,15 @@
        <a href="https://github.com/ppazos/cabolabs-ehrserver-groovy" target="_blank">Groovy</a>
      </li>
      <li>
+       <a href="https://github.com/ppazos/cabolabs-ehrserver/blob/master/api/ehrserver_rest_insomnia.json" target="_blank">Insomnia REST Client Test Requests</a>
+     </li>
+     <li>
+       <a href="https://github.com/ppazos/cabolabs-ehrserver/blob/master/api/swagger.yaml" target="_blank">Swagger API Specification (Beta)</a>
+     </li>
+     <li>
+       <a href="https://swaggerhub.com/apis/ppazos/ehr-server/0.9.5" target="_blank">Swagger API Test (Beta)</a>
+     </li>
+     <li>
        More soon!
      </li>
      <li>

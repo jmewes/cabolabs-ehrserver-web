@@ -28,8 +28,8 @@
       and might not have the latest version of the EHRServer installed, but we try
       to keep them up to date. Also the service might not be available 100% of the time.
       <ul>
-        <li>Staging 1: <a href="https://cabolabs-ehrserver.rhcloud.com/" target="_blank">cabolabs-ehrserver.rhcloud.com</a> (old version)</li>
-        <li>Staging 2: <a href="https://ehrserver-cabolabs2.rhcloud.com/login/auth" target="_blank">ehrserver-cabolabs2.rhcloud.com</a> (latest version)</li>
+        <li>Staging 1: <a href="https://cabolabs-ehrserver.rhcloud.com/" target="_blank">cabolabs-ehrserver.rhcloud.com</a></li>
+        <li>Staging 2: <a href="https://ehrserver-cabolabs2.rhcloud.com/" target="_blank">ehrserver-cabolabs2.rhcloud.com</a></li>
       </ul>
     </p>
   </div>
