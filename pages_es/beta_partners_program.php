@@ -10,7 +10,7 @@
 
 <div class="row">
   <div class="col-md-12">
-    <h2>Why join as a Beta Partner?</h2>
+    <h2>¿Por qué ser Beta Partner?</h2>
     <p>
       Queremos empoderar a un pequeño grupo de desarrolladores y fábricas de software para volverse
       expertos en el EHRServer, colaborando con ellos mientras lo evalúan, y lo usan para construir

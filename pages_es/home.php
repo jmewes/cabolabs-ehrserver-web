@@ -71,29 +71,40 @@
   </div>
 </div>
 
+<a name="solution_partners"></a>
 <div class="row">
   <div class="col-md-12">
     <h1>Socios de Solución</h1>
-    <p¡No estamos solos! Estamos asociados a empresas de primera categoría para ofrecer una solución completa.</p>  
+    <p>¡No estamos solos! Estamos asociados a empresas de primera categoría para ofrecer una solución completa.</p>  
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <h2><a href="https://www.veratech.es/" target="_blank">VeraTech</a></h2>
+    <p>Interoperabilidad semántica y calidad de datos de salud</p>  
+  </div>
+  <div class="col-md-6">
+    <h2><a href="https://www.glyms.com.ar/web/" target="_blank">GLYMS</a></h2>
+    <p>Solución de gestión de laboratorios</p>  
   </div>
 </div>
 <div class="row">
   <div class="col-md-6">
     <h2><a href="https://www.nirdhost.com/" target="_blank">NIRD HOST</a></h2>
-    <p>Solución PaaS que cumple HIPAA.</p>  
+    <p>Solución PaaS que cumple HIPAA</p>  
   </div>
   <div class="col-md-6">
     <h2><a href="http://infoclinic.co/" target="_blank">InfoClinic</a></h2>
-    <p>Servicios Terminológicos de Salud.</p>  
+    <p>Servicios Terminológicos de Salud</p>  
   </div>
 </div>
 <div class="row">
   <div class="col-md-6">
     <h2><a href="http://www.vitalbox.com/" target="_blank">VitalBox</a></h2>
-    <p>Solución de Portal de Pacientes interoperable.</p>  
+    <p>Solución de Portal de Pacientes interoperable</p>  
   </div>
     <div class="col-md-6">
     <h2><a href="http://www.miclinicaweb.com/" target="_blank">Cliniweb</a></h2>
-    <p>Finanzas para consultorios, historias clínicas y citas en línea.</p>  
+    <p>Finanzas para consultorios, historias clínicas y citas en línea</p>  
   </div>
 </div>

@@ -51,7 +51,7 @@
      </li>
      <li>
        <a href="https://github.com/ppazos/notes" target="_blank">Notes</a>
-       : web app to keep ypur psycotheray notes organized, uses the EHRServer as a secondary storage / backup
+       : web app to keep your psycotheray notes organized, uses the EHRServer as a secondary storage / backup
      </li>
     </ol>
   </div>

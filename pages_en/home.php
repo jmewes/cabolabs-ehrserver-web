@@ -171,6 +171,7 @@ h1 div#main_text_2 {
   </div>
 </div>
 
+<a name="solution_partners"></a>
 <div class="row">
   <div class="col-md-12">
     <h1>Solution Partners</h1>
@@ -179,8 +180,18 @@ h1 div#main_text_2 {
 </div>
 <div class="row">
   <div class="col-md-6">
+    <h2><a href="https://www.veratech.es/" target="_blank">VeraTech</a></h2>
+    <p>Semantic interoperability and data quality for health</p>  
+  </div>
+  <div class="col-md-6">
+    <h2><a href="https://www.glyms.com.ar/web/" target="_blank">GLYMS</a></h2>
+    <p>Laboratory management solution</p>  
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
     <h2><a href="https://www.nirdhost.com/" target="_blank">NIRD HOST</a></h2>
-    <p>HIPAA compliant PaaS solution.</p>  
+    <p>HIPAA compliant PaaS solution</p>  
   </div>
   <div class="col-md-6">
     <h2><a href="http://infoclinic.co/" target="_blank">InfoClinic</a></h2>
@@ -190,11 +201,11 @@ h1 div#main_text_2 {
 <div class="row">
   <div class="col-md-6">
     <h2><a href="http://www.vitalbox.com/" target="_blank">VitalBox</a></h2>
-    <p>Interoperable Patient Portal solution.</p>  
+    <p>Interoperable Patient Portal solution</p>  
   </div>
   <div class="col-md-6">
     <h2><a href="http://www.miclinicaweb.com/" target="_blank">Cliniweb</a></h2>
-    <p>EMR, finance and online appointments.</p>  
+    <p>EMR, finance and online appointments</p>  
   </div>
 </div>
 <!--
