@@ -81,7 +81,7 @@
     </p>
     <ol>
       <li>Are meaningless, are not person or patient identifiers</li>
-      <li>Universally unique, allows distributed generation, maintainin uniqueness</li>
+      <li>Universally unique, allows distributed generation, maintaining uniqueness</li>
       <li>Are compliant with the openEHR specifications</li>
     </ol>
     <h3>No references to person or patient real-life identifiers</h3>
@@ -99,7 +99,7 @@
       When creating an EHR, a patient ID should be provided. Above we recommend that ID to be an UUID.
       To have access to the EHR, client apps should store the patient UUID and/or the EHR UUID. Those
       identifiers are the only link between your patient's demographic data and the clinical data stored
-      in the EHRServer.We recommend to store those identifiers in a safe place, encryption is encouraged,
+      in the EHRServer. We recommend to store those identifiers in a safe place, encryption is encouraged,
       allowing decrition only for authorized users, and, if possible, making a little dificult to find
       the link between a patient demographic record and it's EHR and patient UUIDs. One idea would be to
       store the UUIDs in a different database, alongside with the patient ID in the demograpihc repository.
@@ -118,7 +118,7 @@
     </p>
     <h3>Accessing clinical information</h3>
     <p>
-      To access data of a specific EHR, or to cimmit data to it, client apps should provide the
+      To access data of a specific EHR, or to commit data to it, client apps should provide the
       EHR UUID to the EHRServer REST API. Only authorized users should be able to get the UUID and
       access the REST API with that UUID. The UUID access should be controlled by your application,
       while the EHRServer verifies authorization rules internally.
