@@ -47,7 +47,7 @@
       <li><a href="https://github.com/ppazos/cabolabs-ehrserver/tree/master/opts/base_opts" target="_blank">Get sample Operational Templates (OPT)</a></li>
       <li><a href="https://github.com/ppazos/openEHR-OPT" target="_blank">Get openEHR-OPT to generate XML instances from OPTs</a></li>
       <li><a href="https://insomnia.rest/" target="_blank">Install Insomnia REST Client to act as client of the EHRServer to commit data as XML instances</a></li>
-      <li><a href="https://github.com/ppazos/cabolabs-ehrserver/blob/master/ehrserver_rest_insomnia.json" target="_blank">Get the test Insomnia Script that has the needed requests already configured</a></li>
+      <li><a href="https://github.com/ppazos/cabolabs-ehrserver/blob/master/api/EHRServer_v1.1_insomnia_5.4.json" target="_blank">Get the test Insomnia Script that has the needed requests already configured</a></li>
       <li><a href="https://github.com/ppazos/EHRCommitter" target="_blank">Install EHRCommitter as an alternative method of committing XML instances to the EHRServer</a></li>
     </ol>
   </div>
