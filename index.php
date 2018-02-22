@@ -102,7 +102,8 @@ $router = array(
        '/'                            => 'home.php',
        '/index'                       => 'home.php',
        '/home'                        => 'home.php',
-       '/community'                   => 'community.php'
+       '/community'                   => 'community.php',
+       '/pricing'                     => 'pricing.php'
      ),
   'es' => // TODO: rename to spanish routes
      array(
@@ -218,6 +219,9 @@ $router_maps = array(
     '/community' => array(
       'es' => '/comunidad' 
     ),
+    '/pricing' => array(
+      'es' => '/precios' 
+    ),
   ),
   'es' => array(
     '/comienza' => array(
@@ -294,6 +298,9 @@ $router_maps = array(
     ),
     '/comunidad' => array(
       'en' => '/community' 
+    ),
+    '/precios' => array(
+      'en' => '/pricing' 
     ),
   )
 );
@@ -387,6 +394,8 @@ echo $router[$route] .'<br/>'; // TODO: CHECK IF IT EXISTS
     <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
     
     <script src='https://www.google.com/recaptcha/api.js'></script>
+    
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     
     <style>
       a {

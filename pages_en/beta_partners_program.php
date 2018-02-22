@@ -1,3 +1,13 @@
+
+<div class="row">
+  <div class="col-md-12">
+  <br/>
+   <div class="alert alert-danger">
+     <strong>Oops!</strong> The Beta Partner Program is currently closed, you can sign up to one of our <a href="<?=$_base_dir?>/pricing">SaaS plans!</a>
+   </div>
+  </div>
+</div>
+
 <div class="row">
   <div class="col-md-12">
     <h1>Beta Partners Program</h1>

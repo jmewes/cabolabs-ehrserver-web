@@ -1,3 +1,13 @@
+
+<div class="row">
+  <div class="col-md-12">
+  <br/>
+   <div class="alert alert-danger">
+     <strong>Oops!</strong> This guide has been deprecated, since staging servers are not longer available.
+   </div>
+  </div>
+</div>
+
 <div class="row">
   <div class="col-md-12">
     <h1>Using the EHRServer staging server</h1>

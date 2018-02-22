@@ -15,7 +15,7 @@
       <a href="https://dev.mysql.com/downloads/mysql/ target="_blank">Download here</a>
     </p>
     <p>
-      <b>2) Download and Install Grails 2.5.5</b><br/><br/>
+      <b>2) Download and Install Grails 2.5.6</b><br/><br/>
       <a href="http://www.grails.org/download.html target="_blank">Download and installation instructions here</a><br/></br>
     </p>
     
@@ -77,7 +77,7 @@
 
        Execute this command line from the project folder:<br/></br>
 
-       ehrserver/ grails -Dserver.port=8090 run-app<br/></br>
+       $ehrserver&gt; grails -Dserver.port=8090 -Duser.timezone=UTC run-app<br/></br>
 
        This will run the server locally, on the port 8090, so you will be able to access it through:
        http://localhost:8090/ehr<br/></br>

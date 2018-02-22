@@ -108,7 +108,7 @@
       This is a web app we developed to help us test the data commit to the EHRServer, and will be our
       second method to test how to send data to the EHRServer. Since this is a web app, it has some
       requirements. First you'll need to have Java 7 or superior. Second you'll need to download and
-      install Grails v2.5.5 (https://grails.org/download.html). It needs to be v2.5.5!. It can also be
+      install Grails v2.5.6 (https://grails.org/download.html). It needs to be v2.5.6!. It can also be
       installed through SDKMAN, check that on the download page. Once you have Grails installed, download
       or clone the EHRCommitter project from here:<br/><br/>
 
@@ -121,17 +121,17 @@
   <div class="col-md-12">
     <h2>5. Process to follow</h2>
     <p>
-      For the test we will use the staging server
-      (<a href="https://ehrserver-cabolabs2.rhcloud.com/login/auth" target="_target">https://ehrserver-cabolabs2.rhcloud.com/login/auth</a>).
-      Please create an account to setup your username, password and organization.
+      For the test you'll need to have EHRServer installed on your machine. You can also have an account on our <a href="<?=$_base_dir?>/pricing">production server</a>.
+      
+      To install EHRServer locally, check section 2 of the <a href="https://www.cabolabs.com/en/products/ehrserver" target="_blank">EHRServer guide</a>.
     </p>
     
     <h3>Using the Insomnia Script</h3>
     <p>
-      First, check that the Insomnia script you imported is pointing to our staging server. Go to the
+      First, check that the Insomnia script you imported is pointing to the right server URL. Go to the
       Request Group "EHRServer local", click on the down arrow that appears on the right, click on
-      "Edit Environment". It will show a JSON with a lot of URLs, be sure that the one called exactly
-      "base_url" has the value "https://ehrserver-cabolabs2.rhcloud.com/api/v1".
+      "Edit Environment". It will show a JSON with a lot of URLs, be sure that the correct URL is set to
+      "base_url", for a local server the URL will be "http://localhost:8090/ehr/api/v1".
     </p>
     <p>
       Then check that your credentials work. Go to the "login" request under the "EHRServer local"
@@ -150,7 +150,7 @@
       the data. With those elements our request will be complete.
     </p>
     <p>
-      To create an EHR, go to the staging server and login. Go to the EHRs section and click on "Create EHR".
+      To create an EHR, login into the server and go to the EHRs section and click on "Create EHR".
       Just fill in anything to the Subject ID (external patient ID) and click on Save. The EHRServer will
       assign an UID to the EHR, copy it. Go back to Insomnia, select the "commit test 1" request, and go to
       the PARAMS tab. Paste the value of the EHR UID in the ehrUid param.
@@ -233,7 +233,7 @@
     </pre><br/><br/>
     
     <p>
-      Go to the EHRServer Web Console to verify the commit. After you login into the staging server, go to
+      Go to the EHRServer's Administrative Console to verify the commit. After you login into the server, go to
       EHRs, click on the EHR that you used for the commit. Below the EHR data you will see a list of
       Contributions that represent all the changes to that EHR. The latest contribution should be our test.
       If you click over the XML icon, you will see exactly the same XML generated from the openEHR-OPT project,
@@ -257,7 +257,7 @@
       Generating the clinical document with annotations
     </p>
     <p>
-      This part assumes you already have a user created on the staging server and that you created an EHR
+      This part assumes you already have a user created in the server, and that you created an EHR
       (see previous section).
     </p>
     <p>
@@ -301,14 +301,14 @@
     </p>
     <p>
       Now let's run the EHRCommitter. Open a console, go to "C:\committer" and execute "grails prod run-app".
-      Of course this supposes that you have Grails 2.5.5 and the EHRCommitter installed. The application
+      Of course this supposes that you have Grails 2.5.6 and the EHRCommitter installed. The application
       will run on: http://localhost:8080/EhrCommitter
     </p>
     <p>
-      Open the address of the committer in your browser and login with your credentials from the staging server.
-       The EHRCommitter uses the REST API of the EHRServer to authenticate the user and get the EHRs you created
-       from the Web Console. The EHRCommitter will display a list of all the instances with metatags, you will
-       see the one we created on the previous step. Click on that one.
+      Open the address of the committer in your browser and login with your credentials from the EHRServer.
+      The EHRCommitter uses the REST API of the EHRServer to authenticate the user and get the EHRs you created
+      from the Web Console. The EHRCommitter will display a list of all the instances with metatags, you will
+      see the one we created on the previous step. Click on that one.
     </p>
     <p>
       A form with random data is displayed. Each field is defined by one metatag in the XML. The first field
@@ -324,7 +324,7 @@
       software than the Insomnia test.
     </p>
     <p>
-      Go to the staging server to check your commits!
+      Go to the EHRServer to check your commits!
     </p>
   </div>
 </div>

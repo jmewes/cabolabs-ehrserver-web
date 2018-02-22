@@ -7,11 +7,15 @@
         {
           if ($_SESSION['lang'] == $_slang)
           {
-             echo strtoupper($_slang);
+            echo strtoupper($_slang);
           }
           else
           {
-            echo '<a href="'. $_base_dir . ($_SESSION['lang'] != $_slang ? $router_maps[$_SESSION['lang']][$route][$_slang] : '') .'?lang='. $_slang .'" style="'. ($_SESSION['lang'] == $_slang ? 'font-weight:bold;text-decoration:underline;':'') .'">'. strtoupper($_slang) .'</a>';
+            $path = '';
+            if ( !isset($router_maps[$_SESSION['lang']][$route]) ) $path = $router_maps[$_SESSION['lang']]['/inicio'][$_slang];
+            else $path = $router_maps[$_SESSION['lang']][$route][$_slang];
+             
+            echo '<a href="'. $_base_dir . ($_SESSION['lang'] != $_slang ? $path : '') .'?lang='. $_slang .'" style="'. ($_SESSION['lang'] == $_slang ? 'font-weight:bold;text-decoration:underline;':'') .'">'. strtoupper($_slang) .'</a>';
           }
           if ($i < count($_supported_langs)-1) echo ' | ';
         }

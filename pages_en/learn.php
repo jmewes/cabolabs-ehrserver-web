@@ -28,9 +28,11 @@
      <li>
        <a href="<?=$_base_dir?>/learn/try_it">Trying the EHRServer locally</a>
      </li>
+     <!--
      <li>
        <a href="<?=$_base_dir?>/learn/using_staging">Using the EHRServer staging server</a>
      </li>
+     -->
      <li>
        <a href="<?=$_base_dir?>/learn/data_commit">Data Commit Guide</a>
      </li>
