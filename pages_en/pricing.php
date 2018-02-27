@@ -30,8 +30,8 @@
        <h2>Basic</h2>
      </li>
      <li class="list-group-item">
-       <h3>7 USD/mo</h3>
-       <small>+ one time 10 USD fee for setup</small>
+       <h3>15 USD/mo</h3>
+       <small>+ one time 15 USD fee for setup</small>
      </li>
      <li class="list-group-item">
        <i class="fa fa-database fa-fw" aria-hidden="true"></i> 2.5 GB
@@ -43,6 +43,17 @@
      </li>
      <li class="list-group-item">
        <i class="fa fa-building-o fa-fw" aria-hidden="true"></i> 1 organization
+     </li>
+     <li class="list-group-item">
+       Up to 5 API tokens
+       <i class="fa fa-question-circle fa-fw question templates" aria-hidden="true" title="API tokens are used to connect client apps to the EHRServer REST API"></i>
+     </li>
+     <li class="list-group-item">
+       Unlimited EHRs
+     </li>
+     <li class="list-group-item">
+       Free SNOMED expressions for 1 year
+       <i class="fa fa-question-circle fa-fw question templates" aria-hidden="true" title="Allows to use SNOMED expressions in clinica data queries with complex search criteria"></i>
      </li>
      <li class="list-group-item">
        Community support
@@ -62,8 +73,8 @@
        <h2>Standard</h2>
      </li>
      <li class="list-group-item">
-       <h3>15 USD/mo</h3>
-       <small>+ one time 10 USD fee for setup</small>
+       <h3>35 USD/mo</h3>
+       <small>+ one time 15 USD fee for setup</small>
      </li>
      <li class="list-group-item">
        <i class="fa fa-database fa-fw" aria-hidden="true"></i> 7.5 GB
@@ -75,6 +86,17 @@
      </li>
      <li class="list-group-item">
        <i class="fa fa-building-o fa-fw" aria-hidden="true"></i> 3 organizations
+     </li>
+     <li class="list-group-item">
+       Up to 20 API tokens
+       <i class="fa fa-question-circle fa-fw question templates" aria-hidden="true" title="API tokens are used to connect client apps to the EHRServer REST API"></i>
+     </li>
+     <li class="list-group-item">
+       Unlimited EHRs
+     </li>
+     <li class="list-group-item">
+       Free SNOMED expressions for 1 year
+       <i class="fa fa-question-circle fa-fw question templates" aria-hidden="true" title="Allows to use SNOMED expressions in clinica data queries with complex search criteria"></i>
      </li>
      <li class="list-group-item">
        Community support
@@ -94,8 +116,8 @@
        <h2>Enterprise</h2>
      </li>
      <li class="list-group-item">
-       <h3>35 USD/mo</h3>
-       <small>+ one time 10 USD fee for setup</small>
+       <h3>75 USD/mo</h3>
+       <small>+ one time 15 USD fee for setup</small>
      </li>
      <li class="list-group-item">
        <i class="fa fa-database fa-fw" aria-hidden="true"></i> 15 GB
@@ -107,6 +129,17 @@
      </li>
      <li class="list-group-item">
        <i class="fa fa-building-o fa-fw" aria-hidden="true"></i> 10 organizations
+     </li>
+     <li class="list-group-item">
+       Unlimited API tokens
+       <i class="fa fa-question-circle fa-fw question templates" aria-hidden="true" title="API tokens are used to connect client apps to the EHRServer REST API"></i>
+     </li>
+     <li class="list-group-item">
+       Unlimited EHRs
+     </li>
+     <li class="list-group-item">
+       Free SNOMED expressions for 1 year
+       <i class="fa fa-question-circle fa-fw question templates" aria-hidden="true" title="Allows to use SNOMED expressions in clinica data queries with complex search criteria"></i>
      </li>
      <li class="list-group-item">
        Personalized support
@@ -123,8 +156,10 @@
 <div class="row">
   <div class="col-md-12">
     <h2>Need more?</h2>
-    <p>We also provide custom plans and dedicated servers (one server just for you with no limits)</p>
-    <p><a href="<?=$_base_dir?>/contact">Contact us!</a></p>
+    <p>
+      We also provide custom plans and dedicated servers (one server just for you with no limits).
+      <a href="<?=$_base_dir?>/contact">Contact us!</a>
+    </p>
   </div>
 </div>
 
@@ -136,8 +171,8 @@
     of organizations that will generate and consume documents, and the number of
     different types of documents (templates) supported for each organization.</p>
     
-    <p>Plans are paid yearly, and that credit is assigned to your account. Each month a debit
-    equals to the monthly cost of the plan will be executed against your credit.</p>
+    <p>Plan subscriptions are paid yearly, and that credit is assigned to your account. Each month
+    a debit equals to the monthly cost of the plan will be executed against your credit.</p>
     
     <p>You can request a plan change any time, and the credit you have will be prorrated to the
     price of the new plan. For instance, if you sign up to a Basic plan, and after two months

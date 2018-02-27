@@ -131,7 +131,8 @@ $router = array(
        '/'                           => 'home.php',
        '/index'                      => 'home.php',
        '/inicio'                     => 'home.php',
-       '/comunidad'                  => 'community.php'
+       '/comunidad'                  => 'community.php',
+       '/precios'                    => 'precios.php'
      )
 );
 

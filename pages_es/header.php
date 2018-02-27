@@ -1,6 +1,6 @@
 <div class="masthead">
   <h3 class="text-muted">
-    <a href="<?=$_base_dir?>/index">Cloud EHRServer <sub>(beta)</sub></a>
+    <a href="<?=$_base_dir?>/index">CloudEHRServer <sub>(beta)</sub></a>
     <span id="langs">
       <?php
         foreach ($_supported_langs as $i => $_slang)
@@ -25,7 +25,7 @@
   <nav>
     <ul class="nav nav-justified">
       <li <?=(startsWith($route,'/comienza'))?'class="active"':''?>><a href="<?=$_base_dir?>/comienza">Comienza</a></li>
-      <li <?=(startsWith($route,'/programa_beta_partners'))?'class="active"':''?>><a href="<?=$_base_dir?>/programa_beta_partners">Beta Partners</a></li>
+      <li <?=(startsWith($route,'/precios'))?'class="active"':''?>><a href="<?=$_base_dir?>/precios">Precios</a></li>
       <li <?=(startsWith($route,'/aprende'))?'class="active"':''?>><a href="<?=$_base_dir?>/aprende">Aprende</a></li>
       <li <?=(startsWith($route,'/contacto'))?'class="active"':''?>><a href="<?=$_base_dir?>/contacto">Contacto</a></li>
       <li <?=(startsWith($route,'/comunidad'))?'class="active"':''?>><a href="<?=$_base_dir?>/comunidad">Comunidad</a></li>
