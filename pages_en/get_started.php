@@ -23,9 +23,9 @@
   <div class="col-md-12">
     <h2>Subscribe to CloudEHRServer</h2>
     <p>
-      On the <a href="<?=$_base_dir?>/pricing">pricing page</a> you can find plans with different services levels.
+      On the <a href="<?=$_base_dir?>/pricing">pricing page</a> you can find plans with different service levels.
       After you sign up to a plan, you can start building your repository, create organizations, users, EHRs, templates and queries.
-      You can find more information about that on the <a href="<?=$_base_dir?>/learn">learn page</a>
+      You can find more information about that on the <a href="<?=$_base_dir?>/learn">learn page</a>.
     </p>
   </div>
 </div>

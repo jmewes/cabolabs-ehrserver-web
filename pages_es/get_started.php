@@ -2,18 +2,42 @@
   <div class="col-md-12">
     <h1>Comienza</h1>
     <p>
-      Actualmente sólo estamos aceptando usuarios que sean parte del
-      <a href="<?=$_base_dir?>/programa_beta_partners">Programa de Beta Partners</a>.
-      Pronto lanzaremos los planes para uso general.
+      CloudEHRServer es una plataforma para gestionar y compartir información clínica, basada en
+      <a href="https://github.com/ppazos/cabolabs-ehrserver" target="_blank">software de código abierto</a>
+      y el <a href="https://www.openehr.org/" target="_blank">estándar openEHR</a>.
+    </p>
+    <p>
+      Los principales componentes son: un repositorio de información estandarizado, una API REST y una
+      consola web de administración. Provee todo lo necesario para almacenar, consultar, recuperar, 
+      gestionar y auditar información clínica de forma segura, privada y de forma estándar.
+    </p>
+    <p>
+      CloudEHRServer habilita la creación de varios tipos de aplicaciones clínicas para ingreso, visualización,
+      y análisis de información clínica. El backend de tu próxima aplicación clínica está listo, para que puedas
+      focalizarte en las funcionalidades para tus clientes.
     </p>
   </div>
 </div>
+
+<div class="row">
+  <div class="col-md-12">
+    <h2>Suscríbete a CloudEHRServer</h2>
+    <p>
+      En la página de <a href="<?=$_base_dir?>/precios">precios</a> puedes encontrar los planes que ofrecemos
+      con distintos niveles de servicio. Luego de suscribirte a un plan, podrás crear tu repositorio, crear
+      organizaciones, usuarios, historias clínicas, plantillas y consultas de datos clínicos. Puedes encontrar
+      más inbformación en nuestra <a href="<?=$_base_dir?>/aprende">página de aprendizaje</a>.
+    </p>
+  </div>
+</div>
+
+<!--
 <div class="row">
   <div class="col-md-12">
     <h2>Proceso de registro</h2>
     <p>
       Para usar CloudEHRServer, envíanos un <a href="<?=$_base_dir?>/contacto">mensaje</a>
-      y te contactaremos con istrucciones. Luego de la confirmación de tu registro, te enviaremos
+      y te contactaremos con instrucciones. Luego de la confirmación de tu registro, te enviaremos
       toda la información necesaria para comenzar a usar el CloudEHRServer!
       Quienes se registren en nuestro
       <a href="<?=$_base_dir?>/programa_beta_partners">Programa de  Beta Partners</a>
@@ -37,6 +61,7 @@
     </p>
   </div>
 </div>
+-->
 <div class="row">
   <div class="col-md-12">
     <h2>Uso y Administración</h2>
@@ -49,25 +74,27 @@
 <div class="row">
   <div class="col-md-12">
     <h3>¿Cómo funciona?</h3>
+    
     <p>EHRServer está basado en el estándar openEHR, y gran parte de sus especificaciones
     y características son soportadas.</p>
+    
     <p>EHRServer consume modelos de inforamción clínica llamados Plantillas Operativas
     (OPT por su sigla en inglés), donde se define la semántica, estructuras de datos,
     restricciones y terminología asociada a cada documento clínico que será almacenado.</p>
-    <p>
-    Cuando una aplicación envía documentos para almacenar en EHRServer, datos clave son
+    
+    <p>Cuando una aplicación envía documentos para almacenar en EHRServer, datos clave son
     extraídos para permitir búsquedas inteligentes de información. Esos documentos deberán
     cumplir con los OPTs cargados previamente.</p>
-    <p>
-    Un administrador podrá crear consultas de información utilizando una interfaz web, y
+    
+    <p>Un administrador podrá crear consultas de información utilizando una interfaz web, y
     estarán basadas en las definiciones de los OPTs. Las consultas estarán
     disponibles de forma instantánea para ser ejecutadas desde Servicios Web REST, y así
     poder obtener conjuntos de datos almacenados en EHRServer.</p>
-    <p>
-    Se pueden crear tantas consultas como sea necesario, sin modificar una sola línea de
+    
+    <p>Se pueden crear tantas consultas como sea necesario, sin modificar una sola línea de
     código ni escribir SQL.</p>
-    <p>
-    Eso es todo, guardas datos, consultas datos, todo estandarizado, y sin escribir una sola
+    
+    <p>Eso es todo, guardas datos, consultas datos, todo estandarizado, y sin escribir una sola
     línea de código.</p>
     
     <h4>Tan simple como:</h4>
