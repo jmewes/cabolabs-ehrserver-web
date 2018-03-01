@@ -1,134 +1,141 @@
 <div class="row">
   <div class="col-md-12">
-    <h1>Want to test the EHRServer?</h1>
-    <p>There are two ways of testing the EHRServer: install it on your computer or use our staging server.</p>
+    <h1>¿Quieres probar el EHRServer?</h1>
+    <p>Esta guía te ayudará a instalarlo en tu computadora.</p>
   </div>
 </div>
 
 <div class="row">
   <div class="col-md-12">
-    <h2>1. Install the EHRServer in your machine</h2>
+    <h2>1. Instalación del EHRServer</h2>
     
-    <h3>Prerequisites</h3>
+    <h3>Prerrequisitos</h3>
     <p>
-      <b>1) Download and Install MySQL Server</b><br/><br/>
-      <a href="https://dev.mysql.com/downloads/mysql/ target="_blank">Download here</a>
+      <b>1) Instala MySQL Server</b><br/><br/>
+      <a href="https://dev.mysql.com/downloads/mysql/" target="_blank">Descarga el instalador</a>
     </p>
     <p>
-      <b>2) Download and Install Grails 2.5.6</b><br/><br/>
-      <a href="http://www.grails.org/download.html target="_blank">Download and installation instructions here</a><br/></br>
+      <b>2) Instala Grails 2.5.6</b><br/><br/>
+      <a href="http://www.grails.org/download.html" target="_blank">Aquí puedes encontrar la descarga y las instrucciones de instalación</a><br/></br>
     </p>
     
-    <h3>Installing</h3>
+    <h3>EHRServer</h3>
     <p>
-     <b>3) Download EHRServer</b><br/><br/>
+     <b>3) Descarga EHRServer</b><br/><br/>
 
-     You can download latest development version of EHRServer from
-     <a href="https://github.com/ppazos/cabolabs-ehrserver/archive/master.zip" target="_blank">here</a>.
+     Descarga la versión de desarrollo
+     <a href="https://github.com/ppazos/cabolabs-ehrserver/archive/master.zip" target="_blank">aquí</a>.
 
-     You can download the latest release from
-     <a href="https://github.com/ppazos/cabolabs-ehrserver/releases" target="_blank">here</a>.<br/></br>
+     Descarga la última versión liberada
+     <a href="https://github.com/ppazos/cabolabs-ehrserver/releases" target="_blank">aquí</a>.<br/></br>
     </p>
     <p>
-     <b>4) Configure the database</b><br/><br/>
+     <b>4) Configura la base de datos</b><br/><br/>
 
-     Edit the DaraSource, under the "development" environment, 
-     <a href="https://github.com/ppazos/cabolabs-ehrserver/blob/master/grails-app/conf/DataSource.groovy" target="_blank">check this</a>.
+     Edita el archivo DaraSource, bajo el ambiente "development",
+     <a href="https://github.com/ppazos/cabolabs-ehrserver/blob/master/grails-app/conf/DataSource.groovy" target="_blank">puedes verlo aquí</a>.
 
-     If the database you configured doesn’t exist, you need to create it in your DBMS (e.g. MySQL).<br/></br>
+     Si la base de datos configurada no existe, debes crearla en MySQL. Por simplicidad puedes llamarla "ehrserver".<br/></br>
     </p>
     <p>
-      <b>5) Create working folders and configure paths</b><br/><br/>
+      <b>5) Configuración de las carpetas de trabajo</b><br/><br/>
 
-       opts &amp; opts/base_opts<br/><br/>
+       opts y opts/base_opts<br/><br/>
+       
+       El proyecto incluye una carpeta llamada "opts", que contiene una carpeta llamada "base_opts". Ahí están
+       las plantillas openEHR que se cargarán cuando se ejecute EHRServer. Puedes mover la carpeta "opts" a
+       cualquier ora ubicación, si lo haces debes configurar la entrada "app.opt_repo" en el archivo
+       <a href="https://github.com/ppazos/cabolabs-ehrserver/blob/master/grails-app/conf/Config.groovy" target="_blank">Config.groovy</a>,
+       bajo el entorno "development".<br/><br/>
 
-       The project includes a folder called "opts". Inside there is a "base_opts" folder, where the default 
-       Operational Templates (definitions of openEHR clinical documents) are located. When the EHRServer is 
-       started, the OPTs from "base_opts" are copied (and renamed) to "opts", only those definitions will be 
-       used by the EHRServer. You can move the "opts" folder to any location, but you need to update the entry 
-       "app.opt_repo" in the Config script to reflect the new location of the folder.<br/><br/>
-
+       
        xsd<br/><br/>
-
-       The project includes a folder called "xsd" where the needed XML Schemas are located. You can move that 
-       folder to any location, but you need to update these entries on the Config script:
+       
+       El proyecto incluye una carpeta llamada "xsd" que contiene los esquemas XML necesarios para validar plantillas y
+       documentos clínicos. Puedes mover esa carpeta pero en
+       <a href="https://github.com/ppazos/cabolabs-ehrserver/blob/master/grails-app/conf/Config.groovy" target="_blank">Config.groovy</a>
+       debes actualizar las siguientes entradas:
 
        <ul>
-           <li>app.version_xsd</li>
-           <li>app.xslt</li>
-           <li>app.opt_xsd</li>
+         <li>app.version_xsd</li>
+         <li>app.xslt</li>
+         <li>app.opt_xsd</li>
        </ul>
+       <br/>
 
-       Note: if you run the EHRServer from the WAR in a Web Server like Tomcat, the xsd folder is not needed because 
-       it is packaged with the app in the WAR file.<br/><br/>
+       Nota: si ejecutas EHRServer desde el WAR en un servidor como Tomcat, la carpeta xsd no es necesaria porque
+       está incluida en el archivo WAR.<br/><br/>
 
 
-       versions<br/><br/>
+       versions y commits<br/><br/>
 
-       You need to create a working folder to store the committed versions. That folder should have permissions to 
-       read and write. After you create that folder, you need to update the entry "app.version_repo" on the Config script.<br/><br/>
+       Si las carpetas versions y commit no están incluidas en el proyecto, deben crearse. Estas carpetas deben tener
+       permisos de escritura para que EHRServer pueda guardar datos en ellas. Luego verifica que la configuración de
+       las entradas "app.version_repo" y "app.commit_logs" contienen las rutas correctas. Esto es dentro de Config.groovy.<br/><br/>
 
-       By default, that folder is ehrserver/versions, where "ehrserver" is the folder in which the EHRServer code is.<br/></br>
+       Por defecto esas rutas son ehrserver/versions y ehrserver/commits, donde "ehrserver" es la carpeta donde está EHRServer.<br/></br>
     </p>
     <p>
-      <b>6) Run the EHRServer</b><br/></br>
+      <b>6) Configura la clave de tokens para la API REST</b><br/></br>
+      
+      Es necesario configurar la variable de entorno EHRSERVER_REST_SECRET, se recomienda que el valor sea un UUID.<br/></br>
+      
+      La variable debería verse así con un valor de ejemplo: EHRSERVER_REST_SECRET=6067dba9-1234-1234-1234-92208c77ce77<br/></br>
+      
+      ¿Cómo configurar variables de entorno?</br>
+      
+      <ul>
+        <li><a href="https://www.java.com/en/download/help/path.xml" target="_blank">Ejemplo de Windows</a></li>
+        <li><a href="https://help.ubuntu.com/community/EnvironmentVariables" target="_blank">Ejemplo de Linux</a></li>
+        <li><a href="https://stackoverflow.com/questions/7501678/set-environment-variables-on-mac-os-x-lion" target="_blank">Ejemplo de MacOS</a></li>
+      </ul>
+      <br/>
+      
+      ¿Cómo puedo obtener un UUID?</br>
+      
+      <ul>
+        <li><a href="https://www.uuidgenerator.net/" target="_blank">Generador de UUIDs</a></li>
+      </ul>
+      <br/>
+    </p>
+    <p>
+      <b>7) Ejecutando EHRServer</b><br/></br>
 
-       Run:<br/></br>
+       Para ejecutar, debes correr este comando desde la consola, estando dentro de la carpeta del EHRServer:<br/></br>
 
-       Execute this command line from the project folder:<br/></br>
+       ehrserver&gt; grails -Dserver.port=8090 -Duser.timezone=UTC run-app<br/></br>
 
-       ehrserver/ grails -Dserver.port=8090 run-app<br/></br>
-
-       This will run the server locally, on the port 8090, so you will be able to access it through:
+       Esto ejecutará EHRServer localemente, y estará accesible desde el puerto 8090, podrás accederlo desde:
        http://localhost:8090/ehr<br/></br>
 
-       Login:<br/></br>
+       Para ingresar desde la consola web, utiliza las credenciales de administración: admin / admin / 123456
+       (nombre de usuario / clave, número de organización). Como este usuario es adminstrador, tendrá acceso
+       a todas las secciones de la consola web.<br/></br>
 
-       Use admin / admin / 123456 (username, password, organization) to login, and you are ready to go. That is the 
-       administration user, so it has special access to all the functionalities of the EHRServer.<br/></br>
-
-       For a more constrained user, you can use this login: orgman / orgman / 123456  (username, password, organization). 
-       That user is an organization manager, and can only manage it’s organizations, so some items on the menu are hidden 
-       from this user as only the admin has rights to access them.<br/></br>
+       Para usuarios con más restricciones puedes usar: accman / accman / 123456 (usuario que gestiona una cuenta),
+       orgman / orgman / 123456 (usuario que gestiona una organización).<br/></br>
     </p>
     <p>
-      <b>7) Create environment variables if you will use the "create account" feature locally</b><br/><br/>
+      <b>8) Crear variables de entorno para habilitar el registro de usuarios</b><br/><br/>
 
-      When an account is created, it needs to send an email with some basic account information, and a link to reset 
-      the password. The email service needs to be configured to do that. We use these environment variables to do 
-      that configuration:
+      Cuando un usuario se registra desde la consola web, el EHRServer enviará un correo con información de cómo
+      ingresar al EHRServer y un link para establecer una clave para su cuenta. Para poder enviar el correo, se
+      debe configurar un servidor de correos SMTP mediante las siguientes variables de entorno:
 
       <ul>
-        <li>EHRSERVER_EMAIL_HOST: URL / IP of your SMTP server</li>
-        <li>EHRSERVER_EMAIL_PORT: port number of your SMTP server</li>
-        <li>EHRSERVER_EMAIL_USER: valid user on your SMTP server (probably an email address)</li>
-        <li>EHRSERVER_EMAIL_PASS: password corresponding to the user</li>
-        <li>EHRSERVER_EMAIL_FROM: the email address that will appear to the receiver as "from"</li>
+        <li>EHRSERVER_EMAIL_HOST: URL / IP de tu servidor SMTP</li>
+        <li>EHRSERVER_EMAIL_PORT: puertodel servidor SMTP</li>
+        <li>EHRSERVER_EMAIL_USER: usuario válido en el servidor SMTP</li>
+        <li>EHRSERVER_EMAIL_PASS: clave para el usuario</li>
+        <li>EHRSERVER_EMAIL_FROM: dirección de correo que aparecerá en el campo "De"</li>
       </ul>
       
       <br/></br>
       
-      You can see where this configuration is used <a href="https://github.com/ppazos/cabolabs-ehrserver/blob/master/grails-app/conf/Config.groovy#L218-L224" target="_blank">here</a><br/></br>
-    </p>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-12">
-    <h2>2. Use our staging server</h2>
-    <p>
-      We have a full guide on <a href="<?=$_base_dir?>/learn/using_staging">Using the EHRServer staging server</a>
-      
-      <h3>Some considerations</h3>
-      <ol>
-        <li>The stagin server was created just for testing purposes</li>
-        <li>It can be slow</li>
-        <li>It can be not available</li>
-        <li>Data can be erased without notification</li>
-      </ol>
+      Aquí puedes ver donde se utiliza esta <a href="https://github.com/ppazos/cabolabs-ehrserver/blob/master/grails-app/conf/Config.groovy#L285-L293" target="_blank">configuración</a><br/></br>
     </p>
     <p>
-      <a href="<?=$_base_dir?>/contact">Contact us</a> if you have any questions.
+      Si tienes algún problema, consulta en nuestro <a href="https://www.cabolabs.com/forum/" target="_blank">foro de la comunidad</a>.
     </p>
   </div>
 </div>
