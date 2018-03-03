@@ -5,7 +5,7 @@
     <meta name="keywords" content="EHRServer, EHR, Server, cloud, saas, back-end, backend, CDR, clinical data repository, openEHR, foss, cabolabs, Cloud EHR Server, electronic health record, medical record, clinical data, clinical information, archetypes, clinical data query, clinical decision suport, CDS">
     <meta name="author" content="Pablo Pazos">
     <meta name="contact" content="pablo.pazos@cabolabs.com" />
-    <title>Cloud EHRServer by CaboLabs</title>
+    <title>CloudEHRServer by CaboLabs</title>
     <script>
     var loc = window.location.href+'';
     if (loc.indexOf('http://')==0){

@@ -347,7 +347,7 @@ echo $router[$route] .'<br/>'; // TODO: CHECK IF IT EXISTS
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="Cloud EHRServer, the open source, clinical data repository, REST API, compliant with the openEHR standard">
+    <meta name="description" content="CloudEHRServer, the open source, clinical data repository, REST API, compliant with the openEHR standard">
     <meta name="keywords" content="cloud,ehrserver,cabolabs,clinical data repository,clinical database,openehr,rest api,archetypes,templates,foss,open source,open,health,platform,ehr,sharing,emr,phr,smart,interoperability">
     <meta name="author" content="Pablo Pazos Gutierrez">
     <title>EHRServer by CaboLabs</title>

@@ -1,7 +1,3 @@
-<style type="text/css">
-
-</style>
-
 <div class="row">
   <div class="col-lg-8 col-lg-offset-2 text-center main">
     <img src="<?=$_base_dir?>/images/CloudEHRServer_white_72_square.png" />
@@ -51,9 +47,9 @@
  </div>
   <div class="col-lg-4">
     <h2>Powerful REST API</h2>
-    <p>Hassle free clinical data storage and retrieval.
-    Manage EHRs and access all the clinical information in a standardized way,
-    from any system or application, when you need to.</p>
+    <p>Hassle free clinical data storage and retrieval. Manage EHRs and access all the clinical
+    information in a secure and standardized way, from any system or application, how and when
+    you need to.</p>
     <!--
     <p class="center v-air"><a class="btn btn-primary" href="#" role="button">Take a look at our REST API &raquo;</a></p>
     -->
@@ -65,8 +61,9 @@
     <h1>Why EHRServer?</h1>
     <p>
     EHRServer solves a very specific challenge all clinical information systems have to tackle:
-    to build a clinical data repository. And companies are creating custom repositories for every
-    new project, lacking resources on a problem that is already solved in a generic and standard way.
+    to build a clinical data repository. Companies are creating custom repositories for every
+    new project, adding fragmentation, weakening interoperability, lacking resources on a
+    problem that is already solved in a generic and standard way.
     </p>
     
     <p>
@@ -76,13 +73,13 @@
         <li>generic (can handle different types of data structures)</li>
         <li>maintainable in the long term at low cost</li>
         <li>performant, secure and scalable</li>
-        <li>integrable into different kinds of apps and platforms</li>
-        <li>based on open technologies and standards (like the Internet)</li>
+        <li>integrable into different kinds of apps and technologies</li>
+        <li>based on open technologies and standards</li>
       </ol>
     </p>
     
-    <p>It took us years of research and development, trial and error, to create a good solution
-    for those requirements.</p>
+    <p>It took CaboLabs years of research and development, trial and error, to create a
+    good solution that complies with those basic requirements.</p>
     
     <p>The goal of the EHRServer is to save time and money to companies that are building their          
     EHR/EMR/PHR systems, and try to solve the same problem again and again, with custom solutions.</p>

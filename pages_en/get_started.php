@@ -118,12 +118,13 @@
     
     <h4>Main features:</h4>
     <ol>
-      <li>Web Console for simple management</li>
+      <li>Web Console for simple management and audit</li>
       <li>Full audit access for traceability</li>
       <li>Versioned clinical documents</li>
       <li>Service Oriented / REST API</li>
       <li>Supports XML and JSON formats</li>
-      <li>Query Builder from the Web Console</li>
+      <li>Query Builder to create data queries from the Web Console</li>
+      <li>SNOMED CT Expression support on openEHR queries</li>
       <li>Supports any structure of clinical document</li>
       <li>Multitenant</li>
       <li>Open Source</li>

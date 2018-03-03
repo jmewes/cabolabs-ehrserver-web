@@ -109,12 +109,13 @@
     
     <h4>Principales características:</h4>
     <ol>
-      <li>Consola Web para gestión simplificada</li>
+      <li>Consola Web para gestión y audirotía simple</li>
       <li>Auditoría y registros de trazabilidad completos</li>
       <li>Documentos clínicos versionados</li>
       <li>Orientado a servicios / API REST</li>
       <li>Soporta formatos XML y JSON</li>
-      <li>Query Builder desde la Consola Web</li>
+      <li>Query Builder para crear consultas de datos desde la Consola Web</li>
+      <li>Soporte de expresiones SNOMED CT en consultas openEHR</li>
       <li>Soporta cualquier estructura de documento clínico</li>
       <li>Multi-organización</li>
       <li>Código Abierto</li>
