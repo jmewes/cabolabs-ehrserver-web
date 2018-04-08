@@ -15,7 +15,7 @@ function str_remove_prefix ($str, $prefix)
    {
      return substr($str, strlen($prefix));
    }
-   
+
    return $str; // no prfix, nothing change
 }
 
@@ -78,18 +78,18 @@ $route = str_remove_prefix($path, $_base_dir);
 $router = array(
    'en' =>
      array(
-       '/get_started'                 => 'get_started.php',
-       '/beta_partners_program'       => 'beta_partners_program.php',
+       '/get_started'                    => 'get_started.php',
+       '/beta_partners_program'          => 'beta_partners_program.php',
        '/beta_partners_program/complete' => 'beta_partners_program/complete_signup.php',
-       '/learn'                       => 'learn.php',
-       '/learn/try_it'                => 'learn/test_ehrserver.php',
-       '/learn/glossary'              => 'learn/glossary.php',
-       '/learn/basic_rest_api_usage'  => 'learn/basic_rest_api_usage.php',
-       '/learn/openehr_fundamentals'  => '/learn/openehr_fundamentals.php',
+       '/learn'                          => 'learn.php',
+       '/learn/try_it'                   => 'learn/test_ehrserver.php',
+       '/learn/glossary'                 => 'learn/glossary.php',
+       '/learn/basic_rest_api_usage'     => 'learn/basic_rest_api_usage.php',
+       '/learn/openehr_fundamentals'     => '/learn/openehr_fundamentals.php',
        '/learn/anonymous_clinical_information' => '/learn/anonymous_clinical_information.php',
-       '/learn/ehrserver_web_console' => '/learn/ehrserver_web_console.php',
-       '/learn/using_staging'         => '/learn/using_staging.php',
-       '/learn/data_commit'           => '/learn/data_commit.php',
+       '/learn/ehrserver_web_console'    => '/learn/ehrserver_web_console.php',
+       '/learn/using_staging'            => '/learn/using_staging.php',
+       '/learn/data_commit'              => '/learn/data_commit.php',
        '/learn/use_case_shared_health_recods'      => '/learn/use_case_shared_health_recods.php',
        '/learn/use_case_clinical_decision_support' => '/learn/use_case_clinical_decision_support.php',
        '/learn/use_case_monitoring_and_wearables'  => '/learn/use_case_monitoring_and_wearables.php',
@@ -99,21 +99,21 @@ $router = array(
        '/learn/use_case_analytics_and_datawarehousing' => '/learn/use_case_analytics_and_datawarehousing.php',
        '/learn/use_case_research_and_training'     => '/learn/use_case_research_and_training.php',
        '/learn/xml_guides/dv_multimedia_xml'       => '/learn/xml_guides/dv_multimedia_xml.php',
-       '/contact'                     => 'contact.php',
-       '/'                            => 'home.php',
-       '/index'                       => 'home.php',
-       '/home'                        => 'home.php',
-       '/community'                   => 'community.php',
-       '/pricing'                     => 'pricing.php'
+       '/contact'                        => 'contact.php',
+       '/'                               => 'home.php',
+       '/index'                          => 'home.php',
+       '/home'                           => 'home.php',
+       '/community'                      => 'community.php',
+       '/pricing'                        => 'pricing.php'
      ),
   'es' => // TODO: rename to spanish routes
      array(
-       '/comienza'                     => 'get_started.php',
-       '/programa_beta_partners'       => 'beta_partners_program.php',
+       '/comienza'                        => 'get_started.php',
+       '/programa_beta_partners'          => 'beta_partners_program.php',
        '/programa_beta_partners/completa' => 'beta_partners_program/complete_signup.php',
-       '/aprende'                      => 'learn.php',
-       '/aprende/pruebalo'             => 'learn/test_ehrserver.php', // TODO
-       '/aprende/glossary'             => 'learn/glossary.php',
+       '/aprende'                         => 'learn.php',
+       '/aprende/pruebalo'                => 'learn/test_ehrserver.php', // TODO
+       '/aprende/glossary'                => 'learn/glossary.php',
        '/aprende/basic_rest_api_usage'               => 'learn/basic_rest_api_usage.php',
        '/aprende/openehr_fundamentals'               => '/learn/openehr_fundamentals.php',
        '/aprende/anonymous_clinical_information'     => '/learn/anonymous_clinical_information.php',
@@ -128,12 +128,12 @@ $router = array(
        '/aprende/use_case_fast_prototyping_poc'      => '/learn/use_case_fast_prototyping_poc.php',
        '/aprende/use_case_analytics_and_datawarehousing' => '/learn/use_case_analytics_and_datawarehousing.php',
        '/aprende/use_case_research_and_training' => '/learn/use_case_research_and_training.php',
-       '/contacto'                   => 'contact.php',
-       '/'                           => 'home.php',
-       '/index'                      => 'home.php',
-       '/inicio'                     => 'home.php',
-       '/comunidad'                  => 'community.php',
-       '/precios'                    => 'precios.php'
+       '/contacto'                        => 'contact.php',
+       '/'                                => 'home.php',
+       '/index'                           => 'home.php',
+       '/inicio'                          => 'home.php',
+       '/comunidad'                       => 'community.php',
+       '/precios'                         => 'precios.php'
      )
 );
 
@@ -147,96 +147,96 @@ $router_maps = array(
 
   'en' => array(
     '/get_started' => array(
-      'es' => '/comienza' 
+      'es' => '/comienza'
     ),
     '/beta_partners_program' => array(
-      'es' => '/programa_beta_partners' 
+      'es' => '/programa_beta_partners'
     ),
     '/beta_partners_program/complete' => array(
-      'es' => '/programa_beta_partners/completa' 
+      'es' => '/programa_beta_partners/completa'
     ),
     '/learn' => array(
-      'es' => '/aprende' 
+      'es' => '/aprende'
     ),
     '/learn/try_it' => array(
-      'es' => '/aprende/pruebalo' 
+      'es' => '/aprende/pruebalo'
     ),
     '/learn/glossary' => array(
-      'es' => '/aprende/glossary' 
+      'es' => '/aprende/glossary'
     ),
     '/learn/basic_rest_api_usage' => array(
-      'es' => '/aprende/basic_rest_api_usage' 
+      'es' => '/aprende/basic_rest_api_usage'
     ),
     '/learn/openehr_fundamentals' => array(
-      'es' => '/aprende/openehr_fundamentals' 
+      'es' => '/aprende/openehr_fundamentals'
     ),
     '/learn/anonymous_clinical_information' => array(
-      'es' => '/aprende/anonymous_clinical_information' 
+      'es' => '/aprende/anonymous_clinical_information'
     ),
     '/learn/ehrserver_web_console' => array(
-      'es' => '/aprende/ehrserver_web_console' 
+      'es' => '/aprende/ehrserver_web_console'
     ),
     '/learn/using_staging' => array(
-      'es' => '/aprende/using_staging' 
+      'es' => '/aprende/using_staging'
     ),
     '/learn/data_commit' => array(
-      'es' => '/aprende/data_commit' 
+      'es' => '/aprende/data_commit'
     ),
     '/learn/use_case_shared_health_recods' => array(
-      'es' => '/aprende/use_case_shared_health_recods' 
+      'es' => '/aprende/use_case_shared_health_recods'
     ),
     '/learn/use_case_clinical_decision_support' => array(
-      'es' => '/aprende/use_case_clinical_decision_support' 
+      'es' => '/aprende/use_case_clinical_decision_support'
     ),
     '/learn/use_case_monitoring_and_wearables' => array(
-      'es' => '/aprende/use_case_monitoring_and_wearables' 
+      'es' => '/aprende/use_case_monitoring_and_wearables'
     ),
     '/learn/use_case_health_and_wellness_apps' => array(
-      'es' => '/aprende/use_case_health_and_wellness_apps' 
+      'es' => '/aprende/use_case_health_and_wellness_apps'
     ),
     '/learn/use_case_backup_and_query_database' => array(
-      'es' => '/aprende/use_case_backup_and_query_database' 
+      'es' => '/aprende/use_case_backup_and_query_database'
     ),
     '/learn/use_case_fast_prototyping_poc' => array(
-      'es' => '/aprende/use_case_fast_prototyping_poc' 
+      'es' => '/aprende/use_case_fast_prototyping_poc'
     ),
     '/learn/use_case_analytics_and_datawarehousing' => array(
-      'es' => '/aprende/use_case_analytics_and_datawarehousing' 
+      'es' => '/aprende/use_case_analytics_and_datawarehousing'
     ),
     '/learn/use_case_research_and_training' => array(
-      'es' => '/aprende/use_case_research_and_training' 
+      'es' => '/aprende/use_case_research_and_training'
     ),
     '/contact' => array(
-      'es' => '/contacto' 
+      'es' => '/contacto'
     ),
     '/' => array(
-      'es' => '/' 
+      'es' => '/'
     ),
     '/index' => array(
-      'es' => '/' 
+      'es' => '/'
     ),
     '/home' => array(
-      'es' => '/inicio' 
+      'es' => '/inicio'
     ),
     '/community' => array(
-      'es' => '/comunidad' 
+      'es' => '/comunidad'
     ),
     '/pricing' => array(
-      'es' => '/precios' 
+      'es' => '/precios'
     ),
   ),
   'es' => array(
     '/comienza' => array(
-      'en' => '/get_started' 
+      'en' => '/get_started'
     ),
     '/programa_beta_partners' => array(
-      'en' => '/beta_partners_program' 
+      'en' => '/beta_partners_program'
     ),
     '/programa_beta_partners/completa' => array(
-      'en' => '/beta_partners_program/complete' 
+      'en' => '/beta_partners_program/complete'
     ),
     '/aprende' => array(
-      'en' => '/learn' 
+      'en' => '/learn'
     ),
     '/aprende/pruebalo' => array(
       'en' => 'learn/try_it'
@@ -281,28 +281,28 @@ $router_maps = array(
       'en' => '/learn/use_case_fast_prototyping_poc'
     ),
     '/aprende/use_case_analytics_and_datawarehousing' => array(
-      'en' => '/learn/use_case_analytics_and_datawarehousing' 
+      'en' => '/learn/use_case_analytics_and_datawarehousing'
     ),
     '/aprende/use_case_research_and_training' => array(
-      'en' => '/learn/use_case_research_and_training' 
+      'en' => '/learn/use_case_research_and_training'
     ),
     '/contacto' => array(
-      'en' => '/contact' 
+      'en' => '/contact'
     ),
     '/' => array(
-      'en' => '/' 
+      'en' => '/'
     ),
     '/index' => array(
-      'en' => '/' 
+      'en' => '/'
     ),
     '/inicio' => array(
-      'en' => '/' 
+      'en' => '/'
     ),
     '/comunidad' => array(
-      'en' => '/community' 
+      'en' => '/community'
     ),
     '/precios' => array(
-      'en' => '/pricing' 
+      'en' => '/pricing'
     ),
   )
 );
@@ -342,27 +342,22 @@ echo $route .'<br/>'; // /beta_partners_program
 echo $router[$route] .'<br/>'; // TODO: CHECK IF IT EXISTS
 */
 ?><!DOCTYPE html>
-<html lang="<?=$_SESSION['lang']?>">
+<html prefix="og: http://ogp.me/ns#" lang="<?=$_SESSION['lang']?>">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="CloudEHRServer, the open source, clinical data repository, REST API, compliant with the openEHR standard">
-    <meta name="keywords" content="cloud,ehrserver,cabolabs,clinical data repository,clinical database,openehr,rest api,archetypes,templates,foss,open source,open,health,platform,ehr,sharing,emr,phr,smart,interoperability">
-    <meta name="author" content="Pablo Pazos Gutierrez">
-    <title>EHRServer by CaboLabs</title>
-    
+    <!-- lang dependand meta -->
+    <?php include('pages_'. $_SESSION['lang'] .'/'.'meta.php'); ?>
+
     <script>
     var loc = window.location.href+'';
     var parser = document.createElement('a');
     parser.href = loc;
-    
+
     if (parser.hostname != 'localhost' && !parser.hostname.startsWith('192') && loc.indexOf('http://')==0){
       window.location.href = loc.replace('http://','https://');
     }
     </script>
 
+    <!-- not lang dependand meta -->
     <link rel="apple-touch-icon" sizes="57x57" href="<?=$_base_dir?>/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="<?=$_base_dir?>/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="<?=$_base_dir?>/apple-icon-72x72.png">
@@ -377,10 +372,17 @@ echo $router[$route] .'<br/>'; // TODO: CHECK IF IT EXISTS
     <link rel="icon" type="image/png" sizes="96x96" href="<?=$_base_dir?>/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="<?=$_base_dir?>/favicon-16x16.png">
     <link rel="manifest" href="<?=$_base_dir?>/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileColor" content="#0064b4">
     <meta name="msapplication-TileImage" content="<?=$_base_dir?>/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-    
+
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#0064b4">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#0064b4">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#0064b4">
+
+
     <!-- Bootstrap -->
     <link href="<?=$_base_dir?>/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
@@ -392,13 +394,13 @@ echo $router[$route] .'<br/>'; // TODO: CHECK IF IT EXISTS
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    
+
     <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
-    
+
     <script src='https://www.google.com/recaptcha/api.js'></script>
-    
+
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    
+
     <style>
       a {
         color: rgb(66, 133, 244); /* links have the Cloud EHRServer brand color */
@@ -408,7 +410,7 @@ echo $router[$route] .'<br/>'; // TODO: CHECK IF IT EXISTS
   <body>
     <!--
     <button type="button" class="btn btn-default contact">Contact us</button>
-    
+
     <div class="overlay"></div>
     <div id="contact_container">
       <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScOKFq83T2E_0sihwn3-3k52LglWw3gvK7zNua2CX7SW-_l8w/viewform?embedded=true" width="750" height="700" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
@@ -442,14 +444,14 @@ echo $router[$route] .'<br/>'; // TODO: CHECK IF IT EXISTS
              }
           }
           */
-             
+
           // 404
           echo '<div class="row"><div class="col-md-12"><h1>Sorry, this page wasn\'t found</h1></div></div>';
         }
-        
+
         echo '<script>console.log("'.$route.'");</script>';
       ?>
-      
+
       <!-- Site footer -->
       <footer class="footer">
         <p>&copy; <?=date("Y")?> Powered by <a href="http://www.cabolabs.com/" target="_blank">CaboLabs</a></p>
@@ -461,20 +463,20 @@ echo $router[$route] .'<br/>'; // TODO: CHECK IF IT EXISTS
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="<?=$_base_dir?>/js/bootstrap.min.js"></script>
     <script src="<?=$_base_dir?>/js/jquery.form.min.js"></script>
-    
+
     <script>
      $(function() {
-       // bind 'myForm' and provide a simple callback function 
+       // bind 'myForm' and provide a simple callback function
        $('#contact').ajaxForm({
          dataType: 'json',
-         success: function(data, status, resp, $form) { 
+         success: function(data, status, resp, $form) {
            // {status: "ok", msg: "Hemos recibido tu mensaje, nos pondremos en contacto en breve"}
            $('#contact').append('<div class="alert alert-success alert-dismissible" role="alert" style=""><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>  '+ data.msg +'</div>');
          }
        });
      });
     </script>
-    
+
     <script>
       $(function() {
         $( "button.contact" ).on( "click", function() {
@@ -483,7 +485,7 @@ echo $router[$route] .'<br/>'; // TODO: CHECK IF IT EXISTS
         });
       });
     </script>
-    
+
     <script>
      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
