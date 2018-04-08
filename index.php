@@ -35,11 +35,11 @@ function endsWith($haystack, $needle)
    return (substr($haystack, -$length) === $needle);
 }
 
-function a($body, $path)
+function a($body, $path, $target_blank = false)
 {
    global $_base_dir;
    if ($path[0] != '/') $path = '/'. $path;
-   return '<a href="'. $_base_dir . $path .'">'. $body .'</a>';
+   return '<a href="'. $_base_dir . $path .'"'. ($target_blank ? ' target="_blank"' : '') .'>'. $body .'</a>';
 }
 
 //print_r($_REQUEST);
@@ -98,6 +98,7 @@ $router = array(
        '/learn/use_case_fast_prototyping_poc'      => '/learn/use_case_fast_prototyping_poc.php',
        '/learn/use_case_analytics_and_datawarehousing' => '/learn/use_case_analytics_and_datawarehousing.php',
        '/learn/use_case_research_and_training'     => '/learn/use_case_research_and_training.php',
+       '/learn/xml_guides/dv_multimedia_xml'       => '/learn/xml_guides/dv_multimedia_xml.php',
        '/contact'                     => 'contact.php',
        '/'                            => 'home.php',
        '/index'                       => 'home.php',
@@ -111,7 +112,7 @@ $router = array(
        '/programa_beta_partners'       => 'beta_partners_program.php',
        '/programa_beta_partners/completa' => 'beta_partners_program/complete_signup.php',
        '/aprende'                      => 'learn.php',
-       '/aprende/try_it'               => 'learn/test_ehrserver.php', // TODO
+       '/aprende/pruebalo'             => 'learn/test_ehrserver.php', // TODO
        '/aprende/glossary'             => 'learn/glossary.php',
        '/aprende/basic_rest_api_usage'               => 'learn/basic_rest_api_usage.php',
        '/aprende/openehr_fundamentals'               => '/learn/openehr_fundamentals.php',
@@ -158,7 +159,7 @@ $router_maps = array(
       'es' => '/aprende' 
     ),
     '/learn/try_it' => array(
-      'es' => '/aprende/try_it' 
+      'es' => '/aprende/pruebalo' 
     ),
     '/learn/glossary' => array(
       'es' => '/aprende/glossary' 
@@ -237,7 +238,7 @@ $router_maps = array(
     '/aprende' => array(
       'en' => '/learn' 
     ),
-    '/aprende/try_it' => array(
+    '/aprende/pruebalo' => array(
       'en' => 'learn/try_it'
     ),
     '/aprende/glossary' => array(

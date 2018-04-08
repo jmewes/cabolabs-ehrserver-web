@@ -157,7 +157,7 @@
   <div class="col-md-12">
     <h2>¿Necesitas más?</h2>
     <p>
-      Ofrecemos planes a medida y esrvidores dedicados (un servidor solo para ti, sin límites).
+      Ofrecemos planes a medida y servidores dedicados (un servidor solo para ti, sin límites).
       <a href="<?=$_base_dir?>/contacto">¡Contáctanos!</a>
     </p>
   </div>

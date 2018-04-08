@@ -25,11 +25,13 @@
        <a href="<?=$_base_dir?>/aprende/glossary">Gloario de términos comunes</a>
      </li>
      <li>
-       <a href="<?=$_base_dir?>/learn/try_it">Prueba EHRServer localmente</a>
+       <a href="<?=$_base_dir?>/aprende/pruebalo">Prueba EHRServer localmente</a>
      </li>
+     <!--
      <li>
        <a href="<?=$_base_dir?>/aprende/using_staging">Utiliza el servidor de pruebas de EHRServer</a>
      </li>
+     -->
      <li>
        <a href="<?=$_base_dir?>/aprende/data_commit">Guía de almacenamiento de datos</a>
      </li>
@@ -76,7 +78,7 @@
  <div class="col-md-12">
    <h3>Guía de EHRServer</h3>
    <div align="center">
-     <iframe src="https://docs.google.com/gview?url=https://cabolabs.com/software_resources/EHRServer_v1.0.pdf&embedded=true" style="width:640px; height:800px;" frameborder="0"></iframe>
+     <iframe src="https://docs.google.com/gview?url=https://cabolabs.com/software_resources/EHRServer_v1.2.pdf&embedded=true" style="width:640px; height:800px;" frameborder="0"></iframe>
    </div>
  </div>
 </div>

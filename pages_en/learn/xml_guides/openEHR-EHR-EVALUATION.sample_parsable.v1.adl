@@ -1,0 +1,93 @@
+archetype (adl_version=1.4)
+	openEHR-EHR-EVALUATION.sample_parsable.v1
+
+concept
+	[at0000]	-- Sample parsable
+language
+	original_language = <[ISO_639-1::es]>
+	translations = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			author = <
+				["name"] = <"?">
+			>
+		>
+	>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"sample parsable">
+			use = <"sample parsable">
+			misuse = <"">
+			copyright = <"">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"*sample parsable(es)">
+			use = <"*sample parsable(es)">
+			misuse = <"*(es)">
+			copyright = <"*(es)">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"24122A668851FC0189EA1D32A24D759F">
+	>
+
+definition
+	EVALUATION[at0000] matches {	-- Sample parsable
+		data matches {
+			ITEM_TREE[at0001] matches {	-- Tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {	-- Parsable node
+						value matches {
+							DV_PARSABLE matches {
+								formalism matches {"text/html", "text/plain", "text/rtf", "text/xml", "application/json", "HL7_GTS"}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["es"] = <
+			items = <
+				["at0000"] = <
+					text = <"Ejemplo de parsable">
+					description = <"Ejemplo de parsable para pruebas">
+				>
+				["at0001"] = <
+					text = <"Arbol">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Parsable node">
+					description = <"*">
+				>
+			>
+		>
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Sample parsable">
+					description = <"Sample for testing parsable">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Parsable node">
+					description = <"">
+				>
+			>
+		>
+	>

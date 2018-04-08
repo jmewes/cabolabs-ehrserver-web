@@ -1,0 +1,132 @@
+archetype (adl_version=1.4)
+	openEHR-EHR-EVALUATION.sample_multimedia.v1
+
+concept
+	[at0000]	-- Sample multimedia
+language
+	original_language = <[ISO_639-1::es]>
+	translations = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			author = <
+				["name"] = <"?">
+			>
+		>
+	>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"sample_multimedia">
+			use = <"sample_multimedia">
+			misuse = <"">
+			copyright = <"">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"*sample_multimedia(es)">
+			use = <"*sample_multimedia(es)">
+			misuse = <"*(es)">
+			copyright = <"*(es)">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"E0CD7DD375DDA587746635E75AD164A9">
+	>
+
+definition
+	EVALUATION[at0000] matches {	-- Sample multimedia
+		data matches {
+			ITEM_TREE[at0001] matches {	-- Tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..*} matches {	-- Multimedia node
+						value matches {
+							DV_MULTIMEDIA matches {
+								media_type matches {
+									[openEHR::
+									387, 
+									388, 
+									389, 
+									390, 
+									391, 
+									392, 
+									393, 
+									394, 
+									395, 
+									396, 
+									397, 
+									398, 
+									399, 
+									400, 
+									409, 
+									410, 
+									411, 
+									412, 
+									413, 
+									425, 
+									426, 
+									427, 
+									428, 
+									429, 
+									401, 
+									402, 
+									404, 
+									405, 
+									406, 
+									407, 
+									414, 
+									517, 
+									518, 
+									519, 
+									637, 
+									682, 
+									683]
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["es"] = <
+			items = <
+				["at0000"] = <
+					text = <"Ejemplo multimedia">
+					description = <"Ejemplo para probarmultimedia">
+				>
+				["at0001"] = <
+					text = <"Arbol">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Nodo multimedia">
+					description = <"*">
+				>
+			>
+		>
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Sample multimedia">
+					description = <"Sample for testing multimedia">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Multimedia node">
+					description = <"">
+				>
+			>
+		>
+	>
