@@ -15,32 +15,32 @@ function log_to_file($filepath, $text)
 function send_mail()
 {
    $email_text = '';
-   
+
    // Useful data from $_SERVER
-   $email_text .= 'Client IP: '. $_SERVER[REMOTE_ADDR] .'<br/>';
-   $email_text .= 'Client User Agent: '. $_SERVER[HTTP_USER_AGENT] .'<br/>';
+   $email_text .= 'Client IP: '. $_SERVER['REMOTE_ADDR'] .'<br/>';
+   $email_text .= 'Client User Agent: '. $_SERVER['HTTP_USER_AGENT'] .'<br/>';
    //$email_text .= 'Client IP: '. $_SERVER[CONTENT_TYPE] => application/x-www-form-urlencoded .'<br/>';
-   $email_text .= 'Referer: '. $_SERVER[HTTP_REFERER] .'<br/>';
-   $email_text .= 'Languages Accepted: '. $_SERVER[HTTP_ACCEPT_LANGUAGE] .'<br/>';
+   $email_text .= 'Referer: '. $_SERVER['HTTP_REFERER'] .'<br/>';
+   $email_text .= 'Languages Accepted: '. $_SERVER['HTTP_ACCEPT_LANGUAGE'] .'<br/>';
    $email_text .= '<br/>';
    $email_text .= 'Contact Name: '. $_POST['name'] .'<br/>';
    $email_text .= 'Contact Email: '. $_POST['email'] .'<br/>';
    $email_text .= 'Organization: '. $_POST['organization'] .'<br/>';
    $email_text .= 'Message: '. $_POST['message'];
-   
-   
+
+
    $body = "<h2>Contacto desde CloudEHRServer.com</h2>";
    $body .= $email_text;
-   
+
    $headers = "From: ". $_POST['email'] . " <" . $_POST['email'] . ">\r\n"; //optional headerfields
    $headers .="Return-Path:<" . $_POST['email'] . ">\r\n"; // avoid ending in spam folder http://php.net/manual/en/function.mail.php
-   
+
    // To send HTML mail, the Content-type header must be set
    $headers .= 'MIME-Version: 1.0'. "\r\n";
    $headers .= 'Content-type: text/html; charset=iso-8859-1'. "\r\n";
-      
+
    ini_set('sendmail_from', $_POST['email']);
-    
+
    // TODO: los errores logueados a disco
    // Por si no tengo servidor de email
    try
@@ -219,11 +219,11 @@ class Response
 // captcha response no puede ser null
 if (empty($_POST['g-recaptcha-response']))
 {
-   if ($_SESSION['LOCALE'] == "es")
+   if ($_SESSION['lang'] == "es")
      echo json_encode(array('status' => 'error', 'msg' => "Ha ocurrido un error al verificar el captcha"));
    else
      echo json_encode(array('status' => 'error', 'msg' => "An error has occurred verifying the captcha"));
-  
+
    exit;
 }
 
@@ -256,12 +256,12 @@ header('Content-Type: application/json');
 if (!$resp->isSuccess())
 {
    $errors = $resp->getErrorCodes();
-   
-   if ($_SESSION['LOCALE'] == "es")
-     echo json_encode(array('status' => 'error', 'msg' => "Ha ocurrido un error al verificar el captcha, por favor pruebe más tarde o contáctenos en info@cabolabs.com"));
+
+   if ($_SESSION['lang'] == "es")
+     echo json_encode(array('status' => 'error', 'msg' => "Ha ocurrido un error al verificar el captcha, por favor pruebe mas tarde o contÃ¡ctenos en info@cabolabs.com"));
    else
      echo json_encode(array('status' => 'error', 'msg' => "An error has occurred verifying the captcha, please try again later or contact us at info@cabolabs.com"));
-  
+
    exit;
 }
 // ===========================================================================================
@@ -272,14 +272,14 @@ if (!$resp->isSuccess())
 
 if (!send_mail())
 {
-   if ($_SESSION['LOCALE'] == "es")
-     echo json_encode(array('status' => 'error', 'msg' => "Ha ocurrido un error al enviar el mensaje, por favor pruebe más tarde o contáctenos en info@cabolabs.com"));
+   if ($_SESSION['lang'] == "es")
+     echo json_encode(array('status' => 'error', 'msg' => "Ha ocurrido un error al enviar el mensaje, por favor pruebe mas tarde o contÃ¡ctenos en info@cabolabs.com"));
    else
      echo json_encode(array('status' => 'error', 'msg' => "An error sending the message has occurred, please try again later or contact us at info@cabolabs.com"));
 }
 else
 {
-   if ($_SESSION['LOCALE'] == "es")
+   if ($_SESSION['lang'] == "es")
      echo json_encode(array('status' => 'ok', 'msg' => "Hemos recibido tu mensaje, nos pondremos en contacto en breve"));
    else
      echo json_encode(array('status' => 'ok', 'msg' => "We have received your message, we'll contact you back ASAP"));

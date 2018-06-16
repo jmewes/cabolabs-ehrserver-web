@@ -1,11 +1,11 @@
 ##  Can be commented out if causes errors, see notes above.
-Options +SymLinksIfOwnerMatch -Indexes -MultiViews 
+Options +SymLinksIfOwnerMatch -Indexes -MultiViews
 
 #  mod_rewrite in use
 RewriteEngine On
 
 #change to / to upload to the server
-RewriteBase /ehrserver-cloud/
+RewriteBase /cabolabs-ehrserver-web/
 
 # Si es un directorio fisico ir a index tambien
 #RewriteCond %{REQUEST_FILENAME} -d

@@ -11,7 +11,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:title" content="CloudEHRServer by CaboLabs" />
 <meta property="og:description" content="CloudEHRServer: Plataforma Abierta para Gestionar y Compartir Información Clínica cumpliendo el estándar openEHR" />
-<meta property="og:url" content="https://<?=$_SERVER[HTTP_HOST]?><?=$_SERVER['REQUEST_URI']?>" />
+<meta property="og:url" content="https://<?=$_SERVER['HTTP_HOST']?><?=$_SERVER['REQUEST_URI']?>" />
 <meta property="og:site_name" content="CloudEHRServer by CaboLabs" />
 <meta property="og:image" content="https://cloudehrserver.com/images/iso_300_white_1square_1212x1212_final.png" />
 <meta property="og:image:secure_url" content="https://cloudehrserver.com/images/iso_300_white_1square_1212x1212_final.png" />

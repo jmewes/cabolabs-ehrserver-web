@@ -8,7 +8,7 @@
 <div class="row">
   <div class="col-md-12">
     <h2>1. Instalación del EHRServer</h2>
-    
+
     <h3>Prerrequisitos</h3>
     <p>
       <b>1) Instala MySQL Server</b><br/><br/>
@@ -18,7 +18,7 @@
       <b>2) Instala Grails 2.5.6</b><br/><br/>
       <a href="http://www.grails.org/download.html" target="_blank">Aquí puedes encontrar la descarga y las instrucciones de instalación</a><br/></br>
     </p>
-    
+
     <h3>EHRServer</h3>
     <p>
      <b>3) Descarga EHRServer</b><br/><br/>
@@ -41,16 +41,16 @@
       <b>5) Configuración de las carpetas de trabajo</b><br/><br/>
 
        opts y opts/base_opts<br/><br/>
-       
+
        El proyecto incluye una carpeta llamada "opts", que contiene una carpeta llamada "base_opts". Ahí están
        las plantillas openEHR que se cargarán cuando se ejecute EHRServer. Puedes mover la carpeta "opts" a
        cualquier ora ubicación, si lo haces debes configurar la entrada "app.opt_repo" en el archivo
        <a href="https://github.com/ppazos/cabolabs-ehrserver/blob/master/grails-app/conf/Config.groovy" target="_blank">Config.groovy</a>,
        bajo el entorno "development".<br/><br/>
 
-       
+
        xsd<br/><br/>
-       
+
        El proyecto incluye una carpeta llamada "xsd" que contiene los esquemas XML necesarios para validar plantillas y
        documentos clínicos. Puedes mover esa carpeta pero en
        <a href="https://github.com/ppazos/cabolabs-ehrserver/blob/master/grails-app/conf/Config.groovy" target="_blank">Config.groovy</a>
@@ -77,22 +77,22 @@
     </p>
     <p>
       <b>6) Configura la clave de tokens para la API REST</b><br/></br>
-      
+
       Es necesario configurar la variable de entorno EHRSERVER_REST_SECRET, se recomienda que el valor sea un UUID.<br/></br>
-      
+
       La variable debería verse así con un valor de ejemplo: EHRSERVER_REST_SECRET=6067dba9-1234-1234-1234-92208c77ce77<br/></br>
-      
+
       ¿Cómo configurar variables de entorno?</br>
-      
+
       <ul>
         <li><a href="https://www.java.com/en/download/help/path.xml" target="_blank">Ejemplo de Windows</a></li>
         <li><a href="https://help.ubuntu.com/community/EnvironmentVariables" target="_blank">Ejemplo de Linux</a></li>
         <li><a href="https://stackoverflow.com/questions/7501678/set-environment-variables-on-mac-os-x-lion" target="_blank">Ejemplo de MacOS</a></li>
       </ul>
       <br/>
-      
+
       ¿Cómo puedo obtener un UUID?</br>
-      
+
       <ul>
         <li><a href="https://www.uuidgenerator.net/" target="_blank">Generador de UUIDs</a></li>
       </ul>
@@ -105,7 +105,7 @@
 
        ehrserver&gt; grails -Dserver.port=8090 -Duser.timezone=UTC run-app<br/></br>
 
-       Esto ejecutará EHRServer localemente, y estará accesible desde el puerto 8090, podrás accederlo desde:
+       Esto ejecutará EHRServer localmente, y estará accesible desde el puerto 8090, podrás accederlo desde:
        http://localhost:8090/ehr<br/></br>
 
        Para ingresar desde la consola web, utiliza las credenciales de administración: admin / admin / 123456
@@ -129,9 +129,9 @@
         <li>EHRSERVER_EMAIL_PASS: clave para el usuario</li>
         <li>EHRSERVER_EMAIL_FROM: dirección de correo que aparecerá en el campo "De"</li>
       </ul>
-      
+
       <br/></br>
-      
+
       Aquí puedes ver donde se utiliza esta <a href="https://github.com/ppazos/cabolabs-ehrserver/blob/master/grails-app/conf/Config.groovy#L285-L293" target="_blank">configuración</a><br/></br>
     </p>
     <p>

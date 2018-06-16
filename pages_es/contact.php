@@ -115,14 +115,14 @@
         color: #888;
       }
     </style>
-  
+
 
       <div class="row">
         <div class="col-md-12">
           <h1>Contáctanos</h1>
         </div>
       </div>
-      
+
       <div class="row">
         <div class="col-md-12">
          <form id="contact" action="<?=$_base_dir?>/code/MailController.php" method="post">
@@ -133,7 +133,7 @@
             <input placeholder="Correo electronico" type="email" name="email" tabindex="2" required>
           </fieldset>
           <fieldset>
-            <input placeholder="Empresa u Organizacion" type="text" name="organization"" tabindex="3" required>
+            <input placeholder="Empresa u Organizacion" type="text" name="organization" tabindex="3" required>
           </fieldset>
           <fieldset>
             <textarea placeholder="Mensaje ..." tabindex="4" name="message" required></textarea>

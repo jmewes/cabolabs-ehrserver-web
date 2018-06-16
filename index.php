@@ -325,7 +325,7 @@ if (!array_key_exists($route, $router[$_SESSION['lang']]) || !file_exists('pages
   {
      if (array_key_exists($route, $router[$_olang]))
      {
-        $current_url = (isset($_SERVER['HTTPS']) ? "https" : "http") ."://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]?lang=". $_olang;
+        $current_url = (isset($_SERVER['HTTPS']) ? "https" : "http") ."://". $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'] ."?lang=". $_olang;
         //echo "found $route in $_olang, go to $current_url";
         header('Location: ' . $current_url, true, 302);
         exit();
@@ -453,8 +453,37 @@ echo $router[$route] .'<br/>'; // TODO: CHECK IF IT EXISTS
       ?>
 
       <!-- Site footer -->
-      <footer class="footer">
-        <p>&copy; <?=date("Y")?> Powered by <a href="http://www.cabolabs.com/" target="_blank">CaboLabs</a></p>
+      <footer class="footer row">
+        <div class="col-md-6">
+          <p>&copy; <?=date("Y")?> Powered by <a href="http://www.cabolabs.com/" target="_blank">CaboLabs</a></p>
+        </div>
+        <div class="col-md-6 text-right">
+          <a href="https://www.facebook.com/cloudehrserver/" target="_blank">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+            </span></a>
+          <a href="https://twitter.com/cloudehrserver" target="_blank">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+            </span></a>
+          <a href="https://www.linkedin.com/company/cloudehrserver/" target="_blank">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+            </span></a>
+          <a href="https://www.youtube.com/c/CaboLabsHealthInformatics" target="_blank">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-youtube-play fa-stack-1x fa-inverse"></i>
+            </span></a>
+          <a href="https://plus.google.com/+CaboLabsHealthInformatics" target="_blank">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+            </span></a>
+        </div>
       </footer>
     </div>
 
