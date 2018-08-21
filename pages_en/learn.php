@@ -76,9 +76,27 @@
 
 <div class="row">
  <div class="col-md-12">
-   <h3>The EHRServer Guide</h3>
+   <h3>EHRServer Guide (complete documentation, including REST API)</h3>
    <div align="center">
-     <iframe src="https://docs.google.com/gview?url=https://cabolabs.com/software_resources/EHRServer_v1.2.pdf&embedded=true" style="width:640px; height:800px;" frameborder="0"></iframe>
+     <iframe src="https://docs.google.com/gview?url=https://cloudehrserver.com/pages_en/guide/EHRServer%20v1.3%20Guide.pdf&embedded=true" style="width:640px; height:800px;" frameborder="0"></iframe>
+   </div>
+ </div>
+</div>
+
+<div class="row">
+ <div class="col-md-12">
+   <h3>EHRServer openEHR Conformance Statement</h3>
+   <div align="center">
+     <iframe src="https://docs.google.com/gview?url=https://cloudehrserver.com/pages_en/guide/EHRServer%20openEHR%20Conformance%20v1.0.pdf&embedded=true" style="width:640px; height:800px;" frameborder="0"></iframe>
+   </div>
+ </div>
+</div>
+
+<div class="row">
+ <div class="col-md-12">
+   <h3>EHRServer Whitepaper</h3>
+   <div align="center">
+     <iframe src="https://docs.google.com/gview?url=https://cloudehrserver.com/pages_en/guide/EHRServer%20Whitepaper%20(en).pdf&embedded=true" style="width:640px; height:800px;" frameborder="0"></iframe>
    </div>
  </div>
 </div>
