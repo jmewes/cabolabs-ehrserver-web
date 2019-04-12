@@ -2,14 +2,14 @@
   <div class="col-md-12">
     <h1>Get started</h1>
     <p>
-      The CloudEHRServer is a SaaS Clinical Information Management and Sharing Platform, based on 
+      The CloudEHRServer is a SaaS Clinical Information Management and Sharing Platform, based on
       <a href="https://github.com/ppazos/cabolabs-ehrserver" target="_blank">open source software</a>
       and the <a href="https://www.openehr.org/" target="_blank">openEHR standard</a>.
     </p>
     <p>
       The main components are: a Vendor Neutral Archive, a REST API and an administrative Web Console.
       It provides everything that you need to store, query, retrieve, manage and audit clinical information
-      securely, privately and in a standardzed way. 
+      securely, privately and in a standardzed way.
     </p>
     <p>
       The CloudEHRServer enables the creation of many types of clinical applications for clinical data entry,
@@ -35,7 +35,7 @@
   <div class="col-md-12">
     <h1>Get started</h1>
     <p>
-      Currently we are only accepting sign-ups for the 
+      Currently we are only accepting sign-ups for the
       <a href="<?=$_base_dir?>/beta_partners_program">Beta Partners Program</a>.
       Soon we will launch our service plans for general usage.
     </p>
@@ -47,7 +47,7 @@
     <p>
       To sign-up send a request to participate in the Beta Partners Program from
       <a href="<?=$_base_dir?>/beta_partners_program">here</a>. After your request is
-      approved, you'll need to confirm your account and start using the CloudEHRServer. 
+      approved, you'll need to confirm your account and start using the CloudEHRServer.
     </p>
   </div>
 </div>
@@ -76,9 +76,13 @@
       in the process of understanding how the CloudEHRServer woks and how to get the most out of it.
     </p>
     <p>
-      Also check the latest demo of the EHRServer:
+      EHRServer demos and presentations:
       <div align="center">
-        <iframe width="356" height="200" src="https://www.youtube.com/embed/lCIRJkSCvPc?ecver=1" frameborder="0" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/zSftiFBjboE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/pOMhqc1TZ7A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/JIolq3b_Gkw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ix_G6oJk_ns" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/htTagLxXuUI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </p>
   </div>
@@ -86,26 +90,26 @@
 <div class="row">
   <div class="col-md-12">
     <h3>How does it work?</h3>
-    
+
     <p>The core of the CloudEHRServer is based on the openEHR specifications. Most of the capabilities
     and features offered by the CloudEHRServer are because of this.</p>
-    
+
     <p>The CloudEHRServer should be fed with clinical
     document definitions called Operational Templates, or OPT for short. The OPTs define the
     semantics, data structures, constraints and terminology associated with each clinical document.
     It is basically an XML with metadata.</p>
-    
+
     <p>When client apps commit clinical documents to the CloudEHRServer,
     the data is indexed for querying. Of course, those documents should comply with their definitions (OPT).
     A manager will create data queries using the CloudEHRServer Query Builder, and those queries are defined
     using only information from the OPTs, that is all clinical concepts like Blood Pressure, Diagnosis,
     Physical Examination, Glasgow Coma Scale, etc.</p>
-    
+
     <p>To create queries there is no need of writing any SQL or source code.
     Once queries are saved, a client system can executed them using the REST API, pulling clincial data
     out from the CloudEHRServer. That's it, data in, data out, all standardized,
     without writing a single line of code.</p>
-    
+
     <h4>Simple as:</h4>
     <ol>
       <li>Create a clinical document definition</li>
@@ -115,7 +119,7 @@
       <li>Commit some data</li>
       <li>Query and display your data</li>
     </ol>
-    
+
     <h4>Main features:</h4>
     <ol>
       <li>Web Console for simple management and audit</li>
@@ -130,8 +134,8 @@
       <li>Open Source</li>
       <li>Compliant with the openEHR standard</li>
     </ol>
-    
+
     <p class="center v-air"><a class="btn btn-primary" href="<?=$_base_dir?>/learn" role="button">Continue learning</a></p>
-    
+
   </div>
 </div>

@@ -46,7 +46,7 @@ function send_mail()
    try
    {
       // bool mail ( string $to , string $subject , string $message [, string $additional_headers [, string $additional_parameters ]] )
-      if (!mail('info@cloudehrserver.com', 'Contacto desde CloudEHRServer.com', $body, $headers))
+      if (!mail('info@cabolabs.com', 'Contacto desde CloudEHRServer.com', $body, $headers))
       {
          log_to_file('logs/'.date("YmdHis").'.log', 'No se pudo enviar el correo: '. $email_text);
          return false;

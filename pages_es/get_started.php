@@ -8,7 +8,7 @@
     </p>
     <p>
       Los principales componentes son: un repositorio de información estandarizado, una API REST y una
-      consola web de administración. Provee todo lo necesario para almacenar, consultar, recuperar, 
+      consola web de administración. Provee todo lo necesario para almacenar, consultar, recuperar,
       gestionar y auditar información clínica de forma segura, privada y de forma estándar.
     </p>
     <p>
@@ -69,34 +69,43 @@
       En la sección de <a href="<?=$_base_dir?>/aprende">aprendizaje</a> podrás encontrar documentos y guías que
       te ayudarán en el proceso de entender cómo funciona el EHRServer y cómo sacarle provecho.
     </p>
+    <p>
+      Presentaciones y demostracioens de EHRServer:
+      <div align="center">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/8NFoGnQUr88" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/xQq-fEfxxjw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/zSftiFBjboE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/JIolq3b_Gkw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </p>
   </div>
 </div>
 <div class="row">
   <div class="col-md-12">
     <h3>¿Cómo funciona?</h3>
-    
+
     <p>EHRServer está basado en el estándar openEHR, y gran parte de sus especificaciones
     y características son soportadas.</p>
-    
+
     <p>EHRServer consume modelos de inforamción clínica llamados Plantillas Operativas
     (OPT por su sigla en inglés), donde se define la semántica, estructuras de datos,
     restricciones y terminología asociada a cada documento clínico que será almacenado.</p>
-    
+
     <p>Cuando una aplicación envía documentos para almacenar en EHRServer, datos clave son
     extraídos para permitir búsquedas inteligentes de información. Esos documentos deberán
     cumplir con los OPTs cargados previamente.</p>
-    
+
     <p>Un administrador podrá crear consultas de información utilizando una interfaz web, y
     estarán basadas en las definiciones de los OPTs. Las consultas estarán
     disponibles de forma instantánea para ser ejecutadas desde Servicios Web REST, y así
     poder obtener conjuntos de datos almacenados en EHRServer.</p>
-    
+
     <p>Se pueden crear tantas consultas como sea necesario, sin modificar una sola línea de
     código ni escribir SQL.</p>
-    
+
     <p>Eso es todo, guardas datos, consultas datos, todo estandarizado, y sin escribir una sola
     línea de código.</p>
-    
+
     <h4>Tan simple como:</h4>
     <ol>
       <li>Crea una definición de documento clínico</li>
@@ -106,7 +115,7 @@
       <li>Envía datos al EHRServer</li>
       <li>Ejecuta las consultas para obtener los datos en un formato estándar</li>
     </ol>
-    
+
     <h4>Principales características:</h4>
     <ol>
       <li>Consola Web para gestión y audirotía simple</li>
@@ -121,8 +130,8 @@
       <li>Código Abierto</li>
       <li>Cumple el estándar openEHR</li>
     </ol>
-    
+
     <p class="center v-air"><a class="btn btn-primary" href="<?=$_base_dir?>/aprende" role="button">Aprende más</a></p>
-    
+
   </div>
 </div>

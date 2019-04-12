@@ -78,7 +78,7 @@
  <div class="col-md-12">
    <h3>EHRServer Guide (complete documentation, including REST API)</h3>
    <div align="center">
-     <iframe src="https://docs.google.com/gview?url=https://cloudehrserver.com/pages_en/guide/EHRServer%20v1.3%20Guide.pdf&embedded=true" style="width:640px; height:800px;" frameborder="0"></iframe>
+     <iframe src="https://docs.google.com/gview?url=https://cloudehrserver.com/pages_en/guide/EHRServer_v1.4.pdf&embedded=true" style="width:640px; height:800px;" frameborder="0"></iframe>
    </div>
  </div>
 </div>

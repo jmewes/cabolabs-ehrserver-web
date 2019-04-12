@@ -53,7 +53,7 @@
      </ol>
     </p>
 
-    <p>En CaboLabs no ha tomado años de investigación y desarrollo, prueba y error, el crear
+    <p>En CaboLabs nos ha tomado años de investigación y desarrollo, prueba y error, el crear
     una solución que cumpliera con todos esos requerimientos básicos.</p>
 
     <p>El objetivo del EHRServer es ahorrar tiempo y dinero a compañías que están construyendo
