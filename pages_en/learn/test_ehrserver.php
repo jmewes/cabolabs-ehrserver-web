@@ -32,7 +32,7 @@
     <p>
      <b>4) Configure the database</b><br/><br/>
 
-     Edit the DaraSource, under the "development" environment, 
+     Edit the data source, under the "development" environment, 
      <a href="https://github.com/ppazos/cabolabs-ehrserver/blob/master/grails-app/conf/DataSource.groovy" target="_blank">check this</a>.
 
      If the database you configured doesn’t exist, you need to create it in your DBMS (e.g. MySQL). For simplicity name it "ehrserver".<br/></br>
